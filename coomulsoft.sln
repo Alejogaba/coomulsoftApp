@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaz Primaria", "..\..\..\Documents\Interfaz Primaria\Interfaz Primaria\Interfaz Primaria\Interfaz Primaria.csproj", "{031CA1C5-FFF8-4E96-8F39-6530DE0E20DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaz Primaria", "Interfaz Primaria\Interfaz Primaria.csproj", "{031CA1C5-FFF8-4E96-8F39-6530DE0E20DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "..\..\..\Documents\Interfaz Primaria\Interfaz Primaria\Entity\Entity.csproj", "{2B5EC14B-85B1-4F5F-B0D4-6C74CED19D51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csproj", "{C0CD9C67-5DD7-4184-BEFF-84DB058D9FA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{031CA1C5-FFF8-4E96-8F39-6530DE0E20DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{031CA1C5-FFF8-4E96-8F39-6530DE0E20DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{031CA1C5-FFF8-4E96-8F39-6530DE0E20DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B5EC14B-85B1-4F5F-B0D4-6C74CED19D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B5EC14B-85B1-4F5F-B0D4-6C74CED19D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B5EC14B-85B1-4F5F-B0D4-6C74CED19D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B5EC14B-85B1-4F5F-B0D4-6C74CED19D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0CD9C67-5DD7-4184-BEFF-84DB058D9FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0CD9C67-5DD7-4184-BEFF-84DB058D9FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0CD9C67-5DD7-4184-BEFF-84DB058D9FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0CD9C67-5DD7-4184-BEFF-84DB058D9FA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
