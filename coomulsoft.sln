@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaz Primaria", "Interf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csproj", "{C0CD9C67-5DD7-4184-BEFF-84DB058D9FA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{44A79ED8-8E7B-4136-AADA-A29DE47BE14E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C0CD9C67-5DD7-4184-BEFF-84DB058D9FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0CD9C67-5DD7-4184-BEFF-84DB058D9FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0CD9C67-5DD7-4184-BEFF-84DB058D9FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44A79ED8-8E7B-4136-AADA-A29DE47BE14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A79ED8-8E7B-4136-AADA-A29DE47BE14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A79ED8-8E7B-4136-AADA-A29DE47BE14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A79ED8-8E7B-4136-AADA-A29DE47BE14E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
