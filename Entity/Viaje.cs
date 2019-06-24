@@ -6,25 +6,33 @@ namespace Entity
 {
     public class Viaje
     {
-        public String Fecha { get; set; }
-        public String Hora { get; set; }
-        public String Hora_llegada { get; set; }
-        public String Ciudades { get; set; }
+        public int Codigo_viaje { get; set; }
+        public String Cedula_conductor { get; set; }
+        public DateTime Fecha_salida { get; set; }
+        public DateTime Fecha_llegada { get; set; }
+        public DateTime Hora_salida { get; set; }
+        public DateTime Hora_llegada { get; set; }
+        public String Ciudad_origen { get; set; }
         public String Ciudad_destino { get; set; }
-        public decimal Valor { get; set; }
-        public String Nombre_Conductor { get; set; }
+        public int Cantidad_de_pasajeros { get; set; }
 
-        public Viaje(string ciudades, string ciudad_destino, string fecha, string hora,string hora_llegada, decimal valor, string nombre_conductor)
+        public Viaje(string cedula_conductor, DateTime fecha_salida, DateTime fecha_llegada, DateTime hora_salida, DateTime hora_llegada, string ciudad_origen, string ciudad_destino, int cantidad_de_pasajeros)
         {
-            Fecha = fecha;
-            Hora = hora;
+            Cedula_conductor = cedula_conductor;
+            Fecha_salida = fecha_salida;
+            Fecha_llegada = fecha_llegada;
+            Hora_salida = hora_salida;
             Hora_llegada = hora_llegada;
-            Ciudades = ciudades;
+            Ciudad_origen = ciudad_origen;
             Ciudad_destino = ciudad_destino;
-            Valor = valor;
-            Nombre_Conductor = nombre_conductor;
+            Cantidad_de_pasajeros = cantidad_de_pasajeros;
         }
-        
+
+        public void Generar_codigo_viaje()
+        {
+            Random random = new Random();
+            Codigo_viaje = random.Next(10000,99999);
+        }
         
     }
 }

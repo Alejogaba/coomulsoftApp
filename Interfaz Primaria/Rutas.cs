@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using xDialog;
+
 
 namespace Interfaz_Primaria
 {
     public partial class Rutas : Form
     {
+        DialogResult result;
         public Rutas()
         {
             InitializeComponent();
@@ -30,14 +33,15 @@ namespace Interfaz_Primaria
                 if (string.IsNullOrEmpty(textBoxCiudad.Text)|| string.IsNullOrEmpty(textBoxDestino.Text) ||
                     string.IsNullOrEmpty(textBoxDpto.Text) || string.IsNullOrEmpty(textBoxDptoDestino.Text))
                 {
-                    MessageBox.Show("No deje campos vacios", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    result = MsgBox.Show("No deje campos vacios", "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
                 }
                 else
                 {
                     queryadress.Append(ciudad + "," + "+" + dpto + "/");
                     queryadress.Append(destino + "," + "+" + dpto2);
+                    webControl1.WebView.Url = queryadress.ToString();
                 }
-                webControl1.WebView.Url = queryadress.ToString();
+                
             }
             catch (Exception ex)
             {

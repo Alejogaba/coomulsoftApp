@@ -7,22 +7,24 @@ namespace Entity
     {
         public String Nombre { get; set; }
         public String Apellido { get; set; }
-        public String NombreCompleto {
-            get { return this.NombreCompleto = Nombre + Apellido; }set { } }
         public String Identificacion { get; set; }
-        public int Edad { get; set; }
+        public string Telefono { get; set; }
 
         public Personas()
         {
 
         }
 
-        public Personas(string nombre, string apellido, string identificacion, int edad)
+        public Personas(string nombre, string apellido, string identificacion, string telefono)
         {
             Nombre = nombre;
             Apellido = apellido;
             Identificacion = identificacion;
-            Edad = edad;
+            Telefono = telefono;
+        }
+        public string Nombre_Completo()
+        {
+            return Nombre + Apellido;
         }
     }
 }

@@ -6,19 +6,27 @@ namespace Entity
 {
     public class Vehiculo
     {
-        public String Referencia { get; set; }
+        public string Imagen { get; set; }
+        public String Codigo { get; set; }
         public String Placa_Vehiculo { get; set; }
         public String Anio_Modelo { get; set; }
         public String Tipo_vehiculo { get; set; }
-        public String Nombre_buscador { get; set; }
+        public int Capacidad_pasajeros { get; set; }
+        public string Capacidad_maletero { get; set; }
+        public double Consumo_gasolina_km { get; set; }
+        public String Cedula_dueño { get; set; }
 
-        public Vehiculo(string referencia, string placa_Vehiculo, string anio_Modelo, string tipo_vehiculo,string nombre_buscador)
+        public Vehiculo(string imagen, string codigo, string placa_Vehiculo, string anio_Modelo, string tipo_vehiculo, int capacidad_pasajeros, string capacidad_maletero, double consumo_gasolina_km, string cedula_dueño)
         {
-            Referencia = referencia;
+            Imagen = imagen;
+            Codigo = codigo;
             Placa_Vehiculo = placa_Vehiculo;
             Anio_Modelo = anio_Modelo;
             Tipo_vehiculo = tipo_vehiculo;
-            Nombre_buscador = nombre_buscador;
+            Capacidad_pasajeros = capacidad_pasajeros;
+            Capacidad_maletero = capacidad_maletero;
+            Consumo_gasolina_km = consumo_gasolina_km;
+            Cedula_dueño = cedula_dueño;
         }
 
         public Vehiculo()
