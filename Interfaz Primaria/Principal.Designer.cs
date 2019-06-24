@@ -54,6 +54,7 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnTamañoNormal = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.panelFormularios.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -236,6 +237,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.PanelDesplegableReportes);
             this.panelMenu.Controls.Add(this.btnAdmVehiculos);
             this.panelMenu.Controls.Add(this.btnReporte);
@@ -433,6 +435,16 @@
             this.btnTamañoNormal.Visible = false;
             this.btnTamañoNormal.Click += new System.EventHandler(this.btnTamañoNormal_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(56, 536);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Rutas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,6 +504,7 @@
         private System.Windows.Forms.Button btnNuevoViaje;
         private System.Windows.Forms.Button btnAddConductor;
         private System.Windows.Forms.Button btnAddVehiculo;
+        private System.Windows.Forms.Button button1;
     }
 }
 

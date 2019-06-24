@@ -203,6 +203,11 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
             AbrirFormulario<AddConductor>();
         }
 
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormulario<Rutas>();
+        }
+
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
             lx = this.Location.X;

@@ -10,6 +10,7 @@ namespace Entity
         public String Hora { get; set; }
         public String Ciudades { get; set; }
         public String Ciudad_destino { get; set; }
+       
 
 
         public Cliente(string nombre, string apellido, string identificacion, int edad, string ciudades, string ciudad_destino, string hora, string fecha) :

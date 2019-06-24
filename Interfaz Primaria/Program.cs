@@ -16,7 +16,7 @@ namespace Interfaz_Primaria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Logi());
+            Application.Run(new Principal());
         }
     }
 }
