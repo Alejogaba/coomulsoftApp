@@ -21,5 +21,30 @@ namespace Interfaz_Primaria
         {
             this.Close();
         }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if (ofdSeleccionarImagen.ShowDialog() == DialogResult.OK)
+            {
+                string ruta = ofdSeleccionarImagen.FileName;
+                pictureBoxVehiculo.Image = Image.FromFile(ruta);
+            }
+       
+        }
+
+        private void PictureBoxVehiculo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

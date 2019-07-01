@@ -10,6 +10,8 @@ namespace Entity
         public String Identificacion { get; set; }
         public string Telefono { get; set; }
 
+        
+
         public Personas()
         {
 
