@@ -48,5 +48,10 @@ namespace Interfaz_Primaria
                 MessageBox.Show(ex.Message.ToString(), "Error");
             }
         }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

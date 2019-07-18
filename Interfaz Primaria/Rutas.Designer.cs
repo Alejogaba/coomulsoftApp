@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelMapa = new System.Windows.Forms.Panel();
+            this.webControl1 = new EO.WinForm.WebControl();
+            this.webView1 = new EO.WebBrowser.WebView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,24 +49,42 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.webControl1 = new EO.WinForm.WebControl();
-            this.webView1 = new EO.WebBrowser.WebView();
-            this.panel1.SuspendLayout();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.panelMapa.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelMapa
             // 
-            this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(this.webControl1);
-            this.panel1.Location = new System.Drawing.Point(296, 163);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(692, 412);
-            this.panel1.TabIndex = 0;
+            this.panelMapa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelMapa.AutoSize = true;
+            this.panelMapa.Controls.Add(this.webControl1);
+            this.panelMapa.Location = new System.Drawing.Point(296, 163);
+            this.panelMapa.Name = "panelMapa";
+            this.panelMapa.Size = new System.Drawing.Size(692, 413);
+            this.panelMapa.TabIndex = 0;
+            // 
+            // webControl1
+            // 
+            this.webControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.webControl1.BackColor = System.Drawing.Color.White;
+            this.webControl1.Location = new System.Drawing.Point(0, -17);
+            this.webControl1.Name = "webControl1";
+            this.webControl1.Size = new System.Drawing.Size(689, 427);
+            this.webControl1.TabIndex = 0;
+            this.webControl1.Text = "webControl1";
+            this.webControl1.WebView = this.webView1;
+            // 
+            // webView1
+            // 
+            this.webView1.InputMsgFilter = null;
+            this.webView1.ObjectForScripting = null;
+            this.webView1.Title = null;
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -115,21 +135,29 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(570, 120);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 10;
             this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(570, 75);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
             this.button2.Text = "Añadir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // textBoxDptoDestino
             // 
@@ -181,12 +209,16 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(570, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // textBoxCiudad
@@ -207,14 +239,16 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(2, 163);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(288, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(288, 381);
             this.dataGridView1.TabIndex = 2;
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(12, 24);
@@ -225,6 +259,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(-1, 147);
@@ -233,36 +268,36 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Lista de rutas";
             // 
-            // webControl1
+            // btnFinalizar
             // 
-            this.webControl1.BackColor = System.Drawing.Color.White;
-            this.webControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webControl1.Location = new System.Drawing.Point(0, 0);
-            this.webControl1.Name = "webControl1";
-            this.webControl1.Size = new System.Drawing.Size(692, 412);
-            this.webControl1.TabIndex = 0;
-            this.webControl1.Text = "webControl1";
-            this.webControl1.WebView = this.webView1;
-            // 
-            // webView1
-            // 
-            this.webView1.InputMsgFilter = null;
-            this.webView1.ObjectForScripting = null;
-            this.webView1.Title = null;
+            this.btnFinalizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnFinalizar.FlatAppearance.BorderSize = 0;
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFinalizar.Location = new System.Drawing.Point(109, 550);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(82, 25);
+            this.btnFinalizar.TabIndex = 16;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // Rutas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 571);
+            this.ClientSize = new System.Drawing.Size(1000, 610);
+            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMapa);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Rutas";
             this.Text = "Rutas";
-            this.panel1.ResumeLayout(false);
+            this.panelMapa.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -273,7 +308,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelMapa;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxCiudad;
@@ -294,5 +329,6 @@
         private System.Windows.Forms.Label label9;
         private EO.WinForm.WebControl webControl1;
         private EO.WebBrowser.WebView webView1;
+        private System.Windows.Forms.Button btnFinalizar;
     }
 }
