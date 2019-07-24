@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddVehiculo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNombreModelo = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -39,9 +39,9 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtCapacidaMaletero = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtGasolina = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,9 +50,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxVehiculo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxCapacidad = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCapacidadPasajeros = new System.Windows.Forms.TextBox();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -86,7 +86,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtNombreModelo);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.label20);
@@ -94,9 +94,9 @@
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.txtCapacidaMaletero);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtGasolina);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label7);
@@ -105,9 +105,9 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBoxVehiculo);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.textBoxCapacidad);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtCapacidadPasajeros);
+            this.panel1.Controls.Add(this.txtPlaca);
+            this.panel1.Controls.Add(this.txtCodigo);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -125,14 +125,13 @@
             this.button4.TabIndex = 25;
             this.button4.Text = "Cancelar";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
-            // textBox4
+            // txtNombreModelo
             // 
-            this.textBox4.Location = new System.Drawing.Point(145, 76);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(213, 20);
-            this.textBox4.TabIndex = 24;
+            this.txtNombreModelo.Location = new System.Drawing.Point(145, 76);
+            this.txtNombreModelo.Name = "txtNombreModelo";
+            this.txtNombreModelo.Size = new System.Drawing.Size(213, 20);
+            this.txtNombreModelo.TabIndex = 24;
             // 
             // label21
             // 
@@ -200,12 +199,12 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Galon/kilometro";
             // 
-            // textBox7
+            // txtCapacidaMaletero
             // 
-            this.textBox7.Location = new System.Drawing.Point(529, 188);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(60, 20);
-            this.textBox7.TabIndex = 16;
+            this.txtCapacidaMaletero.Location = new System.Drawing.Point(529, 188);
+            this.txtCapacidaMaletero.Name = "txtCapacidaMaletero";
+            this.txtCapacidaMaletero.Size = new System.Drawing.Size(60, 20);
+            this.txtCapacidaMaletero.TabIndex = 16;
             // 
             // label9
             // 
@@ -217,12 +216,12 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Capacidad Maletero";
             // 
-            // textBox3
+            // txtGasolina
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 195);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 20);
-            this.textBox3.TabIndex = 14;
+            this.txtGasolina.Location = new System.Drawing.Point(143, 195);
+            this.txtGasolina.Name = "txtGasolina";
+            this.txtGasolina.Size = new System.Drawing.Size(150, 20);
+            this.txtGasolina.TabIndex = 14;
             // 
             // label8
             // 
@@ -303,26 +302,26 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // textBoxCapacidad
+            // txtCapacidadPasajeros
             // 
-            this.textBoxCapacidad.Location = new System.Drawing.Point(529, 132);
-            this.textBoxCapacidad.Name = "textBoxCapacidad";
-            this.textBoxCapacidad.Size = new System.Drawing.Size(60, 20);
-            this.textBoxCapacidad.TabIndex = 6;
+            this.txtCapacidadPasajeros.Location = new System.Drawing.Point(529, 132);
+            this.txtCapacidadPasajeros.Name = "txtCapacidadPasajeros";
+            this.txtCapacidadPasajeros.Size = new System.Drawing.Size(60, 20);
+            this.txtCapacidadPasajeros.TabIndex = 6;
             // 
-            // textBox2
+            // txtPlaca
             // 
-            this.textBox2.Location = new System.Drawing.Point(446, 23);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(51, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtPlaca.Location = new System.Drawing.Point(446, 23);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(51, 20);
+            this.txtPlaca.TabIndex = 5;
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(108, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtCodigo.Location = new System.Drawing.Point(163, 26);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(108, 20);
+            this.txtCodigo.TabIndex = 4;
             // 
             // label4
             // 
@@ -554,9 +553,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxCapacidad;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCapacidadPasajeros;
+        private System.Windows.Forms.TextBox txtPlaca;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBoxVehiculo;
@@ -564,9 +563,9 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtCapacidaMaletero;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtGasolina;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -588,7 +587,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNombreModelo;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.OpenFileDialog ofdSeleccionarImagen;

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.PanelPlanilla = new System.Windows.Forms.Panel();
             this.btnFinalizar = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.PanelPlanilla.SuspendLayout();
             this.SuspendLayout();
@@ -65,12 +65,13 @@
             this.panel1.Size = new System.Drawing.Size(514, 316);
             this.panel1.TabIndex = 3;
             // 
-            // textBox3
+            // dateTimePicker2
             // 
-            this.textBox3.Location = new System.Drawing.Point(227, 145);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 8;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(225, 179);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(201, 20);
+            this.dateTimePicker2.TabIndex = 9;
             // 
             // textBox2
             // 
@@ -190,13 +191,12 @@
             this.btnFinalizar.UseVisualStyleBackColor = false;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click_1);
             // 
-            // dateTimePicker2
+            // textBox3
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(225, 179);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(201, 20);
-            this.dateTimePicker2.TabIndex = 9;
+            this.textBox3.Location = new System.Drawing.Point(227, 145);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(200, 20);
+            this.textBox3.TabIndex = 8;
             // 
             // IniciarViaje
             // 
@@ -222,12 +222,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Panel PanelPlanilla;
         private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

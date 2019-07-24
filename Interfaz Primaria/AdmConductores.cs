@@ -7,16 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
 
 namespace Interfaz_Primaria
 {
     public partial class AdmConductores : Form
     {
-        ConductorService service = new ConductorService();
         public AdmConductores()
         {
             InitializeComponent();
+            this.ttMensaje.SetToolTip(this.btnBorrarFoto, "Borrar la foto");
+            this.ttMensaje.SetToolTip(this.btnCargarFoto, "Subir la foto");
+            this.ttMensaje.SetToolTip(this.btnBuscar, "Buscar Conductor");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -63,23 +64,15 @@ namespace Interfaz_Primaria
             this.Close();
         }
 
-        public void Guardar()
-        {
-            string nom, apellido, ced, est_licencia, licencia, cuenta_banco, direccion, telefono, email;
-            try
-            {
-                
-                
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
-        private void Button4_Click(object sender, EventArgs e)
+        private void btnCargarFoto_Click(object sender, EventArgs e)
         {
 
+            if (ofdSeleccionarImagen.ShowDialog() == DialogResult.OK)
+            {
+                string ruta = ofdSeleccionarImagen.FileName;
+                MarcoDeFoto.Image = Image.FromFile(ruta);
+
+            }
         }
     }
 }
