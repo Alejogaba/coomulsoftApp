@@ -46,5 +46,10 @@ namespace Interfaz_Primaria
         {
 
         }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            pictureBoxVehiculo.Image = pictureBoxVehiculo.InitialImage;
+        }
     }
 }

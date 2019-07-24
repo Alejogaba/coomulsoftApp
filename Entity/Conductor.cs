@@ -18,13 +18,14 @@ namespace Entity
         {
         }
 
-        public Conductor(string nombre, string apellido, string identificacion, string telefono,string imagen,string licencia,
+        public Conductor(string nombre, string apellido, string identificacion, string telefono,string direccion, string imagen,string licencia,
             DateTime fecha, string email,string bank)
         {
             Nombre = nombre;
             Apellido = apellido;
             Identificacion = identificacion;
             Telefono = telefono;
+            Direccion = direccion;
             Imagen = imagen;
             Licencia = licencia;
             Fecha_vencimiento_licencia = fecha;

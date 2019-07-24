@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace Interfaz_Primaria
 {
     public partial class AdmConductores : Form
     {
+        ConductorService service = new ConductorService();
         public AdmConductores()
         {
             InitializeComponent();
@@ -59,6 +61,25 @@ namespace Interfaz_Primaria
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void Guardar()
+        {
+            string nom, apellido, ced, est_licencia, licencia, cuenta_banco, direccion, telefono, email;
+            try
+            {
+                
+                
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

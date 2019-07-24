@@ -37,17 +37,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxid = new System.Windows.Forms.TextBox();
+            this.textBoxlicencia = new System.Windows.Forms.TextBox();
+            this.textBoxapell = new System.Windows.Forms.TextBox();
+            this.textBoxnom = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBuscarPorCedula = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxtelefono = new System.Windows.Forms.TextBox();
+            this.textBoxdireccion = new System.Windows.Forms.TextBox();
+            this.textBoxlicencia_estado = new System.Windows.Forms.TextBox();
+            this.textBoxemail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,7 +56,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerlicencia = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickernacimiento = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -146,40 +146,33 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "ID";
             // 
-            // textBox1
+            // textBoxid
             // 
-            this.textBox1.Location = new System.Drawing.Point(197, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBoxid.Location = new System.Drawing.Point(197, 33);
+            this.textBoxid.Name = "textBoxid";
+            this.textBoxid.Size = new System.Drawing.Size(227, 20);
+            this.textBoxid.TabIndex = 9;
             // 
-            // textBox3
+            // textBoxlicencia
             // 
-            this.textBox3.Location = new System.Drawing.Point(197, 165);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(227, 20);
-            this.textBox3.TabIndex = 11;
+            this.textBoxlicencia.Location = new System.Drawing.Point(197, 165);
+            this.textBoxlicencia.Name = "textBoxlicencia";
+            this.textBoxlicencia.Size = new System.Drawing.Size(227, 20);
+            this.textBoxlicencia.TabIndex = 11;
             // 
-            // textBox4
+            // textBoxapell
             // 
-            this.textBox4.Location = new System.Drawing.Point(197, 132);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(227, 20);
-            this.textBox4.TabIndex = 12;
+            this.textBoxapell.Location = new System.Drawing.Point(197, 98);
+            this.textBoxapell.Name = "textBoxapell";
+            this.textBoxapell.Size = new System.Drawing.Size(227, 20);
+            this.textBoxapell.TabIndex = 13;
             // 
-            // textBox5
+            // textBoxnom
             // 
-            this.textBox5.Location = new System.Drawing.Point(197, 98);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(227, 20);
-            this.textBox5.TabIndex = 13;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(197, 64);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(227, 20);
-            this.textBox6.TabIndex = 14;
+            this.textBoxnom.Location = new System.Drawing.Point(197, 64);
+            this.textBoxnom.Name = "textBoxnom";
+            this.textBoxnom.Size = new System.Drawing.Size(227, 20);
+            this.textBoxnom.TabIndex = 14;
             // 
             // pictureBox1
             // 
@@ -205,33 +198,33 @@
             this.txtBuscarPorCedula.Enter += new System.EventHandler(this.txtBuscarPorCedula_Enter);
             this.txtBuscarPorCedula.Leave += new System.EventHandler(this.txtBuscarPorCedula_Leave);
             // 
-            // textBox7
+            // textBoxtelefono
             // 
-            this.textBox7.Location = new System.Drawing.Point(197, 304);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(227, 20);
-            this.textBox7.TabIndex = 21;
+            this.textBoxtelefono.Location = new System.Drawing.Point(197, 304);
+            this.textBoxtelefono.Name = "textBoxtelefono";
+            this.textBoxtelefono.Size = new System.Drawing.Size(227, 20);
+            this.textBoxtelefono.TabIndex = 21;
             // 
-            // textBox8
+            // textBoxdireccion
             // 
-            this.textBox8.Location = new System.Drawing.Point(197, 269);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(227, 20);
-            this.textBox8.TabIndex = 22;
+            this.textBoxdireccion.Location = new System.Drawing.Point(197, 269);
+            this.textBoxdireccion.Name = "textBoxdireccion";
+            this.textBoxdireccion.Size = new System.Drawing.Size(227, 20);
+            this.textBoxdireccion.TabIndex = 22;
             // 
-            // textBox9
+            // textBoxlicencia_estado
             // 
-            this.textBox9.Location = new System.Drawing.Point(198, 236);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(136, 20);
-            this.textBox9.TabIndex = 23;
+            this.textBoxlicencia_estado.Location = new System.Drawing.Point(198, 236);
+            this.textBoxlicencia_estado.Name = "textBoxlicencia_estado";
+            this.textBoxlicencia_estado.Size = new System.Drawing.Size(136, 20);
+            this.textBoxlicencia_estado.TabIndex = 23;
             // 
-            // textBox10
+            // textBoxemail
             // 
-            this.textBox10.Location = new System.Drawing.Point(197, 339);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(227, 20);
-            this.textBox10.TabIndex = 24;
+            this.textBoxemail.Location = new System.Drawing.Point(197, 339);
+            this.textBoxemail.Name = "textBoxemail";
+            this.textBoxemail.Size = new System.Drawing.Size(227, 20);
+            this.textBoxemail.TabIndex = 24;
             // 
             // label2
             // 
@@ -315,6 +308,7 @@
             this.button4.TabIndex = 34;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // pictureBox4
             // 
@@ -326,19 +320,27 @@
             this.pictureBox4.TabIndex = 35;
             this.pictureBox4.TabStop = false;
             // 
-            // dateTimePicker1
+            // dateTimePickerlicencia
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(197, 198);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
-            this.dateTimePicker1.TabIndex = 36;
+            this.dateTimePickerlicencia.Location = new System.Drawing.Point(197, 198);
+            this.dateTimePickerlicencia.Name = "dateTimePickerlicencia";
+            this.dateTimePickerlicencia.Size = new System.Drawing.Size(137, 20);
+            this.dateTimePickerlicencia.TabIndex = 36;
+            // 
+            // dateTimePickernacimiento
+            // 
+            this.dateTimePickernacimiento.Location = new System.Drawing.Point(198, 135);
+            this.dateTimePickernacimiento.Name = "dateTimePickernacimiento";
+            this.dateTimePickernacimiento.Size = new System.Drawing.Size(226, 20);
+            this.dateTimePickernacimiento.TabIndex = 37;
             // 
             // AdmConductores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 610);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickernacimiento);
+            this.Controls.Add(this.dateTimePickerlicencia);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -348,18 +350,17 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBoxemail);
+            this.Controls.Add(this.textBoxlicencia_estado);
+            this.Controls.Add(this.textBoxdireccion);
+            this.Controls.Add(this.textBoxtelefono);
             this.Controls.Add(this.dataGridAddConductores);
             this.Controls.Add(this.txtBuscarPorCedula);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxnom);
+            this.Controls.Add(this.textBoxapell);
+            this.Controls.Add(this.textBoxlicencia);
+            this.Controls.Add(this.textBoxid);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -387,17 +388,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxid;
+        private System.Windows.Forms.TextBox textBoxlicencia;
+        private System.Windows.Forms.TextBox textBoxapell;
+        private System.Windows.Forms.TextBox textBoxnom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtBuscarPorCedula;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxtelefono;
+        private System.Windows.Forms.TextBox textBoxdireccion;
+        private System.Windows.Forms.TextBox textBoxlicencia_estado;
+        private System.Windows.Forms.TextBox textBoxemail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -407,6 +407,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerlicencia;
+        private System.Windows.Forms.DateTimePicker dateTimePickernacimiento;
     }
 }
