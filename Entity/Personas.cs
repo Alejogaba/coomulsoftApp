@@ -10,20 +10,22 @@ namespace Entity
         public String Identificacion { get; set; }
         public string Telefono { get; set; }
 
-        
+        public string Direccion { get; set; }
 
         public Personas()
         {
 
         }
 
-        public Personas(string nombre, string apellido, string identificacion, string telefono)
+        public Personas(string nombre, string apellido, string identificacion, string telefono, string direccion)
         {
             Nombre = nombre;
             Apellido = apellido;
             Identificacion = identificacion;
             Telefono = telefono;
+            Direccion = direccion;
         }
+
         public string Nombre_Completo()
         {
             return Nombre + Apellido;
