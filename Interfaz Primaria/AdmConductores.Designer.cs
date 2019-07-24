@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmConductores));
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.dataGridAddConductores = new System.Windows.Forms.DataGridView();
@@ -37,17 +38,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtLicencia = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.txtBuscarPorCedula = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtEstadoLicencia = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,21 +56,26 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.MarcoDeFoto = new System.Windows.Forms.PictureBox();
+            this.dtimeLicVence = new System.Windows.Forms.DateTimePicker();
+            this.dtimeFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.btnCargarFoto = new System.Windows.Forms.Button();
+            this.btnBorrarFoto = new System.Windows.Forms.Button();
+            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
+            this.ofdSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFinalizar
             // 
-            this.btnFinalizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFinalizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.btnFinalizar.FlatAppearance.BorderSize = 0;
             this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFinalizar.Location = new System.Drawing.Point(629, 262);
+            this.btnFinalizar.Location = new System.Drawing.Point(377, 577);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(74, 25);
             this.btnFinalizar.TabIndex = 1;
@@ -84,7 +89,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridAddConductores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.dataGridAddConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAddConductores.Location = new System.Drawing.Point(215, 380);
+            this.dataGridAddConductores.Location = new System.Drawing.Point(215, 374);
             this.dataGridAddConductores.Name = "dataGridAddConductores";
             this.dataGridAddConductores.Size = new System.Drawing.Size(581, 197);
             this.dataGridAddConductores.TabIndex = 17;
@@ -146,52 +151,45 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "ID";
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(197, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtId.Location = new System.Drawing.Point(197, 33);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(227, 20);
+            this.txtId.TabIndex = 9;
             // 
-            // textBox3
+            // txtLicencia
             // 
-            this.textBox3.Location = new System.Drawing.Point(197, 165);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(227, 20);
-            this.textBox3.TabIndex = 11;
+            this.txtLicencia.Location = new System.Drawing.Point(197, 165);
+            this.txtLicencia.Name = "txtLicencia";
+            this.txtLicencia.Size = new System.Drawing.Size(227, 20);
+            this.txtLicencia.TabIndex = 11;
             // 
-            // textBox4
+            // txtApellidos
             // 
-            this.textBox4.Location = new System.Drawing.Point(197, 132);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(227, 20);
-            this.textBox4.TabIndex = 12;
+            this.txtApellidos.Location = new System.Drawing.Point(197, 98);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(227, 20);
+            this.txtApellidos.TabIndex = 13;
             // 
-            // textBox5
+            // txtNombres
             // 
-            this.textBox5.Location = new System.Drawing.Point(197, 98);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(227, 20);
-            this.textBox5.TabIndex = 13;
+            this.txtNombres.Location = new System.Drawing.Point(197, 64);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(227, 20);
+            this.txtNombres.TabIndex = 14;
             // 
-            // textBox6
+            // btnBuscar
             // 
-            this.textBox6.Location = new System.Drawing.Point(197, 64);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(227, 20);
-            this.textBox6.TabIndex = 14;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(857, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(857, 23);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(49, 38);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnBuscar.TabIndex = 15;
+            this.btnBuscar.TabStop = false;
             // 
             // txtBuscarPorCedula
             // 
@@ -205,33 +203,33 @@
             this.txtBuscarPorCedula.Enter += new System.EventHandler(this.txtBuscarPorCedula_Enter);
             this.txtBuscarPorCedula.Leave += new System.EventHandler(this.txtBuscarPorCedula_Leave);
             // 
-            // textBox7
+            // txtTelefono
             // 
-            this.textBox7.Location = new System.Drawing.Point(197, 304);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(227, 20);
-            this.textBox7.TabIndex = 21;
+            this.txtTelefono.Location = new System.Drawing.Point(197, 304);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(227, 20);
+            this.txtTelefono.TabIndex = 21;
             // 
-            // textBox8
+            // txtDireccion
             // 
-            this.textBox8.Location = new System.Drawing.Point(197, 269);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(227, 20);
-            this.textBox8.TabIndex = 22;
+            this.txtDireccion.Location = new System.Drawing.Point(197, 269);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(227, 20);
+            this.txtDireccion.TabIndex = 22;
             // 
-            // textBox9
+            // txtEstadoLicencia
             // 
-            this.textBox9.Location = new System.Drawing.Point(198, 236);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(136, 20);
-            this.textBox9.TabIndex = 23;
+            this.txtEstadoLicencia.Location = new System.Drawing.Point(198, 236);
+            this.txtEstadoLicencia.Name = "txtEstadoLicencia";
+            this.txtEstadoLicencia.Size = new System.Drawing.Size(136, 20);
+            this.txtEstadoLicencia.TabIndex = 23;
             // 
-            // textBox10
+            // txtEmail
             // 
-            this.textBox10.Location = new System.Drawing.Point(197, 339);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(227, 20);
-            this.textBox10.TabIndex = 24;
+            this.txtEmail.Location = new System.Drawing.Point(197, 339);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(227, 20);
+            this.txtEmail.TabIndex = 24;
             // 
             // label2
             // 
@@ -290,12 +288,12 @@
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(832, 260);
+            this.button3.Location = new System.Drawing.Point(579, 577);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 25);
             this.button3.TabIndex = 33;
@@ -304,42 +302,83 @@
             // 
             // button4
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(732, 260);
+            this.button4.Location = new System.Drawing.Point(479, 577);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 25);
             this.button4.TabIndex = 34;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // pictureBox4
+            // MarcoDeFoto
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Location = new System.Drawing.Point(675, 70);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(163, 168);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 35;
-            this.pictureBox4.TabStop = false;
+            this.MarcoDeFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MarcoDeFoto.Location = new System.Drawing.Point(681, 82);
+            this.MarcoDeFoto.Name = "MarcoDeFoto";
+            this.MarcoDeFoto.Size = new System.Drawing.Size(163, 168);
+            this.MarcoDeFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MarcoDeFoto.TabIndex = 35;
+            this.MarcoDeFoto.TabStop = false;
             // 
-            // dateTimePicker1
+            // dtimeLicVence
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(197, 198);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
-            this.dateTimePicker1.TabIndex = 36;
+            this.dtimeLicVence.Location = new System.Drawing.Point(197, 200);
+            this.dtimeLicVence.Name = "dtimeLicVence";
+            this.dtimeLicVence.Size = new System.Drawing.Size(137, 20);
+            this.dtimeLicVence.TabIndex = 36;
+            // 
+            // dtimeFechaNacimiento
+            // 
+            this.dtimeFechaNacimiento.Location = new System.Drawing.Point(198, 132);
+            this.dtimeFechaNacimiento.Name = "dtimeFechaNacimiento";
+            this.dtimeFechaNacimiento.Size = new System.Drawing.Size(226, 20);
+            this.dtimeFechaNacimiento.TabIndex = 37;
+            // 
+            // btnCargarFoto
+            // 
+            this.btnCargarFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCargarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnCargarFoto.FlatAppearance.BorderSize = 0;
+            this.btnCargarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarFoto.Image")));
+            this.btnCargarFoto.Location = new System.Drawing.Point(681, 256);
+            this.btnCargarFoto.Name = "btnCargarFoto";
+            this.btnCargarFoto.Size = new System.Drawing.Size(78, 44);
+            this.btnCargarFoto.TabIndex = 38;
+            this.btnCargarFoto.UseVisualStyleBackColor = false;
+            this.btnCargarFoto.Click += new System.EventHandler(this.btnCargarFoto_Click);
+            // 
+            // btnBorrarFoto
+            // 
+            this.btnBorrarFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBorrarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnBorrarFoto.FlatAppearance.BorderSize = 0;
+            this.btnBorrarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrarFoto.Image")));
+            this.btnBorrarFoto.Location = new System.Drawing.Point(766, 256);
+            this.btnBorrarFoto.Name = "btnBorrarFoto";
+            this.btnBorrarFoto.Size = new System.Drawing.Size(78, 44);
+            this.btnBorrarFoto.TabIndex = 39;
+            this.btnBorrarFoto.UseVisualStyleBackColor = false;
+            // 
+            // ofdSeleccionarImagen
+            // 
+            this.ofdSeleccionarImagen.FileName = "openFileDialog1";
             // 
             // AdmConductores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 610);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.MarcoDeFoto);
+            this.Controls.Add(this.btnBorrarFoto);
+            this.Controls.Add(this.btnCargarFoto);
+            this.Controls.Add(this.dtimeFechaNacimiento);
+            this.Controls.Add(this.dtimeLicVence);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -348,18 +387,17 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtEstadoLicencia);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.dataGridAddConductores);
             this.Controls.Add(this.txtBuscarPorCedula);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtNombres);
+            this.Controls.Add(this.txtApellidos);
+            this.Controls.Add(this.txtLicencia);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -371,8 +409,8 @@
             this.Name = "AdmConductores";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,17 +425,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtLicencia;
+        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.PictureBox btnBuscar;
         private System.Windows.Forms.TextBox txtBuscarPorCedula;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtEstadoLicencia;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -406,7 +443,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.PictureBox MarcoDeFoto;
+        private System.Windows.Forms.DateTimePicker dtimeLicVence;
+        private System.Windows.Forms.DateTimePicker dtimeFechaNacimiento;
+        private System.Windows.Forms.Button btnCargarFoto;
+        private System.Windows.Forms.Button btnBorrarFoto;
+        private System.Windows.Forms.ToolTip ttMensaje;
+        private System.Windows.Forms.OpenFileDialog ofdSeleccionarImagen;
     }
 }

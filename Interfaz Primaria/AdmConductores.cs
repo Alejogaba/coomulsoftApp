@@ -15,6 +15,9 @@ namespace Interfaz_Primaria
         public AdmConductores()
         {
             InitializeComponent();
+            this.ttMensaje.SetToolTip(this.btnBorrarFoto, "Borrar la foto");
+            this.ttMensaje.SetToolTip(this.btnCargarFoto, "Subir la foto");
+            this.ttMensaje.SetToolTip(this.btnBuscar, "Buscar Conductor");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -59,6 +62,17 @@ namespace Interfaz_Primaria
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCargarFoto_Click(object sender, EventArgs e)
+        {
+
+            if (ofdSeleccionarImagen.ShowDialog() == DialogResult.OK)
+            {
+                string ruta = ofdSeleccionarImagen.FileName;
+                MarcoDeFoto.Image = Image.FromFile(ruta);
+
+            }
         }
     }
 }
