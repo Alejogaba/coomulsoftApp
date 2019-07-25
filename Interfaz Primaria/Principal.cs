@@ -126,7 +126,7 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<AdmVehiculos>();
+            AbrirFormulario<AddVehiculo>();
             //btnAdmVehiculos.BackColor = Color.FromArgb(47, 79, 79);
             btnAdmVehiculos.BackColor = Color.FromArgb(7, 124, 131);
         }
@@ -194,7 +194,7 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
 
         private void btnAddVehiculo_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<AddVehiculo>();
+           
         }
 
         private void btnNuevoViaje_Click(object sender, EventArgs e)
