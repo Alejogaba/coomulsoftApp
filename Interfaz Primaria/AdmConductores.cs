@@ -166,6 +166,18 @@ namespace Interfaz_Primaria
                 System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
                 MarcoDeFoto.Image = returnImage;
                 txtApellidos.Text = con.Apellido;
+                txtDireccion.Text = con.Direccion;
+                txtEmail.Text = con.Email;
+                txtEstadoLicencia.Text = con.Estado_Licencia;
+                txtLicencia.Text = con.Licencia;
+                txtTelefono.Text = con.Telefono;
+                txtId.Text = con.Identificacion;
+                dtimeFechaNacimiento.Text = Convert.ToString(con.Fecha_naciemiento);
+                dtimeLicVence.Text = Convert.ToString(con.Fecha_vencimiento_licencia);
+
+                
+
+
             }
             catch (Exception ex)
             {
