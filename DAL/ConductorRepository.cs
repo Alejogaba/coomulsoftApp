@@ -31,7 +31,7 @@ namespace DAL
                    "VALUES(@cedula,@nombres,@apellidos,@fecha_nac,@telefono,@email,@direccion,@imagen,@licencia,@est_licencia,@fecha_licencia,@cuenta_bancaria,@vehiculo_a)";
 
                
-                    cmd.Parameters.Add("@cedula", SqlDbType.Int).Value = conductor.Identificacion;
+                    cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = conductor.Identificacion;
                     cmd.Parameters.Add("@nombres", SqlDbType.VarChar).Value = conductor.Nombre;
                     cmd.Parameters.Add("@apellidos", SqlDbType.VarChar).Value = conductor.Apellido;
                     cmd.Parameters.Add("@fecha_nac", SqlDbType.Date).Value = conductor.Fecha_naciemiento;
