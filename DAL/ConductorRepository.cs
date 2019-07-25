@@ -157,6 +157,27 @@ namespace DAL
             return condu;
         }
 
+        public IList<Conductor> Buscar_por_vehiculo(string veh)
+        {
+            Conductor condu = new Conductor();
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "SELECT * FROM Conductores WHERE [Vehiculo asignado]=@veh";
+                Comando.Parameters.Add("@veh", SqlDbType.VarChar).Value = veh;
+                Reader = Comando.ExecuteReader();
+
+                while (Reader.Read())
+                {
+
+                    Conductor conductor = new Conductor();
+                    conductor = Map(Reader);
+                    conductores.Add(conductor);
+                }
+            }
+            return conductores;
+        }
+
+
         public IList<Conductor> Filtro_sin_asignar()
         {
             Conductor condu = new Conductor();
