@@ -70,7 +70,8 @@ namespace Interfaz_Primaria
             string dpto = textBoxDpto.Text;
             string destino = textBoxDestino.Text;
             string dpto2 = textBoxDptoDestino.Text;
-            Rutas rutas = new Rutas(ciudad, dpto, destino, dpto2,0);
+            int tarifa = int.Parse(txtTarifa.Text);
+            Rutas rutas = new Rutas(ciudad, dpto, destino, dpto2,tarifa);
             result = MsgBox.Show(service.Guardar(rutas), "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
 
         }

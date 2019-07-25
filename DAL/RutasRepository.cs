@@ -31,9 +31,9 @@ namespace DAL
 
 
                     cmd.Parameters.Add("@origen", SqlDbType.VarChar).Value = ruta.Ciudad_Origen;
-                    cmd.Parameters.Add("@dptoporigen", SqlDbType.VarChar).Value = ruta.Ciudad_Origen;
-                    cmd.Parameters.Add("@destino", SqlDbType.VarChar).Value = ruta.Ciudad_Origen;
-                    cmd.Parameters.Add("@dptodestino", SqlDbType.VarChar).Value = ruta.Ciudad_Origen;
+                    cmd.Parameters.Add("@dptoporigen", SqlDbType.VarChar).Value = ruta.Dpto_Origen;
+                    cmd.Parameters.Add("@destino", SqlDbType.VarChar).Value = ruta.Ciudad_Destino;
+                    cmd.Parameters.Add("@dptodestino", SqlDbType.VarChar).Value = ruta.Dpto_Destino;
                     cmd.Parameters.Add("@Tarifa", SqlDbType.VarChar).Value = ruta.Tarifa;
 
 

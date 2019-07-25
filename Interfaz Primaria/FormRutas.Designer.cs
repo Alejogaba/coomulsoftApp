@@ -54,6 +54,8 @@
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtTarifa = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panelMapa.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
@@ -66,7 +68,7 @@
             this.panelMapa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelMapa.AutoSize = true;
             this.panelMapa.Controls.Add(this.webControl1);
-            this.panelMapa.Location = new System.Drawing.Point(296, 163);
+            this.panelMapa.Location = new System.Drawing.Point(296, 203);
             this.panelMapa.Name = "panelMapa";
             this.panelMapa.Size = new System.Drawing.Size(692, 413);
             this.panelMapa.TabIndex = 0;
@@ -75,9 +77,9 @@
             // 
             this.webControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.webControl1.BackColor = System.Drawing.Color.White;
-            this.webControl1.Location = new System.Drawing.Point(0, -17);
+            this.webControl1.Location = new System.Drawing.Point(0, 0);
             this.webControl1.Name = "webControl1";
-            this.webControl1.Size = new System.Drawing.Size(689, 427);
+            this.webControl1.Size = new System.Drawing.Size(689, 410);
             this.webControl1.TabIndex = 0;
             this.webControl1.Text = "webControl1";
             this.webControl1.WebView = this.webView1;
@@ -91,6 +93,8 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Controls.Add(this.txtTarifa);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.btnBuscar);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
@@ -107,7 +111,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(296, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(689, 157);
+            this.panel2.Size = new System.Drawing.Size(689, 200);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
@@ -247,9 +251,9 @@
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 163);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 203);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(288, 381);
+            this.dataGridView1.Size = new System.Drawing.Size(288, 341);
             this.dataGridView1.TabIndex = 2;
             // 
             // label9
@@ -257,7 +261,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(-1, 147);
+            this.label9.Location = new System.Drawing.Point(-1, 187);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 13);
             this.label9.TabIndex = 15;
@@ -282,9 +286,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(69, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 130);
+            this.pictureBox1.Size = new System.Drawing.Size(166, 157);
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
@@ -294,11 +298,27 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkRed;
-            this.label8.Location = new System.Drawing.Point(105, 126);
+            this.label8.Location = new System.Drawing.Point(105, 158);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 20);
             this.label8.TabIndex = 18;
             this.label8.Text = "Rutas";
+            // 
+            // txtTarifa
+            // 
+            this.txtTarifa.Location = new System.Drawing.Point(221, 160);
+            this.txtTarifa.Name = "txtTarifa";
+            this.txtTarifa.Size = new System.Drawing.Size(100, 20);
+            this.txtTarifa.TabIndex = 16;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(254, 144);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(34, 13);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Tarifa";
             // 
             // FormRutas
             // 
@@ -352,5 +372,7 @@
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtTarifa;
+        private System.Windows.Forms.Label label10;
     }
 }

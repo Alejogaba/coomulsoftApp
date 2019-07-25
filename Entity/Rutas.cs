@@ -10,9 +10,9 @@ namespace Entity
         public string Dpto_Origen { get; set; }
         public string Ciudad_Destino { get; set; }
         public string Dpto_Destino { get; set; }
-        public double Tarifa { get; set; }
+        public int Tarifa { get; set; }
 
-        public Rutas(string ciudad_Origen, string dpto_Origen, string ciudad_Destino, string dpto_Destino, double tarifa)
+        public Rutas(string ciudad_Origen, string dpto_Origen, string ciudad_Destino, string dpto_Destino, int tarifa)
         {
             Ciudad_Origen = ciudad_Origen;
             Dpto_Origen = dpto_Origen;
