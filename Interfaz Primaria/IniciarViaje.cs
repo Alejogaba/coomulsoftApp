@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using xDialog;
 
 namespace Interfaz_Primaria
 {
     public partial class IniciarViaje : Form
     {
+        DialogResult result;
         public IniciarViaje()
         {
             InitializeComponent();
@@ -58,6 +61,41 @@ namespace Interfaz_Primaria
         private void btnFinalizar_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+        public byte[] ImageToByteArray(System.Drawing.Image imagen)
+        {
+            MemoryStream ms = new MemoryStream();
+            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            return ms.ToArray();
+        }
+        public void Guardar ()
+        {
+            string origen, destino,  placa, codigo;
+            int capacidad_pasajeros;
+            DateTime fecha, salida;
+
+            capacidad_pasajeros = int.Parse(txtCantPasajeros.Text);
+            placa = txtPlaca.Text ;
+            codigo = txtCodigo.Text;
+            origen = comboBoxOrigen.Text;
+            destino = comboBoxDestino.Text;
+            fecha = Convert.ToDateTime(dtimeFecha.Text);
+            salida = Convert.ToDateTime(dtimeHoraSalida.Text);
+            if (string.IsNullOrEmpty(placa) || string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(origen) || string.IsNullOrEmpty(Convert.ToString(capacidad_pasajeros)))
+            {
+                result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+            }
+            else
+            {
+
+            }
+
+
+
+
+                
+          
+
         }
     }
 }
