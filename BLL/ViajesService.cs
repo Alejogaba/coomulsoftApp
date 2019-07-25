@@ -50,10 +50,10 @@ namespace BLL
         }
 
 
-        public Rutas Buscar(int cod)
+        public Viaje Buscar(int cod)
         {
             conexion.Open();
-            Rutas cd = new Rutas();
+            Viaje cd = new Viaje();
             cd = viajesrepository.Buscar(cod);
             conexion.Close();
             return cd;

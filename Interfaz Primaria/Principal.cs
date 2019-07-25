@@ -211,7 +211,15 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
             AbrirFormulario<FormRutas>();
         }
 
-       
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms["AdmConductores"].Close();
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {

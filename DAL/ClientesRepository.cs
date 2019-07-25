@@ -61,7 +61,7 @@ namespace DAL
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "Select * from Clientes Where [Codigo viaje]=@codigo";
-                cmd.Parameters.Add("@codigo_viaje", SqlDbType.Int).Value = codigo;
+                Comando.Parameters.Add("@codigo_viaje", SqlDbType.Int).Value = codigo;
                 Reader = Comando.ExecuteReader();
 
                 while (Reader.Read())

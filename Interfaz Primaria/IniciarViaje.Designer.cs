@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IniciarViaje));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxOrigen = new System.Windows.Forms.ComboBox();
             this.comboBoxDestino = new System.Windows.Forms.ComboBox();
             this.dtimeHoraSalida = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,6 +41,10 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.PanelPlanilla = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtLicencia = new System.Windows.Forms.Label();
+            this.txtCelular = new System.Windows.Forms.Label();
+            this.txtIdentificacion = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -48,24 +53,35 @@
             this.comboBoxBuscarConductor = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtCantPasajeros = new System.Windows.Forms.Label();
+            this.txtPlaca = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxBuscarVehiculo = new System.Windows.Forms.ComboBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
-            this.txtCodigo = new System.Windows.Forms.Label();
-            this.txtPlaca = new System.Windows.Forms.Label();
-            this.txtCantPasajeros = new System.Windows.Forms.Label();
-            this.comboBoxOrigen = new System.Windows.Forms.ComboBox();
-            this.txtNombre = new System.Windows.Forms.Label();
-            this.txtIdentificacion = new System.Windows.Forms.Label();
-            this.txtCelular = new System.Windows.Forms.Label();
-            this.txtLicencia = new System.Windows.Forms.Label();
+            this.labelIdentificacion = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.labelcontador = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.labelmaximo = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelPlanilla.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +103,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(419, 139);
             this.panel1.TabIndex = 3;
+            // 
+            // comboBoxOrigen
+            // 
+            this.comboBoxOrigen.FormattingEnabled = true;
+            this.comboBoxOrigen.Location = new System.Drawing.Point(186, 10);
+            this.comboBoxOrigen.Name = "comboBoxOrigen";
+            this.comboBoxOrigen.Size = new System.Drawing.Size(201, 21);
+            this.comboBoxOrigen.TabIndex = 11;
             // 
             // comboBoxDestino
             // 
@@ -204,6 +228,46 @@
             this.panel4.Size = new System.Drawing.Size(419, 138);
             this.panel4.TabIndex = 12;
             // 
+            // txtLicencia
+            // 
+            this.txtLicencia.AutoSize = true;
+            this.txtLicencia.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtLicencia.Location = new System.Drawing.Point(106, 113);
+            this.txtLicencia.Name = "txtLicencia";
+            this.txtLicencia.Size = new System.Drawing.Size(85, 13);
+            this.txtLicencia.TabIndex = 17;
+            this.txtLicencia.Text = "--------------------------";
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.AutoSize = true;
+            this.txtCelular.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtCelular.Location = new System.Drawing.Point(106, 91);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(85, 13);
+            this.txtCelular.TabIndex = 16;
+            this.txtCelular.Text = "--------------------------";
+            // 
+            // txtIdentificacion
+            // 
+            this.txtIdentificacion.AutoSize = true;
+            this.txtIdentificacion.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtIdentificacion.Location = new System.Drawing.Point(106, 45);
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(85, 13);
+            this.txtIdentificacion.TabIndex = 15;
+            this.txtIdentificacion.Text = "--------------------------";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.AutoSize = true;
+            this.txtNombre.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtNombre.Location = new System.Drawing.Point(106, 67);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(85, 13);
+            this.txtNombre.TabIndex = 14;
+            this.txtNombre.Text = "--------------------------";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -268,6 +332,21 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.labelmaximo);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.labelcontador);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.labelIdentificacion);
             this.panel3.Location = new System.Drawing.Point(12, 298);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(419, 138);
@@ -290,6 +369,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(419, 138);
             this.panel2.TabIndex = 10;
+            // 
+            // txtCantPasajeros
+            // 
+            this.txtCantPasajeros.AutoSize = true;
+            this.txtCantPasajeros.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtCantPasajeros.Location = new System.Drawing.Point(106, 110);
+            this.txtCantPasajeros.Name = "txtCantPasajeros";
+            this.txtCantPasajeros.Size = new System.Drawing.Size(85, 13);
+            this.txtCantPasajeros.TabIndex = 13;
+            this.txtCantPasajeros.Text = "--------------------------";
+            // 
+            // txtPlaca
+            // 
+            this.txtPlaca.AutoSize = true;
+            this.txtPlaca.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPlaca.Location = new System.Drawing.Point(106, 77);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(85, 13);
+            this.txtPlaca.TabIndex = 12;
+            this.txtPlaca.Text = "--------------------------";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.AutoSize = true;
+            this.txtCodigo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtCodigo.Location = new System.Drawing.Point(106, 43);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(85, 13);
+            this.txtCodigo.TabIndex = 11;
+            this.txtCodigo.Text = "--------------------------";
             // 
             // pictureBox1
             // 
@@ -358,83 +467,130 @@
             this.btnFinalizar.UseVisualStyleBackColor = false;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click_1);
             // 
-            // txtCodigo
+            // labelIdentificacion
             // 
-            this.txtCodigo.AutoSize = true;
-            this.txtCodigo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCodigo.Location = new System.Drawing.Point(106, 43);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(85, 13);
-            this.txtCodigo.TabIndex = 11;
-            this.txtCodigo.Text = "--------------------------";
+            this.labelIdentificacion.AutoSize = true;
+            this.labelIdentificacion.Location = new System.Drawing.Point(29, 20);
+            this.labelIdentificacion.Name = "labelIdentificacion";
+            this.labelIdentificacion.Size = new System.Drawing.Size(70, 13);
+            this.labelIdentificacion.TabIndex = 0;
+            this.labelIdentificacion.Text = "Identificacion";
             // 
-            // txtPlaca
+            // label13
             // 
-            this.txtPlaca.AutoSize = true;
-            this.txtPlaca.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtPlaca.Location = new System.Drawing.Point(106, 77);
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(85, 13);
-            this.txtPlaca.TabIndex = 12;
-            this.txtPlaca.Text = "--------------------------";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(29, 45);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Nombres";
             // 
-            // txtCantPasajeros
+            // label14
             // 
-            this.txtCantPasajeros.AutoSize = true;
-            this.txtCantPasajeros.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCantPasajeros.Location = new System.Drawing.Point(106, 110);
-            this.txtCantPasajeros.Name = "txtCantPasajeros";
-            this.txtCantPasajeros.Size = new System.Drawing.Size(85, 13);
-            this.txtCantPasajeros.TabIndex = 13;
-            this.txtCantPasajeros.Text = "--------------------------";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(30, 67);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Apellidos";
             // 
-            // comboBoxOrigen
+            // label15
             // 
-            this.comboBoxOrigen.FormattingEnabled = true;
-            this.comboBoxOrigen.Location = new System.Drawing.Point(186, 10);
-            this.comboBoxOrigen.Name = "comboBoxOrigen";
-            this.comboBoxOrigen.Size = new System.Drawing.Size(201, 21);
-            this.comboBoxOrigen.TabIndex = 11;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(29, 113);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(52, 13);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Direccion";
             // 
-            // txtNombre
+            // label16
             // 
-            this.txtNombre.AutoSize = true;
-            this.txtNombre.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtNombre.Location = new System.Drawing.Point(106, 67);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(85, 13);
-            this.txtNombre.TabIndex = 14;
-            this.txtNombre.Text = "--------------------------";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(29, 91);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Telefono";
             // 
-            // txtIdentificacion
+            // labelcontador
             // 
-            this.txtIdentificacion.AutoSize = true;
-            this.txtIdentificacion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtIdentificacion.Location = new System.Drawing.Point(106, 45);
-            this.txtIdentificacion.Name = "txtIdentificacion";
-            this.txtIdentificacion.Size = new System.Drawing.Size(85, 13);
-            this.txtIdentificacion.TabIndex = 15;
-            this.txtIdentificacion.Text = "--------------------------";
+            this.labelcontador.AutoSize = true;
+            this.labelcontador.Location = new System.Drawing.Point(157, -1);
+            this.labelcontador.Name = "labelcontador";
+            this.labelcontador.Size = new System.Drawing.Size(13, 13);
+            this.labelcontador.TabIndex = 5;
+            this.labelcontador.Text = "1";
             // 
-            // txtCelular
+            // label12
             // 
-            this.txtCelular.AutoSize = true;
-            this.txtCelular.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCelular.Location = new System.Drawing.Point(106, 91);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(85, 13);
-            this.txtCelular.TabIndex = 16;
-            this.txtCelular.Text = "--------------------------";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(177, -1);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(19, 13);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "de";
             // 
-            // txtLicencia
+            // labelmaximo
             // 
-            this.txtLicencia.AutoSize = true;
-            this.txtLicencia.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtLicencia.Location = new System.Drawing.Point(106, 113);
-            this.txtLicencia.Name = "txtLicencia";
-            this.txtLicencia.Size = new System.Drawing.Size(85, 13);
-            this.txtLicencia.TabIndex = 17;
-            this.txtLicencia.Text = "--------------------------";
+            this.labelmaximo.AutoSize = true;
+            this.labelmaximo.Location = new System.Drawing.Point(203, -1);
+            this.labelmaximo.Name = "labelmaximo";
+            this.labelmaximo.Size = new System.Drawing.Size(16, 13);
+            this.labelmaximo.TabIndex = 7;
+            this.labelmaximo.Text = "---";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(137, 15);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 20);
+            this.textBox1.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(137, 38);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(166, 20);
+            this.textBox2.TabIndex = 9;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(137, 60);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(166, 20);
+            this.textBox3.TabIndex = 10;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(137, 83);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(166, 20);
+            this.textBox4.TabIndex = 11;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(137, 105);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(166, 20);
+            this.textBox5.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(380, 102);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "->";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(345, 102);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(29, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "<-";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // IniciarViaje
             // 
@@ -451,6 +607,8 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -492,5 +650,20 @@
         private System.Windows.Forms.Label txtCelular;
         private System.Windows.Forms.Label txtIdentificacion;
         private System.Windows.Forms.Label txtNombre;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelmaximo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelcontador;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelIdentificacion;
     }
 }

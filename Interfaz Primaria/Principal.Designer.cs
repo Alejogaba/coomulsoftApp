@@ -235,6 +235,7 @@
             this.label2.Size = new System.Drawing.Size(138, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "COOMULSOFT";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // pictureBox2
             // 
@@ -244,7 +245,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(101, 101);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
-           
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // btnRutas
             // 

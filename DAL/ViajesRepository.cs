@@ -79,7 +79,7 @@ namespace DAL
         }
 
 
-        public Rutas Buscar(int cod)
+        public Viaje Buscar(int cod)
         {
             Viaje viaje = new Viaje();
             using (var Comando = Conexion.CreateCommand())
