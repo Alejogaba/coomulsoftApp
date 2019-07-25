@@ -26,7 +26,7 @@ namespace DAL
             {
                 using (var cmd = Conexion.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Clientes([Codigo viaje],[Identificacion],[Nombres],[Apellidos],[Telefono],[Direccion]" +
+                    cmd.CommandText = "INSERT INTO Clientes([Codigo viaje],[Identificacion],[Nombres],[Apellidos],[Telefono],[Direccion])" +
                         "VALUES(@codigo_viaje,@id,@nombres,@apellidos,@telefono,@direcion)";
 
 
