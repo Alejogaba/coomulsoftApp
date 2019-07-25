@@ -168,7 +168,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(24, 89);
+            this.label2.Location = new System.Drawing.Point(34, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 23);
             this.label2.TabIndex = 6;
@@ -180,7 +180,7 @@
             // 
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(45, 6);
+            this.btnHome.Location = new System.Drawing.Point(55, 6);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(101, 101);
             this.btnHome.TabIndex = 5;
