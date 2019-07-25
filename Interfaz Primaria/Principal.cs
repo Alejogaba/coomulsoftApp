@@ -211,6 +211,8 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
             AbrirFormulario<Rutas>();
         }
 
+       
+
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
             lx = this.Location.X;
