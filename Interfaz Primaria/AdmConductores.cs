@@ -28,7 +28,7 @@ namespace Interfaz_Primaria
            
             this.ttMensaje.SetToolTip(this.btnBorrarFoto, "Borrar la foto");
             this.ttMensaje.SetToolTip(this.btnCargarFoto, "Subir la foto");
-            this.ttMensaje.SetToolTip(this.btnBuscar, "Buscar Conductor");
+            this.ttMensaje.SetToolTip(this.pictur, "Buscar Conductor");
             this.ttMensaje.SetToolTip(this.btnRefresh, "Actualizar tabla");
         }
 

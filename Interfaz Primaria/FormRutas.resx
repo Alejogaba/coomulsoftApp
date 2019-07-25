@@ -121,6 +121,15 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAADFSURBVFhH7ZQxCsMwDEU99yhdPdo+S4/WS+UgCWRvpfINRiTUpqpEwA/+EIGib0l2mEx6iTHe
+        UkpPfNpSSrnnnBfSCyE76NQPKrxzcVMDteW1sKmBtuWaogOtKHGObLm2UOYcdwPMv0ZA2lDiO65L2CJH
+        grAtrg9RxfUpHoFNsll82oNdWXhsCNkCA6ydFxhhOxoDHw2PhBJW+RMF9Y/kIFlLfSM5SNRSt4FNJGrI
+        7lbI4sNL+CtNcddr6PcQmbd8cnFCeANROoxIXyZ2TQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAzVJREFUWEe9
