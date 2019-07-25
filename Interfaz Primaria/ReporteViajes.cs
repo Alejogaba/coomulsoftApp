@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using iTextSharp.text;
+using iTextSharp.text.html;
+using iTextSharp.text.pdf;
+using iTextSharp.text.html.simpleparser;
+using System.IO;
 
 namespace Interfaz_Primaria
 {
@@ -24,6 +29,15 @@ namespace Interfaz_Primaria
         {
             DateTime fecha = Convert.ToDateTime(dateTimePicker1.Text);
             dataGridView1.DataSource = service.Consultar_por_fecha(fecha);
+        }
+      
+        public void exportar_pdf()
+        {
+            
+        }
+        private void Button2_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }
