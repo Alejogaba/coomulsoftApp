@@ -40,11 +40,22 @@ namespace BLL
 
         public IList<Conductor> Consultar()
         {
-            conexion.Open();
-            conductores = new List<Conductor>();
-            conductores = ConductorRepository.Consultar();
-            conexion.Close();
-            return conductores;
+            string e;
+            try
+            {
+                conexion.Open();
+                conductores = new List<Conductor>();
+                conductores = ConductorRepository.Consultar();
+                conexion.Close();
+                return conductores;
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                e = ex.Message;
+                return null;
+            }
+            
         }
     }
 }
