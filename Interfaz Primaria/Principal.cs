@@ -16,6 +16,7 @@ namespace Interfaz_Primaria
         public Principal()
         {
             InitializeComponent();
+            this.ttMensaje.SetToolTip(this.btnHome, "Cerrar todos los Formularios");
         }
         
 
@@ -213,7 +214,15 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
 
         private void PictureBox2_Click(object sender, EventArgs e)
         {
-            Application.OpenForms["AdmConductores"].Close();
+            if (Application.OpenForms.OfType<AdmConductores>().Any())
+                Application.OpenForms["AdmConductores"].Close();
+            if (Application.OpenForms.OfType<FormRutas>().Any())
+                Application.OpenForms["FormRutas"].Close();
+            if (Application.OpenForms.OfType<AddVehiculo>().Any())
+                Application.OpenForms["AddVehiculo"].Close();
+            if (Application.OpenForms.OfType<IniciarViaje>().Any())
+                Application.OpenForms["IniciarViaje"].Close();
+
         }
 
         private void Label2_Click(object sender, EventArgs e)

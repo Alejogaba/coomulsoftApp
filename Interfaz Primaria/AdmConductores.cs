@@ -179,11 +179,12 @@ namespace Interfaz_Primaria
             
 
         }
-
+      
         private void AdmConductores_Load(object sender, EventArgs e)
         {
-           
+          
         }
+      
 
         private void ComboBoxBuscarPorCedula_SelectedIndexChanged(object sender, EventArgs e)
         {
