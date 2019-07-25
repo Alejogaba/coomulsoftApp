@@ -125,6 +125,10 @@ namespace Interfaz_Primaria
 
         private void ComboBoxBuscarCodigo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string cod = comboBoxBuscarCodigo.Text;
+            Vehiculo con = new Vehiculo();
+            con = servicevehiculo.Buscar(cod);
+            txtCodigo.Text = con.Codigo;
             panelconductor.Enabled = true;
             cargarconductor();
         }
@@ -158,12 +162,24 @@ namespace Interfaz_Primaria
             codigo_vehiculo = txtCodigo.Text;
             cedula = comboBoxconductor.Text;
             serviceconductor.Asignar_vehiculo(codigo_vehiculo,cedula);
+            Limpiar_conductor();
+            cargarconductor();
         }
 
         private void BtnDesasignarVehiculo_Click(object sender, EventArgs e)
         {
             string cedula = comboBoxconductor.Text;
             serviceconductor.Desasignar_vehiculo(cedula);
+            Limpiar_conductor();
+            cargarconductor();
+        }
+
+        public void Limpiar_conductor()
+        {
+            labelnombre.Text = "----------------------------------------------------------";
+            labetelefonno.Text = "----------------------------------------------------------";
+            labelapellido.Text = "----------------------------------------------------------";
+            pictureBoxconductor.Image = pictureBoxconductor.InitialImage; 
         }
     }
 }

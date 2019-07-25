@@ -65,30 +65,22 @@ namespace DAL
 
         public string Asignar(string vehiculo,string ced)
         {
-            try
-            {
-                using (var cmd = Conexion.CreateCommand())
+           
+                using (var Comando = Conexion.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Conductores SET [Vehiculo asignado]=@vehiculo WHERE Cedula=@cedula ";
+                    Comando.CommandText = "UPDATE Conductores SET [Vehiculo asignado]=@vehiculo WHERE Cedula=@cedula";
 
 
-                    cmd.Parameters.Add("@vehiculo", SqlDbType.VarChar).Value = vehiculo;
-                    cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = ced;
+                    Comando.Parameters.Add("@vehiculo", SqlDbType.VarChar).Value = vehiculo;
+                    Comando.Parameters.Add("@cedula", SqlDbType.VarChar).Value = ced;
 
 
-                    int i = cmd.ExecuteNonQuery();
+                    int i = Comando.ExecuteNonQuery();
 
-                    return (i > 0) ? "Se asigno correctamente el vehiculo "+vehiculo : "No se pudo asignar";
+                    return (i > 0) ? "Se asigno correctamente el vehiculo" : "No se pudo asignar";
 
                 }
 
-
-
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
 
 
         }

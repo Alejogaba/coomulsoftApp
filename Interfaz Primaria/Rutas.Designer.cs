@@ -175,6 +175,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Añadir";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // textBoxDptoDestino
             // 
