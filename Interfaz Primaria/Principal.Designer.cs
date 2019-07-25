@@ -33,13 +33,13 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormularios = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnNuevoViaje = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnHome = new System.Windows.Forms.PictureBox();
             this.btnRutas = new System.Windows.Forms.Button();
+            this.btnNuevoViaje = new System.Windows.Forms.Button();
             this.PanelDesplegableReportes = new System.Windows.Forms.Panel();
             this.btnConductores = new System.Windows.Forms.Button();
             this.btnPasajeros = new System.Windows.Forms.Button();
@@ -55,10 +55,9 @@
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.panelContenedor.SuspendLayout();
             this.panelFormularios.SuspendLayout();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.PanelDesplegableReportes.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -98,31 +97,35 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.panel1.Controls.Add(this.btnNuevoViaje);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1050, 134);
             this.panel1.TabIndex = 5;
             // 
-            // btnNuevoViaje
+            // label2
             // 
-            this.btnNuevoViaje.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnNuevoViaje.FlatAppearance.BorderSize = 0;
-            this.btnNuevoViaje.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnNuevoViaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnNuevoViaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoViaje.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnNuevoViaje.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoViaje.Image")));
-            this.btnNuevoViaje.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevoViaje.Location = new System.Drawing.Point(37, 11);
-            this.btnNuevoViaje.Name = "btnNuevoViaje";
-            this.btnNuevoViaje.Size = new System.Drawing.Size(191, 101);
-            this.btnNuevoViaje.TabIndex = 0;
-            this.btnNuevoViaje.Text = "INICIAR NUEVO VIAJE";
-            this.btnNuevoViaje.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNuevoViaje.UseVisualStyleBackColor = true;
-            this.btnNuevoViaje.Click += new System.EventHandler(this.btnNuevoViaje_Click);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(34, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "COOMULSOFT";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(55, 6);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(101, 101);
+            this.btnHome.TabIndex = 5;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -150,8 +153,9 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.panelMenu.Controls.Add(this.label2);
-            this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Controls.Add(this.btnRutas);
+            this.panelMenu.Controls.Add(this.btnHome);
+            this.panelMenu.Controls.Add(this.btnNuevoViaje);
             this.panelMenu.Controls.Add(this.PanelDesplegableReportes);
             this.panelMenu.Controls.Add(this.btnAdmVehiculos);
             this.panelMenu.Controls.Add(this.btnReporte);
@@ -161,31 +165,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(200, 610);
             this.panelMenu.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(34, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 23);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "COOMULSOFT";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(55, 6);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(101, 101);
-            this.btnHome.TabIndex = 5;
-            this.btnHome.TabStop = false;
-            this.btnHome.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // btnRutas
             // 
@@ -197,13 +176,32 @@
             this.btnRutas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
             this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutas.Location = new System.Drawing.Point(0, 540);
+            this.btnRutas.Location = new System.Drawing.Point(0, 544);
             this.btnRutas.Name = "btnRutas";
-            this.btnRutas.Size = new System.Drawing.Size(200, 70);
+            this.btnRutas.Size = new System.Drawing.Size(200, 42);
             this.btnRutas.TabIndex = 4;
             this.btnRutas.Text = "Rutas";
             this.btnRutas.UseVisualStyleBackColor = true;
             this.btnRutas.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
+            // btnNuevoViaje
+            // 
+            this.btnNuevoViaje.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnNuevoViaje.FlatAppearance.BorderSize = 0;
+            this.btnNuevoViaje.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnNuevoViaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnNuevoViaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoViaje.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnNuevoViaje.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoViaje.Image")));
+            this.btnNuevoViaje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoViaje.Location = new System.Drawing.Point(3, 130);
+            this.btnNuevoViaje.Name = "btnNuevoViaje";
+            this.btnNuevoViaje.Size = new System.Drawing.Size(200, 42);
+            this.btnNuevoViaje.TabIndex = 0;
+            this.btnNuevoViaje.Text = "            Iniciar Nuevo Viaje";
+            this.btnNuevoViaje.UseVisualStyleBackColor = true;
+            this.btnNuevoViaje.Click += new System.EventHandler(this.btnNuevoViaje_Click);
             // 
             // PanelDesplegableReportes
             // 
@@ -211,7 +209,7 @@
             this.PanelDesplegableReportes.Controls.Add(this.btnConductores);
             this.PanelDesplegableReportes.Controls.Add(this.btnPasajeros);
             this.PanelDesplegableReportes.Controls.Add(this.btnViajes);
-            this.PanelDesplegableReportes.Location = new System.Drawing.Point(3, 382);
+            this.PanelDesplegableReportes.Location = new System.Drawing.Point(3, 369);
             this.PanelDesplegableReportes.Name = "PanelDesplegableReportes";
             this.PanelDesplegableReportes.Size = new System.Drawing.Size(194, 169);
             this.PanelDesplegableReportes.TabIndex = 3;
@@ -280,9 +278,9 @@
             this.btnAdmVehiculos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdmVehiculos.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmVehiculos.Image")));
             this.btnAdmVehiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmVehiculos.Location = new System.Drawing.Point(0, 221);
+            this.btnAdmVehiculos.Location = new System.Drawing.Point(0, 256);
             this.btnAdmVehiculos.Name = "btnAdmVehiculos";
-            this.btnAdmVehiculos.Size = new System.Drawing.Size(200, 70);
+            this.btnAdmVehiculos.Size = new System.Drawing.Size(200, 42);
             this.btnAdmVehiculos.TabIndex = 3;
             this.btnAdmVehiculos.Text = "               Adm Vehiculos";
             this.btnAdmVehiculos.UseVisualStyleBackColor = true;
@@ -298,9 +296,9 @@
             this.btnReporte.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(0, 306);
+            this.btnReporte.Location = new System.Drawing.Point(0, 323);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(200, 70);
+            this.btnReporte.Size = new System.Drawing.Size(200, 42);
             this.btnReporte.TabIndex = 2;
             this.btnReporte.Text = "    Reporte";
             this.btnReporte.UseVisualStyleBackColor = true;
@@ -316,11 +314,11 @@
             this.btnAdmConductores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdmConductores.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmConductores.Image")));
             this.btnAdmConductores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmConductores.Location = new System.Drawing.Point(3, 131);
+            this.btnAdmConductores.Location = new System.Drawing.Point(0, 192);
             this.btnAdmConductores.Name = "btnAdmConductores";
-            this.btnAdmConductores.Size = new System.Drawing.Size(200, 70);
+            this.btnAdmConductores.Size = new System.Drawing.Size(200, 42);
             this.btnAdmConductores.TabIndex = 1;
-            this.btnAdmConductores.Text = "                     Adm Conductores";
+            this.btnAdmConductores.Text = "             Adm Conductores";
             this.btnAdmConductores.UseVisualStyleBackColor = true;
             this.btnAdmConductores.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -408,11 +406,10 @@
             this.panelContenedor.ResumeLayout(false);
             this.panelFormularios.ResumeLayout(false);
             this.panelFormularios.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.PanelDesplegableReportes.ResumeLayout(false);
             this.panelTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();

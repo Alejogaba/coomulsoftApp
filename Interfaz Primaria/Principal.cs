@@ -22,7 +22,7 @@ namespace Interfaz_Primaria
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            btnReporte.Location = new Point(0, 306);
+            btnReporte.Location = new Point(0, 323);
             btnRutas.Location = new Point(0, 389);
             PanelDesplegableReportes.Hide();
 
@@ -133,7 +133,7 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
 
         private void button2_Click(object sender, EventArgs e)
         {
-            btnReporte.BackColor = Color.FromArgb(7, 124, 131);
+            
             if (PanelDesplegableReportes.Visible ==true)
             {
                 PanelDesplegableReportes.Visible = false;
@@ -141,14 +141,19 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
             else
             {
                 PanelDesplegableReportes.Visible = true;
+               
             }
-            btnReporte.Location = new Point(0, 306);
-            PanelDesplegableReportes.Location = new Point(3, 382);
-            btnRutas.Location = new Point(0, 540);
+            btnReporte.Location = new Point(0, 323);
+            PanelDesplegableReportes.Location = new Point(3, 369);
+            btnRutas.Location = new Point(0, 544);
+           
+
             if (PanelDesplegableReportes.Visible == false)
             {
-                btnReporte.Location = new Point(0, 306);
+                btnReporte.Location = new Point(0, 323);
                 btnRutas.Location = new Point(3, 389);
+
+              
             }
         }
         private void CloseForms(object sender,FormClosedEventArgs e)
@@ -237,6 +242,25 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
                 Application.OpenForms["ReportePasajeros"].Close();
             if (Application.OpenForms.OfType<ReporteViajes>().Any())
                 Application.OpenForms["ReporteViajes"].Close();
+            
+            if (PanelDesplegableReportes.Visible == true)
+            {
+                PanelDesplegableReportes.Visible = false;
+            }
+            else
+            {
+                
+            }
+            btnReporte.Location = new Point(0, 323);
+            PanelDesplegableReportes.Location = new Point(3, 365);
+            btnRutas.Location = new Point(0, 537);
+
+            if (PanelDesplegableReportes.Visible == false)
+            {
+                btnReporte.Location = new Point(0, 323);
+                btnRutas.Location = new Point(3, 389);
+
+            }
 
         }
 
