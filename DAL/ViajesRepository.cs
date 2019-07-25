@@ -26,8 +26,8 @@ namespace DAL
             {
                 using (var cmd = Conexion.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Viajes([Codigo viaje],[Cedula conductor],[Codigo vehiculo],[Fecha salida],[Hora salida],[Fecha llegada],[Hora llegada],[Ciudad origen],[Ciudad destino])" +
-                        "Values(@codigo_viaje,@cedula,@codigo,@fecha_salida,@hora_salida,@origen,@estino)";
+                    cmd.CommandText = "INSERT INTO Viajes([Codigo viaje],[Cedula conductor],[Codigo vehiculo],[Fecha salida],[Hora salida],[Ciudad origen],[Ciudad destino])" +
+                        "Values(@codigo_viaje,@cedula,@codigo,@fecha_salida,@hora_salida,@origen,@destino)";
 
 
                     cmd.Parameters.Add("@codigo_viaje", SqlDbType.Int).Value = viaje.Codigo_viaje;
@@ -35,10 +35,8 @@ namespace DAL
                     cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = viaje.Cod_vehiculo;
                     cmd.Parameters.Add("@fecha_salida", SqlDbType.Date).Value = viaje.Fecha_salida;
                     cmd.Parameters.Add("@hora_salida", SqlDbType.Date).Value = viaje.Hora_salida;
-                    cmd.Parameters.Add("@fecha_llegada", SqlDbType.Date).Value = viaje.Fecha_llegada;
-                    cmd.Parameters.Add("@hora_llegada", SqlDbType.Date).Value = viaje.Hora_llegada;
-                    cmd.Parameters.Add("@origen", SqlDbType.VarChar).Value = viaje.Fecha_salida;
-                    cmd.Parameters.Add("@destino", SqlDbType.VarChar).Value = viaje.Hora_salida;
+                    cmd.Parameters.Add("@origen", SqlDbType.VarChar).Value = viaje.Ciudad_origen;
+                    cmd.Parameters.Add("@destino", SqlDbType.VarChar).Value = viaje.Ciudad_destino;
 
 
 
