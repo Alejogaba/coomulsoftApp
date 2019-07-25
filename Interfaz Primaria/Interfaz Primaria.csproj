@@ -91,6 +91,11 @@
     <Compile Include="AdmVehiculos.Designer.cs">
       <DependentUpon>AdmVehiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="CoomulsoftAppDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoomulsoftAppDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="IniciarViaje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +176,17 @@
     <EmbeddedResource Include="Rutas.resx">
       <DependentUpon>Rutas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CoomulsoftAppDataSet.xsc">
+      <DependentUpon>CoomulsoftAppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CoomulsoftAppDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoomulsoftAppDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CoomulsoftAppDataSet.xss">
+      <DependentUpon>CoomulsoftAppDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

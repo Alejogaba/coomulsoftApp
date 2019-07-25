@@ -48,6 +48,16 @@ namespace BLL
           
             
         }
+        public Conductor Buscar(string ced)
+        {
+            conexion.Open();
+            Conductor cd = new Conductor();
+            cd = ConductorRepository.Buscar(ced);
+            conexion.Close();
+            return cd;
+
+
+        }
         public string Eliminar(string cedula)
         {
             string msg;
