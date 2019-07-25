@@ -72,7 +72,7 @@ namespace Interfaz_Primaria
         public void Guardar ()
         {
             byte[] byteArrayImagen = ImageToByteArray(pictureBoxVehiculo.Image);
-            string placa, codigo, nombre_modelo, año_modelo, tipo,
+            string placa, codigo, nombre_modelo, año_modelo, tipo;
                int capacidad_pasajeros;
             float gasolina, capacidad_maletero;
             placa = txtPlaca.Text + "-" + txtPlaca2.Text;
@@ -84,7 +84,7 @@ namespace Interfaz_Primaria
             gasolina = float.Parse(txtGasolina.Text);
             capacidad_maletero = float.Parse(txtCapacidaMaletero.Text);
 
-            if (string.IsNullOrEmpty(placa)||string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(capacidad_pasajeros) || string.IsNullOrEmpty(gasolina) || string.IsNullOrEmpty(capacidad_maletero))
+            if (string.IsNullOrEmpty(placa)||string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(Convert.ToString(capacidad_pasajeros)) || string.IsNullOrEmpty(Convert.ToString(gasolina)) || string.IsNullOrEmpty(Convert.ToString(capacidad_maletero)))
             {
                 result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             }
@@ -93,6 +93,7 @@ namespace Interfaz_Primaria
                 Vehiculo vehiculo = new Vehiculo(byteArrayImagen, codigo, placa, nombre_modelo, tipo, capacidad_pasajeros, capacidad_maletero, gasolina);
                   result = MsgBox.Show(service.Guardar(vehiculo), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
                 Cargar_combobox();
+                panelconductor.Enabled = true;
             }
 
 
@@ -120,6 +121,16 @@ namespace Interfaz_Primaria
         }
 
         private void ComboBoxBuscarCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            panelconductor.Enabled = true;
+        }
+
+        public void cargarconductor()
+        {
+
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

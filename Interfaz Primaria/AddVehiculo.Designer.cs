@@ -58,18 +58,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelconductor = new System.Windows.Forms.Panel();
             this.btnDesasignarVehiculo = new System.Windows.Forms.Button();
             this.btnAsignarVehiculo = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.labetelefonno = new System.Windows.Forms.Label();
+            this.labelapellido = new System.Windows.Forms.Label();
+            this.labelnombre = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxconductor = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.ofdSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
@@ -77,7 +77,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVehiculo)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelconductor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -388,26 +388,27 @@
             this.label1.Text = "CODIGO";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // panel2
+            // panelconductor
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnDesasignarVehiculo);
-            this.panel2.Controls.Add(this.btnAsignarVehiculo);
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Location = new System.Drawing.Point(13, 408);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(975, 190);
-            this.panel2.TabIndex = 1;
+            this.panelconductor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelconductor.BackColor = System.Drawing.SystemColors.Control;
+            this.panelconductor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelconductor.Controls.Add(this.btnDesasignarVehiculo);
+            this.panelconductor.Controls.Add(this.btnAsignarVehiculo);
+            this.panelconductor.Controls.Add(this.labetelefonno);
+            this.panelconductor.Controls.Add(this.labelapellido);
+            this.panelconductor.Controls.Add(this.labelnombre);
+            this.panelconductor.Controls.Add(this.label16);
+            this.panelconductor.Controls.Add(this.label15);
+            this.panelconductor.Controls.Add(this.label14);
+            this.panelconductor.Controls.Add(this.pictureBox4);
+            this.panelconductor.Controls.Add(this.label13);
+            this.panelconductor.Controls.Add(this.comboBoxconductor);
+            this.panelconductor.Enabled = false;
+            this.panelconductor.Location = new System.Drawing.Point(13, 408);
+            this.panelconductor.Name = "panelconductor";
+            this.panelconductor.Size = new System.Drawing.Size(975, 190);
+            this.panelconductor.TabIndex = 1;
             // 
             // btnDesasignarVehiculo
             // 
@@ -435,35 +436,35 @@
             this.btnAsignarVehiculo.Text = "Asignar vehiculo";
             this.btnAsignarVehiculo.UseVisualStyleBackColor = false;
             // 
-            // label19
+            // labetelefonno
             // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label19.Location = new System.Drawing.Point(306, 139);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(181, 13);
-            this.label19.TabIndex = 28;
-            this.label19.Text = "----------------------------------------------------------";
+            this.labetelefonno.AutoSize = true;
+            this.labetelefonno.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labetelefonno.Location = new System.Drawing.Point(306, 139);
+            this.labetelefonno.Name = "labetelefonno";
+            this.labetelefonno.Size = new System.Drawing.Size(181, 13);
+            this.labetelefonno.TabIndex = 28;
+            this.labetelefonno.Text = "----------------------------------------------------------";
             // 
-            // label18
+            // labelapellido
             // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(306, 92);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(181, 13);
-            this.label18.TabIndex = 27;
-            this.label18.Text = "----------------------------------------------------------";
+            this.labelapellido.AutoSize = true;
+            this.labelapellido.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelapellido.Location = new System.Drawing.Point(306, 92);
+            this.labelapellido.Name = "labelapellido";
+            this.labelapellido.Size = new System.Drawing.Size(181, 13);
+            this.labelapellido.TabIndex = 27;
+            this.labelapellido.Text = "----------------------------------------------------------";
             // 
-            // label17
+            // labelnombre
             // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label17.Location = new System.Drawing.Point(306, 44);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(181, 13);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "----------------------------------------------------------";
+            this.labelnombre.AutoSize = true;
+            this.labelnombre.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelnombre.Location = new System.Drawing.Point(306, 44);
+            this.labelnombre.Name = "labelnombre";
+            this.labelnombre.Size = new System.Drawing.Size(181, 13);
+            this.labelnombre.TabIndex = 26;
+            this.labelnombre.Text = "----------------------------------------------------------";
             // 
             // label16
             // 
@@ -516,15 +517,16 @@
             this.label13.TabIndex = 21;
             this.label13.Text = "Buscar conductor por identificacion";
             // 
-            // comboBox1
+            // comboBoxconductor
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBoxconductor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(686, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(272, 21);
-            this.comboBox1.TabIndex = 4;
+            this.comboBoxconductor.FormattingEnabled = true;
+            this.comboBoxconductor.Location = new System.Drawing.Point(686, 12);
+            this.comboBoxconductor.Name = "comboBoxconductor";
+            this.comboBoxconductor.Size = new System.Drawing.Size(272, 21);
+            this.comboBoxconductor.TabIndex = 4;
+            this.comboBoxconductor.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -578,7 +580,7 @@
             this.ClientSize = new System.Drawing.Size(1000, 610);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelconductor);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddVehiculo";
@@ -586,8 +588,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVehiculo)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelconductor.ResumeLayout(false);
+            this.panelconductor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -615,15 +617,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panelconductor;
+        private System.Windows.Forms.ComboBox comboBoxconductor;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Button btnDesasignarVehiculo;
         private System.Windows.Forms.Button btnAsignarVehiculo;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label labetelefonno;
+        private System.Windows.Forms.Label labelapellido;
+        private System.Windows.Forms.Label labelnombre;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
