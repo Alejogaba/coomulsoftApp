@@ -55,13 +55,13 @@ namespace DAL
 
         }
 
-        public IList<Cliente> Consultar_por_codigo(int codigo)
+        public IList<Cliente> Consultar_por_codigo(string id)
         {
 
             using (var Comando = Conexion.CreateCommand())
             {
-                Comando.CommandText = "Select * from Clientes Where [Codigo viaje]=@codigo";
-                Comando.Parameters.Add("@codigo_viaje", SqlDbType.Int).Value = codigo;
+                Comando.CommandText = "Select * from Clientes Where Identificacion=@id";
+                Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
                 Reader = Comando.ExecuteReader();
 
                 while (Reader.Read())

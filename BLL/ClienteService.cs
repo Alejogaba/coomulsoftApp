@@ -38,11 +38,11 @@ namespace BLL
             }
         }
 
-        public IList<Cliente> Consultar_por_codigo(int cod)
+        public IList<Cliente> Consultar_por_identificacion(string id)
         {
             conexion.Open();
             clientes = new List<Cliente>();
-            clientes = clientesrepository.Consultar_por_codigo(cod);
+            clientes = clientesrepository.Consultar_por_codigo(id);
             conexion.Close();
             return clientes;
 
