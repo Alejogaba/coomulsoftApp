@@ -34,7 +34,7 @@ namespace DAL
                     cmd.Parameters.Add("@dptoporigen", SqlDbType.VarChar).Value = ruta.Dpto_Origen;
                     cmd.Parameters.Add("@destino", SqlDbType.VarChar).Value = ruta.Ciudad_Destino;
                     cmd.Parameters.Add("@dptodestino", SqlDbType.VarChar).Value = ruta.Dpto_Destino;
-                    cmd.Parameters.Add("@Tarifa", SqlDbType.VarChar).Value = ruta.Tarifa;
+                    cmd.Parameters.Add("@Tarifa", SqlDbType.Int).Value = ruta.Tarifa;
 
 
                     int i = cmd.ExecuteNonQuery();
@@ -116,7 +116,7 @@ namespace DAL
             rutas.Dpto_Origen = (string)reader["Departamento origen"];
             rutas.Ciudad_Destino = (string)reader["Destino"];
             rutas.Dpto_Destino = (string)reader["Departamento destino"];
-            rutas.Tarifa= (double)reader["Tarifa"];
+            rutas.Tarifa= (int)reader["Tarifa"];
 
             return rutas;
         }
