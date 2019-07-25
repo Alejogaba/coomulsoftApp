@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using xDialog;
 
 namespace Interfaz_Primaria
 {
     public partial class AddVehiculo : Form
     {
+        DialogResult result;
         public AddVehiculo()
         {
             InitializeComponent();
@@ -54,6 +56,30 @@ namespace Interfaz_Primaria
         private void button6_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        public void Guardar ()
+        {
+            string placa, codigo, nombre_modelo, año_modelo, tipo, capacidad_pasajeros, gasolina, capacidad_maletero;
+            placa = txtPlaca.Text + "-" + txtPlaca2.Text;
+            codigo = txtCodigo.Text;
+            nombre_modelo = txtNombreModelo.Text;
+            año_modelo = txtAñoModelo.Text;
+            tipo = txtTipo.Text;
+            capacidad_pasajeros = txtCapacidadPasajeros.Text;
+            gasolina = txtGasolina.Text;
+            capacidad_maletero = txtCapacidaMaletero.Text;
+
+            if (string.IsNullOrEmpty(placa)||string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(capacidad_pasajeros) || string.IsNullOrEmpty(gasolina) || string.IsNullOrEmpty(capacidad_maletero))
+            {
+                result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+            }
+
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Guardar();
         }
     }
 }
