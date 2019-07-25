@@ -21,7 +21,7 @@ namespace Interfaz_Primaria
             this.ttMensajes.SetToolTip(this.btnCargar, "Subir la foto");
         }
 
-       
+
 
         private void Label1_Click(object sender, EventArgs e)
         {
@@ -40,7 +40,7 @@ namespace Interfaz_Primaria
                 string ruta = ofdSeleccionarImagen.FileName;
                 pictureBoxVehiculo.Image = Image.FromFile(ruta);
             }
-       
+
         }
 
         private void PictureBoxVehiculo_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace Interfaz_Primaria
         {
             this.Close();
         }
-        public void Guardar ()
+        public void Guardar()
         {
             string placa, codigo, nombre_modelo, año_modelo, tipo, capacidad_pasajeros, gasolina, capacidad_maletero;
             placa = txtPlaca.Text + "-" + txtPlaca2.Text;
@@ -69,7 +69,7 @@ namespace Interfaz_Primaria
             gasolina = txtGasolina.Text;
             capacidad_maletero = txtCapacidaMaletero.Text;
 
-            if (string.IsNullOrEmpty(placa)||string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(capacidad_pasajeros) || string.IsNullOrEmpty(gasolina) || string.IsNullOrEmpty(capacidad_maletero))
+            if (string.IsNullOrEmpty(placa) || string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(capacidad_pasajeros) || string.IsNullOrEmpty(gasolina) || string.IsNullOrEmpty(capacidad_maletero))
             {
                 result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             }
@@ -80,6 +80,18 @@ namespace Interfaz_Primaria
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Guardar();
+        }
+        public void Limpiar()
+        {
+            txtAñoModelo.Clear();
+            txtCapacidadPasajeros.Clear();
+            txtCapacidaMaletero.Clear();
+            txtCodigo.Clear();
+            txtGasolina.Clear();
+            txtNombreModelo.Clear();
+            txtPlaca.Clear();
+            txtPlaca2.Clear();
+            txtTipo.Clear();
         }
     }
 }
