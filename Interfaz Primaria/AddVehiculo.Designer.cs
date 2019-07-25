@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddVehiculo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtAñoModelo = new System.Windows.Forms.TextBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -73,7 +74,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.ofdSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
             this.ttMensajes = new System.Windows.Forms.ToolTip(this.components);
-            this.txtAñoModelo = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVehiculo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -86,6 +87,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtAñoModelo);
             this.panel1.Controls.Add(this.btnFinalizar);
             this.panel1.Controls.Add(this.btnGuardar);
@@ -118,6 +120,13 @@
             this.panel1.Size = new System.Drawing.Size(976, 317);
             this.panel1.TabIndex = 0;
             // 
+            // txtAñoModelo
+            // 
+            this.txtAñoModelo.Location = new System.Drawing.Point(524, 80);
+            this.txtAñoModelo.Name = "txtAñoModelo";
+            this.txtAñoModelo.Size = new System.Drawing.Size(65, 20);
+            this.txtAñoModelo.TabIndex = 28;
+            // 
             // btnFinalizar
             // 
             this.btnFinalizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -125,7 +134,7 @@
             this.btnFinalizar.FlatAppearance.BorderSize = 0;
             this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFinalizar.Location = new System.Drawing.Point(512, 287);
+            this.btnFinalizar.Location = new System.Drawing.Point(611, 287);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(102, 25);
             this.btnFinalizar.TabIndex = 27;
@@ -140,7 +149,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGuardar.Location = new System.Drawing.Point(404, 287);
+            this.btnGuardar.Location = new System.Drawing.Point(338, 287);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(102, 25);
             this.btnGuardar.TabIndex = 26;
@@ -161,6 +170,7 @@
             this.btnBorrar.Size = new System.Drawing.Size(78, 44);
             this.btnBorrar.TabIndex = 25;
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
             // txtNombreModelo
             // 
@@ -187,6 +197,7 @@
             this.comboBoxBuscarCodigo.Name = "comboBoxBuscarCodigo";
             this.comboBoxBuscarCodigo.Size = new System.Drawing.Size(121, 21);
             this.comboBoxBuscarCodigo.TabIndex = 22;
+            this.comboBoxBuscarCodigo.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBuscarCodigo_SelectedIndexChanged);
             // 
             // label20
             // 
@@ -545,12 +556,20 @@
             this.ofdSeleccionarImagen.Filter = "JPEG (*.jpg*)|*.JPG|Archivo de mapas de bits (*.bmp*)|*.BMP|PNG (*.png*)|*.PNG*";
             this.ofdSeleccionarImagen.Title = "Seleccionar Imagen";
             // 
-            // txtAñoModelo
+            // button1
             // 
-            this.txtAñoModelo.Location = new System.Drawing.Point(524, 80);
-            this.txtAñoModelo.Name = "txtAñoModelo";
-            this.txtAñoModelo.Size = new System.Drawing.Size(65, 20);
-            this.txtAñoModelo.TabIndex = 28;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(477, 287);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 25);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // AddVehiculo
             // 
@@ -621,5 +640,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ToolTip ttMensajes;
         private System.Windows.Forms.TextBox txtAñoModelo;
+        private System.Windows.Forms.Button button1;
     }
 }

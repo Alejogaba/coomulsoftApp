@@ -6,17 +6,17 @@ namespace Entity
 {
     public class Vehiculo
     {
-        public string Imagen { get; set; }
+        public byte[] Imagen { get; set; }
         public String Codigo { get; set; }
         public String Placa_Vehiculo { get; set; }
         public String Anio_Modelo { get; set; }
         public String Tipo_vehiculo { get; set; }
         public int Capacidad_pasajeros { get; set; }
-        public string Capacidad_maletero { get; set; }
-        public double Consumo_gasolina_km { get; set; }
-        public String Cedula_dueño { get; set; }
+        public float Capacidad_maletero { get; set; }
+        public float Consumo_gasolina_km { get; set; }
+      
 
-        public Vehiculo(string imagen, string codigo, string placa_Vehiculo, string anio_Modelo, string tipo_vehiculo, int capacidad_pasajeros, string capacidad_maletero, double consumo_gasolina_km, string cedula_dueño)
+        public Vehiculo(byte[] imagen, string codigo, string placa_Vehiculo, string anio_Modelo, string tipo_vehiculo, int capacidad_pasajeros, float capacidad_maletero, float consumo_gasolina_km)
         {
             Imagen = imagen;
             Codigo = codigo;
@@ -26,7 +26,7 @@ namespace Entity
             Capacidad_pasajeros = capacidad_pasajeros;
             Capacidad_maletero = capacidad_maletero;
             Consumo_gasolina_km = consumo_gasolina_km;
-            Cedula_dueño = cedula_dueño;
+            
         }
 
         public Vehiculo()
