@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddVehiculo));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.txtNombreModelo = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.comboBoxBuscarCodigo = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.comboBoxAñoModelo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -47,9 +49,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPlaca2 = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxVehiculo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtCapacidadPasajeros = new System.Windows.Forms.TextBox();
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -58,8 +58,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDesasignarVehiculo = new System.Windows.Forms.Button();
+            this.btnAsignarVehiculo = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -73,9 +73,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.ofdSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVehiculo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -86,12 +84,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnFinalizar);
+            this.panel1.Controls.Add(this.btnGuardar);
+            this.panel1.Controls.Add(this.btnBorrar);
             this.panel1.Controls.Add(this.txtNombreModelo);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.comboBoxBuscarCodigo);
             this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnCargar);
             this.panel1.Controls.Add(this.comboBoxAñoModelo);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
@@ -103,9 +103,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtPlaca2);
-            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBoxVehiculo);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtCapacidadPasajeros);
             this.panel1.Controls.Add(this.txtPlaca);
             this.panel1.Controls.Add(this.txtCodigo);
@@ -118,14 +116,45 @@
             this.panel1.Size = new System.Drawing.Size(976, 317);
             this.panel1.TabIndex = 0;
             // 
-            // button4
+            // btnFinalizar
             // 
-            this.button4.Location = new System.Drawing.Point(828, 240);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 27);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Cancelar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnFinalizar.FlatAppearance.BorderSize = 0;
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnFinalizar.Location = new System.Drawing.Point(512, 287);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(102, 25);
+            this.btnFinalizar.TabIndex = 27;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGuardar.Location = new System.Drawing.Point(404, 287);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(102, 25);
+            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnBorrar.FlatAppearance.BorderSize = 0;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBorrar.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrar.Image")));
+            this.btnBorrar.Location = new System.Drawing.Point(836, 240);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(78, 44);
+            this.btnBorrar.TabIndex = 25;
+            this.btnBorrar.UseVisualStyleBackColor = false;
             // 
             // txtNombreModelo
             // 
@@ -155,22 +184,26 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.SystemColors.Control;
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label20.Location = new System.Drawing.Point(684, 26);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(93, 13);
             this.label20.TabIndex = 21;
             this.label20.Text = "Buscar por codigo";
             // 
-            // button1
+            // btnCargar
             // 
-            this.button1.Location = new System.Drawing.Point(703, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 27);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Subir imagen";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnCargar.FlatAppearance.BorderSize = 0;
+            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCargar.Image = ((System.Drawing.Image)(resources.GetObject("btnCargar.Image")));
+            this.btnCargar.Location = new System.Drawing.Point(731, 240);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(78, 44);
+            this.btnCargar.TabIndex = 20;
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.Button1_Click);
             // 
             // comboBoxAñoModelo
             // 
@@ -268,22 +301,9 @@
             this.txtPlaca2.Size = new System.Drawing.Size(51, 20);
             this.txtPlaca2.TabIndex = 9;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(523, 250);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(65, 64);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // pictureBoxVehiculo
             // 
             this.pictureBoxVehiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBoxVehiculo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxVehiculo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVehiculo.Image")));
             this.pictureBoxVehiculo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxVehiculo.InitialImage")));
             this.pictureBoxVehiculo.Location = new System.Drawing.Point(703, 67);
@@ -293,17 +313,6 @@
             this.pictureBoxVehiculo.TabIndex = 8;
             this.pictureBoxVehiculo.TabStop = false;
             this.pictureBoxVehiculo.Click += new System.EventHandler(this.PictureBoxVehiculo_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(403, 250);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // txtCapacidadPasajeros
             // 
@@ -371,8 +380,8 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnDesasignarVehiculo);
+            this.panel2.Controls.Add(this.btnAsignarVehiculo);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label17);
@@ -387,23 +396,31 @@
             this.panel2.Size = new System.Drawing.Size(975, 190);
             this.panel2.TabIndex = 1;
             // 
-            // button3
+            // btnDesasignarVehiculo
             // 
-            this.button3.Location = new System.Drawing.Point(673, 128);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 23);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Desasignar vehiculo";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDesasignarVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnDesasignarVehiculo.FlatAppearance.BorderSize = 0;
+            this.btnDesasignarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesasignarVehiculo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDesasignarVehiculo.Location = new System.Drawing.Point(673, 128);
+            this.btnDesasignarVehiculo.Name = "btnDesasignarVehiculo";
+            this.btnDesasignarVehiculo.Size = new System.Drawing.Size(120, 23);
+            this.btnDesasignarVehiculo.TabIndex = 30;
+            this.btnDesasignarVehiculo.Text = "Desasignar vehiculo";
+            this.btnDesasignarVehiculo.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnAsignarVehiculo
             // 
-            this.button2.Location = new System.Drawing.Point(673, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 23);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Asignar vehiculo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAsignarVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnAsignarVehiculo.FlatAppearance.BorderSize = 0;
+            this.btnAsignarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsignarVehiculo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAsignarVehiculo.Location = new System.Drawing.Point(673, 82);
+            this.btnAsignarVehiculo.Name = "btnAsignarVehiculo";
+            this.btnAsignarVehiculo.Size = new System.Drawing.Size(120, 23);
+            this.btnAsignarVehiculo.TabIndex = 29;
+            this.btnAsignarVehiculo.Text = "Asignar vehiculo";
+            this.btnAsignarVehiculo.UseVisualStyleBackColor = false;
             // 
             // label19
             // 
@@ -467,6 +484,8 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.InitialImage")));
             this.pictureBox4.Location = new System.Drawing.Point(38, 11);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(163, 168);
@@ -539,9 +558,7 @@
             this.Text = "Form4";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVehiculo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -560,8 +577,6 @@
         private System.Windows.Forms.TextBox txtCapacidadPasajeros;
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBoxVehiculo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPlaca2;
@@ -577,9 +592,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.Button btnDesasignarVehiculo;
+        private System.Windows.Forms.Button btnAsignarVehiculo;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
@@ -593,7 +608,9 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtNombreModelo;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.OpenFileDialog ofdSeleccionarImagen;
+        private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

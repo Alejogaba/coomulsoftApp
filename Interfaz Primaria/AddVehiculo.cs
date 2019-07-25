@@ -17,10 +17,7 @@ namespace Interfaz_Primaria
             InitializeComponent();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
         private void Label1_Click(object sender, EventArgs e)
         {
@@ -50,6 +47,11 @@ namespace Interfaz_Primaria
         private void Button4_Click(object sender, EventArgs e)
         {
             pictureBoxVehiculo.Image = pictureBoxVehiculo.InitialImage;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
