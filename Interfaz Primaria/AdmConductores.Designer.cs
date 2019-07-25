@@ -63,6 +63,7 @@
             this.btnBorrarFoto = new System.Windows.Forms.Button();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.ofdSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).BeginInit();
@@ -313,6 +314,7 @@
             this.button4.TabIndex = 34;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // MarcoDeFoto
             // 
@@ -369,11 +371,22 @@
             // 
             this.ofdSeleccionarImagen.FileName = "openFileDialog1";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(710, 345);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 40;
+            this.button2.Text = "refresh";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // AdmConductores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 610);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.MarcoDeFoto);
             this.Controls.Add(this.btnBorrarFoto);
             this.Controls.Add(this.btnCargarFoto);
@@ -450,5 +463,6 @@
         private System.Windows.Forms.Button btnBorrarFoto;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.OpenFileDialog ofdSeleccionarImagen;
+        private System.Windows.Forms.Button button2;
     }
 }

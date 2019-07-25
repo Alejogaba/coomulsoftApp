@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using Entity;
+using xDialog;
 
 namespace Interfaz_Primaria
 {
     public partial class AdmConductores : Form
     {
+        ConductorService Service = new ConductorService();
+        DialogResult result;
         public AdmConductores()
         {
             InitializeComponent();
@@ -73,6 +78,45 @@ namespace Interfaz_Primaria
                 MarcoDeFoto.Image = Image.FromFile(ruta);
 
             }
+        }
+
+        public void Guardar()
+        {
+            string nombre, apellido, id, tel, dire, email, licencia, est_lic, cuenta_ban,imagen;
+            DateTime lic_fecha,fecha_nac;
+            nombre = txtNombres.Text;
+            apellido = txtApellidos.Text;
+            id = txtId.Text;
+            tel = txtTelefono.Text;
+            dire = txtDireccion.Text;
+            email = txtEmail.Text;
+            imagen = MarcoDeFoto.ImageLocation;
+            licencia = txtEmail.Text;
+            est_lic = "ok";
+            cuenta_ban = "Bancolombia N°134324342 Ahorros";
+            lic_fecha = Convert.ToDateTime(dtimeLicVence.Text);
+            fecha_nac = Convert.ToDateTime(dtimeFechaNacimiento.Text);
+
+            Conductor conductor = new Conductor(nombre, apellido, id, fecha_nac, tel, dire, imagen, licencia,est_lic,lic_fecha,email,cuenta_ban);
+            result = MsgBox.Show(Service.Guardar(conductor), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            Guardar();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridAddConductores.DataSource = Service.Consultar();
+            }
+            catch (Exception ex)
+            {
+                MsgBox.Show("Error"+ex.Message, "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Error);
+            }
+            
         }
     }
 }

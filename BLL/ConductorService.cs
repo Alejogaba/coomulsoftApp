@@ -11,24 +11,24 @@ namespace BLL
 {
     public class ConductorService
     {
-        ConductorRepository Conductor;
+        ConductorRepository ConductorRepository; 
         IList<Conductor> conductores;
         SqlConnection conexion;
         public ConductorService()
         {
-            conexion = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CoomulsoftApp;" +
-                                            "Integrated Security=SSPI;MultipleActiveResultSets=True");
-            Conductor = new ConductorRepository(conexion);  
+            conexion = new SqlConnection(@"Data Source=DESKTOP-4TM7H0H\SQLEXPRESS;Initial Catalog=CoomulsoftApp;Integrated Security=True");
+            ConductorRepository = new ConductorRepository(conexion);  
 
         }
         public string Guardar(Conductor conductor)
         {
+            string msg;
             try
             {
                 conexion.Open();
-                Conductor.insertarConductor(conductor);
+                msg = ConductorRepository.insertarConductor(conductor);
                 conexion.Close();
-                return "Se registro el empleado " + conductor.Nombre + " " + conductor.Apellido;
+                return msg;
             }
             catch (Exception e)
             {
@@ -36,6 +36,15 @@ namespace BLL
                 return "Error en la base de datos" + e.Message.ToString();
                 
             }
+        }
+
+        public IList<Conductor> Consultar()
+        {
+            conexion.Open();
+            conductores = new List<Conductor>();
+            conductores = ConductorRepository.Consultar();
+            conexion.Close();
+            return conductores;
         }
     }
 }

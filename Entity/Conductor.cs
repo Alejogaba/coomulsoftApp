@@ -9,28 +9,32 @@ namespace Entity
         public string Imagen { get; set; }
         public string Licencia { get; set; }
         public string Estado_Licencia { get; set; }
+        public DateTime Fecha_naciemiento { get; set; }
         public DateTime Fecha_vencimiento_licencia { get; set; }
         public string Email { get; set; }
         public string Cuenta_bancaria { get; set; }
-
+        public string Vehiculo_asignado { get; set; }
 
         public Conductor()
         {
         }
 
-        public Conductor(string nombre, string apellido, string identificacion, string telefono,string direccion, string imagen,string licencia,
+        public Conductor(string nombre, string apellido, string identificacion, DateTime fe_na, string telefono,string direccion, string imagen,string licencia,string est_lic,
             DateTime fecha, string email,string bank)
         {
             Nombre = nombre;
             Apellido = apellido;
             Identificacion = identificacion;
+            Fecha_naciemiento = fe_na;
             Telefono = telefono;
             Direccion = direccion;
             Imagen = imagen;
             Licencia = licencia;
             Fecha_vencimiento_licencia = fecha;
+            Estado_Licencia = est_lic;
             Email = email;
             Cuenta_bancaria = bank;
+            Vehiculo_asignado = "No asignado";
    
         }
 
