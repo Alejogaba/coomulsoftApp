@@ -26,14 +26,7 @@ namespace Interfaz_Primaria
             this.ttMensajes.SetToolTip(this.btnCargar, "Subir la foto");
         }
 
-       public void Cargar_combobox()
-        {
-            comboBoxBuscarCodigo.Items.Clear();
-            foreach (var item in service.Consultar())
-            {
-                comboBoxBuscarCodigo.Items.Add(item.Codigo);
-            }
-        }
+       
 
         private void Label1_Click(object sender, EventArgs e)
         {
@@ -52,7 +45,7 @@ namespace Interfaz_Primaria
                 string ruta = ofdSeleccionarImagen.FileName;
                 pictureBoxVehiculo.Image = Image.FromFile(ruta);
             }
-       
+
         }
 
         private void PictureBoxVehiculo_Click(object sender, EventArgs e)
@@ -69,10 +62,10 @@ namespace Interfaz_Primaria
         {
             this.Close();
         }
-        public void Guardar ()
+        public void Guardar()
         {
             byte[] byteArrayImagen = ImageToByteArray(pictureBoxVehiculo.Image);
-            string placa, codigo, nombre_modelo, año_modelo, tipo,
+            string placa, codigo, nombre_modelo, año_modelo, tipo;
                int capacidad_pasajeros;
             float gasolina, capacidad_maletero;
             placa = txtPlaca.Text + "-" + txtPlaca2.Text;
@@ -84,7 +77,7 @@ namespace Interfaz_Primaria
             gasolina = float.Parse(txtGasolina.Text);
             capacidad_maletero = float.Parse(txtCapacidaMaletero.Text);
 
-            if (string.IsNullOrEmpty(placa)||string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(capacidad_pasajeros) || string.IsNullOrEmpty(gasolina) || string.IsNullOrEmpty(capacidad_maletero))
+            if (string.IsNullOrEmpty(placa) || string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(capacidad_pasajeros) || string.IsNullOrEmpty(gasolina) || string.IsNullOrEmpty(capacidad_maletero))
             {
                 result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             }
@@ -106,22 +99,6 @@ namespace Interfaz_Primaria
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Guardar();
-        }
-
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
-            string cod = txtCodigo.Text;
-            result = MsgBox.Show(service.Eliminar(cod), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
-        }
-
-        private void BtnBorrar_Click(object sender, EventArgs e)
-        {
-            pictureBoxVehiculo.Image = pictureBoxVehiculo.InitialImage;
-        }
-
-        private void ComboBoxBuscarCodigo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
