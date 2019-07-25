@@ -133,7 +133,7 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            btnReporte.BackColor = Color.FromArgb(7, 124, 131);
             if (PanelDesplegableReportes.Visible ==true)
             {
                 PanelDesplegableReportes.Visible = false;
@@ -159,6 +159,12 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
                 btnAdmVehiculos.BackColor = Color.FromArgb(58, 58, 60);
             if (Application.OpenForms["Reportes"] ==null)
                 btnReporte.BackColor = Color.FromArgb(58, 58, 60);
+            if (Application.OpenForms["ReporteConductores"] == null)
+                btnConductores.BackColor = Color.FromArgb(41, 57, 82);
+            if (Application.OpenForms["ReportePasajeros"] == null)
+                btnPasajeros.BackColor = Color.FromArgb(41, 57, 82);
+            if (Application.OpenForms["ReporteViaje"] == null)
+                btnViajes.BackColor = Color.FromArgb(41, 57, 82);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -225,6 +231,12 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
                 Application.OpenForms["AddVehiculo"].Close();
             if (Application.OpenForms.OfType<IniciarViaje>().Any())
                 Application.OpenForms["IniciarViaje"].Close();
+            if (Application.OpenForms.OfType<ReporteConductores>().Any())
+                Application.OpenForms["ReporteConductores"].Close();
+            if (Application.OpenForms.OfType<ReportePasajeros>().Any())
+                Application.OpenForms["ReportePasajeros"].Close();
+            if (Application.OpenForms.OfType<ReporteViajes>().Any())
+                Application.OpenForms["ReporteViajes"].Close();
 
         }
 
