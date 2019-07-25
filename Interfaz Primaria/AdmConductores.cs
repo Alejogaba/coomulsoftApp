@@ -127,5 +127,24 @@ namespace Interfaz_Primaria
 
             }
         }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridAddConductores.DataSource = Service.Consultar();
+            }
+            catch (Exception ex)
+            { 
+                result = MsgBox.Show("Error! "+ ex.Message, "Error", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+            }
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            string eliminar = txtId.Text;
+            result = MsgBox.Show(Service.Eliminar(eliminar), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+            dataGridAddConductores.DataSource = Service.Consultar();
+        }
     }
 }

@@ -71,6 +71,7 @@ namespace DAL
 
                 while (Reader.Read())
                 {
+                   
                     Conductor conductor = new Conductor();
                     conductor = Map(Reader);
                     conductores.Add(conductor);
@@ -79,12 +80,27 @@ namespace DAL
             return conductores;
         }
 
+        public string Eliminar(string cedula)
+        {
+                using (var Comando = Conexion.CreateCommand())
+                {
+                    Comando.CommandText = "DELETE FROM Conductores WHERE Cedula=@cedula";
+                    Comando.Parameters.Add("@cedula", SqlDbType.Int).Value = cedula;
+                    int i = Comando.ExecuteNonQuery();
+
+                    return (i > 0) ? "Se elimino con exito" : "Error al eliminar: No se encontro esa identificacion";
+                }
+          
+            
+           
+        }
+
         public Conductor Map(SqlDataReader reader)
         {
             Conductor conductor = new Conductor();
             conductor.Identificacion = (string)reader["Cedula"];
             conductor.Nombre = (string)reader["Nombres"];
-            conductor.Apellido = (string)reader["Apellido"];
+            conductor.Apellido = (string)reader["Apellidos"];
             conductor.Fecha_naciemiento = (DateTime)reader["Fecha nacimiento"];
             conductor.Telefono = (string)reader["Telefono"];
             conductor.Email = (string)reader["Email"];

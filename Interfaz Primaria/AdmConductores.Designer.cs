@@ -283,12 +283,13 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(579, 577);
+            this.button3.Location = new System.Drawing.Point(586, 577);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 25);
             this.button3.TabIndex = 33;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button4
             // 
@@ -360,7 +361,7 @@
             // 
             // ofdSeleccionarImagen
             // 
-            this.ofdSeleccionarImagen.FileName = "openFileDialog1";
+            this.ofdSeleccionarImagen.FileName = "JPEG (*.jpg*)|*.JPG|Archivo de mapas de bits (*.bmp*)|*.BMP|PNG (*.png*)|*.PNG*";
             // 
             // btnRefresh
             // 
@@ -371,6 +372,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(36, 33);
             this.btnRefresh.TabIndex = 41;
             this.btnRefresh.TabStop = false;
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // comboBoxBuscarPorCedula
             // 
