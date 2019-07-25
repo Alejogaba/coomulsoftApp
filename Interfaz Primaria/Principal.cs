@@ -179,16 +179,19 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
 
         private void btnViajes_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<ReporteViajes>();
             btnViajes.BackColor = Color.FromArgb(7, 124, 131);
         }
 
         private void btnPasajeros_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<ReportePasajeros>();
             btnPasajeros.BackColor = Color.FromArgb(7, 124, 131);
         }
 
         private void btnConductores_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<ReporteConductores>();
             btnConductores.BackColor = Color.FromArgb(7, 124, 131);
         }
 
