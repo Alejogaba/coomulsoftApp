@@ -110,6 +110,7 @@ namespace Interfaz_Primaria
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Guardar();
+            Limpiar();
         }
 
         private void Button1_Click_1(object sender, EventArgs e)
@@ -127,8 +128,20 @@ namespace Interfaz_Primaria
         {
             string cod = comboBoxBuscarCodigo.Text;
             Vehiculo con = new Vehiculo();
+            
             con = servicevehiculo.Buscar(cod);
             txtCodigo.Text = con.Codigo;
+            txtAñoModelo.Text = con.Anio_Modelo;
+            txtCapacidadPasajeros.Text = Convert.ToString(con.Capacidad_pasajeros);
+            txtCapacidaMaletero.Text = Convert.ToString(con.Capacidad_maletero);
+            txtPlaca.Text = con.Placa_Vehiculo;
+            txtTipo.Text = con.Tipo_vehiculo;
+            //txtNombreModelo.Text = con.
+            
+            MemoryStream ms = new MemoryStream(con.Imagen);
+            Image returnImage = System.Drawing.Image.FromStream(ms);
+            pictureBoxconductor.Image = returnImage;
+
             panelconductor.Enabled = true;
             cargarconductor();
         }
@@ -180,6 +193,20 @@ namespace Interfaz_Primaria
             labetelefonno.Text = "----------------------------------------------------------";
             labelapellido.Text = "----------------------------------------------------------";
             pictureBoxconductor.Image = pictureBoxconductor.InitialImage; 
+        }
+
+        public void Limpiar()
+        {
+            txtAñoModelo.Clear();
+            txtCapacidadPasajeros.Clear();
+            txtCapacidaMaletero.Clear();
+            txtCodigo.Clear();
+            txtGasolina.Clear();
+            txtNombreModelo.Clear();
+            txtPlaca.Clear();
+            txtPlaca2.Clear();
+            txtTipo.Clear();
+
         }
     }
 }
