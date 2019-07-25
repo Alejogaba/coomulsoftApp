@@ -43,7 +43,6 @@
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
-            this.txtBuscarPorCedula = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtEstadoLicencia = new System.Windows.Forms.TextBox();
@@ -63,10 +62,12 @@
             this.btnBorrarFoto = new System.Windows.Forms.Button();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.ofdSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.PictureBox();
+            this.comboBoxBuscarPorCedula = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFinalizar
@@ -192,18 +193,6 @@
             this.btnBuscar.TabIndex = 15;
             this.btnBuscar.TabStop = false;
             // 
-            // txtBuscarPorCedula
-            // 
-            this.txtBuscarPorCedula.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarPorCedula.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBuscarPorCedula.Location = new System.Drawing.Point(611, 36);
-            this.txtBuscarPorCedula.Name = "txtBuscarPorCedula";
-            this.txtBuscarPorCedula.Size = new System.Drawing.Size(227, 20);
-            this.txtBuscarPorCedula.TabIndex = 16;
-            this.txtBuscarPorCedula.Text = "      BUSCAR POR NUMERO DE CEDULA";
-            this.txtBuscarPorCedula.Enter += new System.EventHandler(this.txtBuscarPorCedula_Enter);
-            this.txtBuscarPorCedula.Leave += new System.EventHandler(this.txtBuscarPorCedula_Leave);
-            // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(197, 304);
@@ -319,6 +308,8 @@
             // MarcoDeFoto
             // 
             this.MarcoDeFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MarcoDeFoto.Image = ((System.Drawing.Image)(resources.GetObject("MarcoDeFoto.Image")));
+            this.MarcoDeFoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("MarcoDeFoto.InitialImage")));
             this.MarcoDeFoto.Location = new System.Drawing.Point(681, 82);
             this.MarcoDeFoto.Name = "MarcoDeFoto";
             this.MarcoDeFoto.Size = new System.Drawing.Size(163, 168);
@@ -371,22 +362,35 @@
             // 
             this.ofdSeleccionarImagen.FileName = "openFileDialog1";
             // 
-            // button2
+            // btnRefresh
             // 
-            this.button2.Location = new System.Drawing.Point(710, 345);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "refresh";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(760, 339);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(36, 33);
+            this.btnRefresh.TabIndex = 41;
+            this.btnRefresh.TabStop = false;
+            // 
+            // comboBoxBuscarPorCedula
+            // 
+            this.comboBoxBuscarPorCedula.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.comboBoxBuscarPorCedula.FormattingEnabled = true;
+            this.comboBoxBuscarPorCedula.Location = new System.Drawing.Point(618, 33);
+            this.comboBoxBuscarPorCedula.Name = "comboBoxBuscarPorCedula";
+            this.comboBoxBuscarPorCedula.Size = new System.Drawing.Size(226, 21);
+            this.comboBoxBuscarPorCedula.TabIndex = 42;
+            this.comboBoxBuscarPorCedula.Text = "      BUSCAR POR NUMERO DE CEDULA";
+            this.comboBoxBuscarPorCedula.Enter += new System.EventHandler(this.comboBoxBuscarPorCedula_Enter);
+            this.comboBoxBuscarPorCedula.Leave += new System.EventHandler(this.comboBoxBuscarPorCedula_Leave);
             // 
             // AdmConductores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 610);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.comboBoxBuscarPorCedula);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.MarcoDeFoto);
             this.Controls.Add(this.btnBorrarFoto);
             this.Controls.Add(this.btnCargarFoto);
@@ -405,7 +409,6 @@
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.dataGridAddConductores);
-            this.Controls.Add(this.txtBuscarPorCedula);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.txtApellidos);
@@ -418,12 +421,14 @@
             this.Controls.Add(this.labelapellidos);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.labelnombre);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdmConductores";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,7 +448,6 @@
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.PictureBox btnBuscar;
-        private System.Windows.Forms.TextBox txtBuscarPorCedula;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtEstadoLicencia;
@@ -463,6 +467,7 @@
         private System.Windows.Forms.Button btnBorrarFoto;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.OpenFileDialog ofdSeleccionarImagen;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox btnRefresh;
+        private System.Windows.Forms.ComboBox comboBoxBuscarPorCedula;
     }
 }

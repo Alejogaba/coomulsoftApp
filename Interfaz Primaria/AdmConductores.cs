@@ -24,6 +24,7 @@ namespace Interfaz_Primaria
             this.ttMensaje.SetToolTip(this.btnBorrarFoto, "Borrar la foto");
             this.ttMensaje.SetToolTip(this.btnCargarFoto, "Subir la foto");
             this.ttMensaje.SetToolTip(this.btnBuscar, "Buscar Conductor");
+            this.ttMensaje.SetToolTip(this.btnRefresh, "Actualizar tabla");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -46,24 +47,9 @@ namespace Interfaz_Primaria
 
         }
 
-        private void txtBuscarPorCedula_Enter(object sender, EventArgs e)
-        {
-            if(txtBuscarPorCedula.Text == "      BUSCAR POR NUMERO DE CEDULA")
-            {
-                txtBuscarPorCedula.Text = "";
-                txtBuscarPorCedula.ForeColor = Color.LightGray;
+      
 
-            }
-        }
-
-        private void txtBuscarPorCedula_Leave(object sender, EventArgs e)
-        {
-            if (txtBuscarPorCedula.Text=="")
-            {
-                txtBuscarPorCedula.Text = "      BUSCAR POR NUMERO DE CEDULA";
-                txtBuscarPorCedula.ForeColor = Color.DimGray;
-            }
-        }
+       
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -121,6 +107,25 @@ namespace Interfaz_Primaria
         {
            
             
+        }
+
+        private void comboBoxBuscarPorCedula_Leave(object sender, EventArgs e)
+        {
+            if (comboBoxBuscarPorCedula.Text == "")
+            {
+                comboBoxBuscarPorCedula.Text = "      BUSCAR POR NUMERO DE CEDULA";
+                comboBoxBuscarPorCedula.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void comboBoxBuscarPorCedula_Enter(object sender, EventArgs e)
+        {
+            if (comboBoxBuscarPorCedula.Text == "      BUSCAR POR NUMERO DE CEDULA")
+            {
+                comboBoxBuscarPorCedula.Text = "";
+                comboBoxBuscarPorCedula.ForeColor = Color.LightGray;
+
+            }
         }
     }
 }
