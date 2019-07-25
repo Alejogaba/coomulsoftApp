@@ -131,11 +131,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rutas.cs">
+    <Compile Include="FormRutas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Rutas.Designer.cs">
-      <DependentUpon>Rutas.cs</DependentUpon>
+    <Compile Include="FormRutas.Designer.cs">
+      <DependentUpon>FormRutas.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddConductor.resx">
       <DependentUpon>AddConductor.cs</DependentUpon>
@@ -173,8 +173,8 @@
     <EmbeddedResource Include="IniciarViaje.resx">
       <DependentUpon>IniciarViaje.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Rutas.resx">
-      <DependentUpon>Rutas.cs</DependentUpon>
+    <EmbeddedResource Include="FormRutas.resx">
+      <DependentUpon>FormRutas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CoomulsoftAppDataSet.xsc">
       <DependentUpon>CoomulsoftAppDataSet.xsd</DependentUpon>

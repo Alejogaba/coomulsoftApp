@@ -8,21 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using xDialog;
+using Entity;
+using BLL;
+
 
 
 namespace Interfaz_Primaria
 {
-    public partial class Rutas : Form
+    public partial class FormRutas : Form
     {
+      
+        RutasService service = new RutasService();
         DialogResult result;
-        public Rutas()
+        
+
+        public FormRutas()
         {
             InitializeComponent();
             this.ttMensaje.SetToolTip(this.btnBuscar, "Buscar Ruta");
         }
 
         
-
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -60,7 +66,25 @@ namespace Interfaz_Primaria
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            string ciudad = textBoxCiudad.Text;
+            string dpto = textBoxDpto.Text;
+            string destino = textBoxDestino.Text;
+            string dpto2 = textBoxDptoDestino.Text;
+            Rutas rutas = new Rutas(ciudad, dpto, destino, dpto2,0);
+            result = MsgBox.Show(service.Guardar(rutas), "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
 
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            string origen = textBoxCiudad.Text;
+            string destino = textBoxDestino.Text;
+            result = MsgBox.Show(service.Eliminar(origen,destino), "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
         }
     }
 }

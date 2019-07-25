@@ -208,7 +208,7 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            AbrirFormulario<Rutas>();
+            AbrirFormulario<FormRutas>();
         }
 
        

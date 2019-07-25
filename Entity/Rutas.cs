@@ -11,21 +11,22 @@ namespace Entity
         public string Ciudad_Destino { get; set; }
         public string Dpto_Destino { get; set; }
         public double Tarifa { get; set; }
-        public double Kilometros { get; set; }
 
-        public Rutas(string ciudad_Origen, string dpto_Origen, string ciudad_Destino, string dpto_Destino, double tarifa,double km)
+        public Rutas(string ciudad_Origen, string dpto_Origen, string ciudad_Destino, string dpto_Destino, double tarifa)
         {
             Ciudad_Origen = ciudad_Origen;
             Dpto_Origen = dpto_Origen;
             Ciudad_Destino = ciudad_Destino;
             Dpto_Destino = dpto_Destino;
             Tarifa = tarifa;
-            Kilometros = km;
         }
 
         public Rutas()
         {
         }
+
+      
+
 
         public void Invertir_origen_destino()
         {

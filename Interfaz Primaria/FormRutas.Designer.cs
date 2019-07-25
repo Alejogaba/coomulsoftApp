@@ -1,6 +1,6 @@
 ﻿namespace Interfaz_Primaria
 {
-    partial class Rutas
+    partial class FormRutas
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rutas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRutas));
             this.panelMapa = new System.Windows.Forms.Panel();
             this.webControl1 = new EO.WinForm.WebControl();
             this.webView1 = new EO.WebBrowser.WebView();
@@ -109,6 +109,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(689, 157);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // btnBuscar
             // 
@@ -162,6 +163,7 @@
             this.button3.TabIndex = 10;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button2
             // 
@@ -298,7 +300,7 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Rutas";
             // 
-            // Rutas
+            // FormRutas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -311,7 +313,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelMapa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Rutas";
+            this.Name = "FormRutas";
             this.Text = "Rutas";
             this.panelMapa.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
