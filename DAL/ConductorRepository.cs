@@ -26,7 +26,7 @@ namespace DAL
             {
                 string ssql;
                 ssql = "INSERT INTO [Conductores]([Cedula],[Nombres],[Apellidos],[Telefono],[Email],[Direccion],[Imagen],[Licencia],[Estado licencia],[Fecha vencimiento licencia],[Cuenta bancaria])" +
-                    "VALUES(@cedula,@nombres,@apellidos,@telefonno,@email,@direccion,@imagen,@licencia,@est_licencia,@fecha_licencia,@cuenta_bancaria";
+                    "VALUES(@cedula,@nombres,@apellidos,@telefono,@email,@direccion,@imagen,@licencia,@est_licencia,@fecha_licencia,@cuenta_bancaria";
 
                 cmd.CommandText = ssql;
                 cmd.Parameters.Add("@cedula", SqlDbType.Int).Value = conductor.Identificacion;
