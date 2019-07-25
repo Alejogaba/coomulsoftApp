@@ -128,8 +128,20 @@ namespace Interfaz_Primaria
         {
             string cod = comboBoxBuscarCodigo.Text;
             Vehiculo con = new Vehiculo();
+            
             con = servicevehiculo.Buscar(cod);
             txtCodigo.Text = con.Codigo;
+            txtAñoModelo.Text = con.Anio_Modelo;
+            txtCapacidadPasajeros.Text = Convert.ToString(con.Capacidad_pasajeros);
+            txtCapacidaMaletero.Text = Convert.ToString(con.Capacidad_maletero);
+            txtPlaca.Text = con.Placa_Vehiculo;
+            txtTipo.Text = con.Tipo_vehiculo;
+            //txtNombreModelo.Text = con.
+            
+            MemoryStream ms = new MemoryStream(con.Imagen);
+            Image returnImage = System.Drawing.Image.FromStream(ms);
+            pictureBoxconductor.Image = returnImage;
+
             panelconductor.Enabled = true;
             cargarconductor();
         }
