@@ -67,6 +67,7 @@
             this.conductoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coomulsoftAppDataSet = new Interfaz_Primaria.CoomulsoftAppDataSet();
             this.conductoresTableAdapter = new Interfaz_Primaria.CoomulsoftAppDataSetTableAdapters.ConductoresTableAdapter();
+            this.webView1 = new EO.WebBrowser.WebView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).BeginInit();
@@ -96,9 +97,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridAddConductores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.dataGridAddConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAddConductores.Location = new System.Drawing.Point(215, 374);
+            this.dataGridAddConductores.Location = new System.Drawing.Point(66, 396);
             this.dataGridAddConductores.Name = "dataGridAddConductores";
-            this.dataGridAddConductores.Size = new System.Drawing.Size(581, 197);
+            this.dataGridAddConductores.Size = new System.Drawing.Size(840, 175);
             this.dataGridAddConductores.TabIndex = 17;
             // 
             // labelnombre
@@ -374,7 +375,7 @@
             // 
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(760, 339);
+            this.btnRefresh.Location = new System.Drawing.Point(870, 357);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(36, 33);
             this.btnRefresh.TabIndex = 41;
@@ -406,6 +407,12 @@
             // conductoresTableAdapter
             // 
             this.conductoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // webView1
+            // 
+            this.webView1.InputMsgFilter = null;
+            this.webView1.ObjectForScripting = null;
+            this.webView1.Title = null;
             // 
             // AdmConductores
             // 
@@ -498,5 +505,6 @@
         private CoomulsoftAppDataSet coomulsoftAppDataSet;
         private System.Windows.Forms.BindingSource conductoresBindingSource;
         private CoomulsoftAppDataSetTableAdapters.ConductoresTableAdapter conductoresTableAdapter;
+        private EO.WebBrowser.WebView webView1;
     }
 }

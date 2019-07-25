@@ -21,7 +21,10 @@ namespace Interfaz_Primaria
         public AdmConductores()
         {
             InitializeComponent();
-            
+            foreach (var item in Service.Consultar())
+            {
+                comboBoxBuscarPorCedula.Items.Add(item.Identificacion);
+            }
            
             this.ttMensaje.SetToolTip(this.btnBorrarFoto, "Borrar la foto");
             this.ttMensaje.SetToolTip(this.btnCargarFoto, "Subir la foto");
@@ -95,6 +98,8 @@ namespace Interfaz_Primaria
         {
             
             Guardar();
+
+            Limpiar();
         }
 
 
@@ -118,6 +123,7 @@ namespace Interfaz_Primaria
                 comboBoxBuscarPorCedula.Text = "      BUSCAR POR NUMERO DE CEDULA";
                 comboBoxBuscarPorCedula.ForeColor = Color.DimGray;
             }
+            
         }
 
         private void comboBoxBuscarPorCedula_Enter(object sender, EventArgs e)
@@ -129,58 +135,58 @@ namespace Interfaz_Primaria
 
             }
         }
-        public void Cargargrid()
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
         {
             try
             {
                 dataGridAddConductores.DataSource = Service.Consultar();
-                dataGridAddConductores.Refresh();
             }
             catch (Exception ex)
-            {
-                result = MsgBox.Show("Error! " + ex.Message, "Error", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+            { 
+                result = MsgBox.Show("Error! "+ ex.Message, "Error", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             }
-        }
-
-        private void BtnRefresh_Click(object sender, EventArgs e)
-        {
-            Cargargrid();
-            
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
             string eliminar = txtId.Text;
             result = MsgBox.Show(Service.Eliminar(eliminar), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
-            dataGridAddConductores.DataSource = Service.Consultar();
             
+            Limpiar();
         }
-
 
         public void Limpiar()
         {
+            txtApellidos.Clear();
+            txtDireccion.Clear();
+            txtEmail.Clear();
+            txtEstadoLicencia.Clear();
+            txtId.Clear();
+            txtLicencia.Clear();
+            txtNombres.Clear();
+            txtTelefono.Clear();
+            dtimeFechaNacimiento.ResetText();
+            dtimeLicVence.ResetText();
             
+
         }
 
         private void AdmConductores_Load(object sender, EventArgs e)
         {
-            foreach (var item in Service.Consultar())
-            {
-                comboBoxBuscarPorCedula.Items.Add(item.Identificacion);
-            }
+           
         }
 
         private void ComboBoxBuscarPorCedula_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                
                 string ced = comboBoxBuscarPorCedula.Text;
                 Conductor con = new Conductor();
                 con = Service.Buscar(ced);
                 txtNombres.Text = con.Nombre;
                 MemoryStream ms = new MemoryStream(con.Imagen);
-                System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+                Image returnImage = System.Drawing.Image.FromStream(ms);
                 MarcoDeFoto.Image = returnImage;
                 txtApellidos.Text = con.Apellido;
                 txtDireccion.Text = con.Direccion;
@@ -198,10 +204,10 @@ namespace Interfaz_Primaria
             }
             catch (Exception ex)
             {
-               
+                result = MsgBox.Show("Error! " + ex.Message, "Error", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             }
-            
 
+            dataGridAddConductores.DataSource = Service.Consultar();
         }
 
         private void OfdSeleccionarImagen_FileOk(object sender, CancelEventArgs e)
