@@ -22,6 +22,7 @@ namespace Interfaz_Primaria
         private void Principal_Load(object sender, EventArgs e)
         {
             btnReporte.Location = new Point(0, 306);
+            btnRutas.Location = new Point(0, 389);
             PanelDesplegableReportes.Hide();
 
         }
@@ -142,9 +143,11 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
             }
             btnReporte.Location = new Point(0, 306);
             PanelDesplegableReportes.Location = new Point(3, 382);
+            btnRutas.Location = new Point(0, 540);
             if (PanelDesplegableReportes.Visible == false)
             {
-                btnReporte.Location = new Point(0, 306); 
+                btnReporte.Location = new Point(0, 306);
+                btnRutas.Location = new Point(3, 389);
             }
         }
         private void CloseForms(object sender,FormClosedEventArgs e)

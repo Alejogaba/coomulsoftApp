@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnRutas = new System.Windows.Forms.Button();
             this.PanelDesplegableReportes = new System.Windows.Forms.Panel();
             this.btnConductores = new System.Windows.Forms.Button();
@@ -57,6 +58,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PanelDesplegableReportes.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -208,6 +210,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.panelMenu.Controls.Add(this.pictureBox2);
             this.panelMenu.Controls.Add(this.btnRutas);
             this.panelMenu.Controls.Add(this.PanelDesplegableReportes);
             this.panelMenu.Controls.Add(this.btnAdmVehiculos);
@@ -219,6 +222,15 @@
             this.panelMenu.Size = new System.Drawing.Size(200, 610);
             this.panelMenu.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(59, 38);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 74);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnRutas
             // 
             this.btnRutas.FlatAppearance.BorderSize = 0;
@@ -227,6 +239,8 @@
             this.btnRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRutas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRutas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
+            this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRutas.Location = new System.Drawing.Point(0, 540);
             this.btnRutas.Name = "btnRutas";
             this.btnRutas.Size = new System.Drawing.Size(200, 70);
@@ -441,6 +455,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PanelDesplegableReportes.ResumeLayout(false);
             this.panelTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
@@ -476,6 +491,7 @@
         private System.Windows.Forms.Button btnAddVehiculo;
         private System.Windows.Forms.Button btnRutas;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

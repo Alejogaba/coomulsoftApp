@@ -18,9 +18,17 @@ namespace Interfaz_Primaria
         public Rutas()
         {
             InitializeComponent();
+            this.ttMensaje.SetToolTip(this.btnBuscar, "Buscar Ruta");
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             string ciudad = textBoxCiudad.Text;
             string dpto = textBoxDpto.Text;
@@ -30,7 +38,7 @@ namespace Interfaz_Primaria
             {
                 StringBuilder queryadress = new StringBuilder();
                 queryadress.Append("https://www.google.com.co/maps/dir/");
-                if (string.IsNullOrEmpty(textBoxCiudad.Text)|| string.IsNullOrEmpty(textBoxDestino.Text) ||
+                if (string.IsNullOrEmpty(textBoxCiudad.Text) || string.IsNullOrEmpty(textBoxDestino.Text) ||
                     string.IsNullOrEmpty(textBoxDpto.Text) || string.IsNullOrEmpty(textBoxDptoDestino.Text))
                 {
                     result = MsgBox.Show("No deje campos vacios", "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
@@ -41,17 +49,11 @@ namespace Interfaz_Primaria
                     queryadress.Append(destino + "," + "+" + dpto2);
                     webControl1.WebView.Url = queryadress.ToString();
                 }
-                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), "Error");
             }
-        }
-
-        private void btnFinalizar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

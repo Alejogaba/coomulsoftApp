@@ -33,10 +33,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.txtNombreModelo = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxBuscarCodigo = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxAñoModelo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCapacidaMaletero = new System.Windows.Forms.TextBox();
@@ -46,7 +46,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPlaca2 = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxVehiculo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -88,10 +88,10 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.txtNombreModelo);
             this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.comboBoxBuscarCodigo);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.comboBoxAñoModelo);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.txtCapacidaMaletero);
@@ -101,7 +101,7 @@
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtPlaca2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBoxVehiculo);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -143,13 +143,13 @@
             this.label21.TabIndex = 23;
             this.label21.Text = "Nombre modelo";
             // 
-            // comboBox3
+            // comboBoxBuscarCodigo
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(809, 23);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 22;
+            this.comboBoxBuscarCodigo.FormattingEnabled = true;
+            this.comboBoxBuscarCodigo.Location = new System.Drawing.Point(809, 23);
+            this.comboBoxBuscarCodigo.Name = "comboBoxBuscarCodigo";
+            this.comboBoxBuscarCodigo.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxBuscarCodigo.TabIndex = 22;
             // 
             // label20
             // 
@@ -171,13 +171,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // comboBox2
+            // comboBoxAñoModelo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(481, 80);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(108, 21);
-            this.comboBox2.TabIndex = 19;
+            this.comboBoxAñoModelo.FormattingEnabled = true;
+            this.comboBoxAñoModelo.Location = new System.Drawing.Point(481, 80);
+            this.comboBoxAñoModelo.Name = "comboBoxAñoModelo";
+            this.comboBoxAñoModelo.Size = new System.Drawing.Size(108, 21);
+            this.comboBoxAñoModelo.TabIndex = 19;
             // 
             // label11
             // 
@@ -260,12 +260,12 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "-";
             // 
-            // textBox5
+            // txtPlaca2
             // 
-            this.textBox5.Location = new System.Drawing.Point(538, 23);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(51, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtPlaca2.Location = new System.Drawing.Point(538, 23);
+            this.txtPlaca2.Name = "txtPlaca2";
+            this.txtPlaca2.Size = new System.Drawing.Size(51, 20);
+            this.txtPlaca2.TabIndex = 9;
             // 
             // pictureBox3
             // 
@@ -560,7 +560,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBoxVehiculo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPlaca2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCapacidaMaletero;
@@ -569,7 +569,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxAñoModelo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
@@ -585,7 +585,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxBuscarCodigo;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtNombreModelo;
         private System.Windows.Forms.Label label21;
