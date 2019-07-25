@@ -15,6 +15,8 @@ namespace Interfaz_Primaria
         public AddVehiculo()
         {
             InitializeComponent();
+            this.ttMensajes.SetToolTip(this.btnBorrar, "Borrar la foto");
+            this.ttMensajes.SetToolTip(this.btnCargar, "Subir la foto");
         }
 
        
