@@ -98,6 +98,8 @@ namespace Interfaz_Primaria
         {
             
             Guardar();
+
+            Limpiar();
         }
 
 
@@ -166,7 +168,7 @@ namespace Interfaz_Primaria
             txtTelefono.Clear();
             dtimeFechaNacimiento.ResetText();
             dtimeLicVence.ResetText();
-            comboBoxBuscarPorCedula.ResetText();
+            
 
         }
 
