@@ -179,6 +179,7 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
 
         private void btnViajes_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<ReporteViajes>();
             btnViajes.BackColor = Color.FromArgb(7, 124, 131);
         }
 
