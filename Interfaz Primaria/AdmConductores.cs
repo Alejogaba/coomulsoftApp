@@ -121,6 +121,7 @@ namespace Interfaz_Primaria
                 comboBoxBuscarPorCedula.Text = "      BUSCAR POR NUMERO DE CEDULA";
                 comboBoxBuscarPorCedula.ForeColor = Color.DimGray;
             }
+            
         }
 
         private void comboBoxBuscarPorCedula_Enter(object sender, EventArgs e)
@@ -149,7 +150,24 @@ namespace Interfaz_Primaria
         {
             string eliminar = txtId.Text;
             result = MsgBox.Show(Service.Eliminar(eliminar), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
-            dataGridAddConductores.DataSource = Service.Consultar();
+            
+            Limpiar();
+        }
+
+        public void Limpiar()
+        {
+            txtApellidos.Clear();
+            txtDireccion.Clear();
+            txtEmail.Clear();
+            txtEstadoLicencia.Clear();
+            txtId.Clear();
+            txtLicencia.Clear();
+            txtNombres.Clear();
+            txtTelefono.Clear();
+            dtimeFechaNacimiento.ResetText();
+            dtimeLicVence.ResetText();
+            comboBoxBuscarPorCedula.ResetText();
+
         }
 
         private void AdmConductores_Load(object sender, EventArgs e)
@@ -166,7 +184,7 @@ namespace Interfaz_Primaria
                 con = Service.Buscar(ced);
                 txtNombres.Text = con.Nombre;
                 MemoryStream ms = new MemoryStream(con.Imagen);
-                System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+                Image returnImage = System.Drawing.Image.FromStream(ms);
                 MarcoDeFoto.Image = returnImage;
                 txtApellidos.Text = con.Apellido;
                 txtDireccion.Text = con.Direccion;
@@ -184,10 +202,10 @@ namespace Interfaz_Primaria
             }
             catch (Exception ex)
             {
-               
+                result = MsgBox.Show("Error! " + ex.Message, "Error", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             }
-            
 
+            dataGridAddConductores.DataSource = Service.Consultar();
         }
 
         private void OfdSeleccionarImagen_FileOk(object sender, CancelEventArgs e)

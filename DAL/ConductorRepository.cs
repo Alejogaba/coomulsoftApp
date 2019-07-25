@@ -106,7 +106,7 @@ namespace DAL
                 using (var Comando = Conexion.CreateCommand())
                 {
                     Comando.CommandText = "DELETE FROM Conductores WHERE Cedula=@cedula";
-                    Comando.Parameters.Add("@cedula", SqlDbType.Int).Value = cedula;
+                    Comando.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
                     int i = Comando.ExecuteNonQuery();
 
                     return (i > 0) ? "Se elimino con exito" : "Error al eliminar: No se encontro esa identificacion";
@@ -122,7 +122,7 @@ namespace DAL
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "SELECT * FROM Conductores WHERE Cedula=@cedula";
-                Comando.Parameters.Add("@cedula", SqlDbType.Int).Value = ced;
+                Comando.Parameters.Add("@cedula", SqlDbType.VarChar).Value = ced;
                 Reader = Comando.ExecuteReader();
 
                 while (Reader.Read())

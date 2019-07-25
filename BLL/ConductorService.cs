@@ -16,7 +16,7 @@ namespace BLL
         SqlConnection conexion;
         public ConductorService()
         {
-            conexion = new SqlConnection(@"Data Source=DESKTOP-4TM7H0H\SQLEXPRESS;Initial Catalog=CoomulsoftApp;Integrated Security=True");
+            conexion = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=CoomulsoftApp;Integrated Security=True");
             ConductorRepository = new ConductorRepository(conexion);  
 
         }
