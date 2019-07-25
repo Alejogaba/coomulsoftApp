@@ -64,15 +64,15 @@
             this.ofdSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
             this.btnRefresh = new System.Windows.Forms.PictureBox();
             this.comboBoxBuscarPorCedula = new System.Windows.Forms.ComboBox();
-            this.coomulsoftAppDataSet = new Interfaz_Primaria.CoomulsoftAppDataSet();
             this.conductoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.coomulsoftAppDataSet = new Interfaz_Primaria.CoomulsoftAppDataSet();
             this.conductoresTableAdapter = new Interfaz_Primaria.CoomulsoftAppDataSetTableAdapters.ConductoresTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFinalizar
@@ -383,28 +383,25 @@
             // 
             // comboBoxBuscarPorCedula
             // 
-            this.comboBoxBuscarPorCedula.DataSource = this.conductoresBindingSource;
-            this.comboBoxBuscarPorCedula.DisplayMember = "Cedula";
             this.comboBoxBuscarPorCedula.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.comboBoxBuscarPorCedula.FormattingEnabled = true;
             this.comboBoxBuscarPorCedula.Location = new System.Drawing.Point(618, 33);
             this.comboBoxBuscarPorCedula.Name = "comboBoxBuscarPorCedula";
             this.comboBoxBuscarPorCedula.Size = new System.Drawing.Size(226, 21);
             this.comboBoxBuscarPorCedula.TabIndex = 42;
-            this.comboBoxBuscarPorCedula.ValueMember = "Cedula";
             this.comboBoxBuscarPorCedula.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBuscarPorCedula_SelectedIndexChanged);
             this.comboBoxBuscarPorCedula.Enter += new System.EventHandler(this.comboBoxBuscarPorCedula_Enter);
             this.comboBoxBuscarPorCedula.Leave += new System.EventHandler(this.comboBoxBuscarPorCedula_Leave);
-            // 
-            // coomulsoftAppDataSet
-            // 
-            this.coomulsoftAppDataSet.DataSetName = "CoomulsoftAppDataSet";
-            this.coomulsoftAppDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // conductoresBindingSource
             // 
             this.conductoresBindingSource.DataMember = "Conductores";
             this.conductoresBindingSource.DataSource = this.coomulsoftAppDataSet;
+            // 
+            // coomulsoftAppDataSet
+            // 
+            this.coomulsoftAppDataSet.DataSetName = "CoomulsoftAppDataSet";
+            this.coomulsoftAppDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // conductoresTableAdapter
             // 
@@ -456,8 +453,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

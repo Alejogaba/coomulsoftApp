@@ -82,6 +82,25 @@ namespace DAL
             return conductores;
         }
 
+        public IList<Conductor> Filtro()
+        {
+
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "Select Cedula from Conductores";
+                Reader = Comando.ExecuteReader();
+
+                while (Reader.Read())
+                {
+
+                    Conductor conductor = new Conductor();
+                    conductor = Map2(Reader);
+                    conductores.Add(conductor);
+                }
+            }
+            return conductores;
+        }
+
         public string Eliminar(string cedula)
         {
                 using (var Comando = Conexion.CreateCommand())
@@ -131,6 +150,12 @@ namespace DAL
             conductor.Fecha_vencimiento_licencia = (DateTime)reader["Fecha vencimiento licencia"];
             conductor.Cuenta_bancaria = (string)reader["Cuenta bancaria"];
             conductor.Vehiculo_asignado = (string)reader["Vehiculo asignado"];
+            return conductor;
+        }
+        public Conductor Map2(SqlDataReader reader)
+        {
+            Conductor conductor = new Conductor();
+            conductor.Identificacion = (string)reader["Cedula"];
             return conductor;
         }
     }

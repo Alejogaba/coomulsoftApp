@@ -21,6 +21,11 @@ namespace Interfaz_Primaria
         public AdmConductores()
         {
             InitializeComponent();
+            foreach (var item in Service.Consultar())
+            {
+                comboBoxBuscarPorCedula.Items.Add(item.Identificacion);
+            }
+           
             this.ttMensaje.SetToolTip(this.btnBorrarFoto, "Borrar la foto");
             this.ttMensaje.SetToolTip(this.btnCargarFoto, "Subir la foto");
             this.ttMensaje.SetToolTip(this.btnBuscar, "Buscar Conductor");
@@ -149,9 +154,7 @@ namespace Interfaz_Primaria
 
         private void AdmConductores_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'coomulsoftAppDataSet.Conductores' Puede moverla o quitarla según sea necesario.
-            this.conductoresTableAdapter.Fill(this.coomulsoftAppDataSet.Conductores);
-
+           
         }
 
         private void ComboBoxBuscarPorCedula_SelectedIndexChanged(object sender, EventArgs e)

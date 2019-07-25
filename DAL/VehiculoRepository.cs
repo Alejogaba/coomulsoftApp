@@ -104,6 +104,8 @@ namespace DAL
             return condu;
         }
 
+
+
         public Vehiculo Map(SqlDataReader reader)
         {
             Vehiculo conductor = new Vehiculo();

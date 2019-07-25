@@ -48,6 +48,17 @@ namespace BLL
           
             
         }
+
+        public IList<Conductor> Filtro()
+        {
+            conexion.Open();
+            conductores = new List<Conductor>();
+            conductores = ConductorRepository.Filtro();
+            conexion.Close();
+            return conductores;
+
+
+        }
         public Conductor Buscar(string ced)
         {
             conexion.Open();
