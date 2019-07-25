@@ -34,7 +34,6 @@
             this.panelFormularios = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNuevoViaje = new System.Windows.Forms.Button();
-            this.btnAddConductor = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -100,7 +99,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.panel1.Controls.Add(this.btnNuevoViaje);
-            this.panel1.Controls.Add(this.btnAddConductor);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1050, 134);
@@ -125,26 +123,6 @@
             this.btnNuevoViaje.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevoViaje.UseVisualStyleBackColor = true;
             this.btnNuevoViaje.Click += new System.EventHandler(this.btnNuevoViaje_Click);
-            // 
-            // btnAddConductor
-            // 
-            this.btnAddConductor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAddConductor.FlatAppearance.BorderSize = 0;
-            this.btnAddConductor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddConductor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnAddConductor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddConductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddConductor.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAddConductor.Image = ((System.Drawing.Image)(resources.GetObject("btnAddConductor.Image")));
-            this.btnAddConductor.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAddConductor.Location = new System.Drawing.Point(276, 11);
-            this.btnAddConductor.Name = "btnAddConductor";
-            this.btnAddConductor.Size = new System.Drawing.Size(191, 101);
-            this.btnAddConductor.TabIndex = 3;
-            this.btnAddConductor.Text = "AGREGAR NUEVO CONDUCTOR";
-            this.btnAddConductor.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAddConductor.UseVisualStyleBackColor = true;
-            this.btnAddConductor.Click += new System.EventHandler(this.btnAddConductor_Click);
             // 
             // pictureBox1
             // 
@@ -464,7 +442,6 @@
         private System.Windows.Forms.Button btnPasajeros;
         private System.Windows.Forms.Button btnViajes;
         private System.Windows.Forms.Button btnNuevoViaje;
-        private System.Windows.Forms.Button btnAddConductor;
         private System.Windows.Forms.Button btnRutas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnHome;

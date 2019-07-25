@@ -74,7 +74,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxBuscarVehiculo = new System.Windows.Forms.ComboBox();
-            this.btnFinalizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelPlanilla.SuspendLayout();
             this.panelVehiculos.SuspendLayout();
@@ -181,7 +180,6 @@
             this.PanelPlanilla.Controls.Add(this.panelVehiculos);
             this.PanelPlanilla.Controls.Add(this.panelClientes);
             this.PanelPlanilla.Controls.Add(this.panel2);
-            this.PanelPlanilla.Controls.Add(this.btnFinalizar);
             this.PanelPlanilla.Controls.Add(this.panel1);
             this.PanelPlanilla.Location = new System.Drawing.Point(0, 0);
             this.PanelPlanilla.Name = "PanelPlanilla";
@@ -552,23 +550,6 @@
             this.comboBoxBuscarVehiculo.TabIndex = 0;
             this.comboBoxBuscarVehiculo.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBuscarVehiculo_SelectedIndexChanged);
             // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnFinalizar.FlatAppearance.BorderSize = 0;
-            this.btnFinalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnFinalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFinalizar.Location = new System.Drawing.Point(450, 483);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(109, 34);
-            this.btnFinalizar.TabIndex = 9;
-            this.btnFinalizar.Text = "FINALIZAR";
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click_1);
-            // 
             // IniciarViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,7 +582,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PanelPlanilla;
-        private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.DateTimePicker dtimeHoraSalida;
         private System.Windows.Forms.ComboBox comboBoxDestino;
         private System.Windows.Forms.Panel panelVehiculos;
