@@ -6,7 +6,7 @@ namespace Entity
 {
     public class Conductor : Personas
     {
-        public string Imagen { get; set; }
+        public byte[] Imagen { get; set; }
         public string Licencia { get; set; }
         public string Estado_Licencia { get; set; }
         public DateTime Fecha_naciemiento { get; set; }
@@ -19,7 +19,7 @@ namespace Entity
         {
         }
 
-        public Conductor(string nombre, string apellido, string identificacion, DateTime fe_na, string telefono,string direccion, string imagen,string licencia,string est_lic,
+        public Conductor(string nombre, string apellido, string identificacion, DateTime fe_na, string telefono,string direccion, byte[] imagen,string licencia,string est_lic,
             DateTime fecha, string email,string bank)
         {
             Nombre = nombre;

@@ -36,7 +36,7 @@ namespace DAL
                     cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = conductor.Telefono;
                     cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = conductor.Email;
                     cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = conductor.Direccion;
-                    cmd.Parameters.Add("@imagen", SqlDbType.VarChar).Value = conductor.Imagen;
+                    cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = conductor.Imagen;
                     cmd.Parameters.Add("@licencia", SqlDbType.VarChar).Value = conductor.Licencia;
                     cmd.Parameters.Add("@est_licencia", SqlDbType.VarChar).Value = conductor.Estado_Licencia;
                     cmd.Parameters.Add("@fecha_licencia", SqlDbType.Date).Value = conductor.Fecha_vencimiento_licencia;
@@ -63,6 +63,7 @@ namespace DAL
 
         public IList<Conductor> Consultar()
         {
+
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "Select * from Conductores";
@@ -82,13 +83,13 @@ namespace DAL
         {
             Conductor conductor = new Conductor();
             conductor.Identificacion = (string)reader["Cedula"];
-            conductor.Nombre = (string)reader["Nombre"];
+            conductor.Nombre = (string)reader["Nombres"];
             conductor.Apellido = (string)reader["Apellido"];
             conductor.Fecha_naciemiento = (DateTime)reader["Fecha nacimiento"];
             conductor.Telefono = (string)reader["Telefono"];
             conductor.Email = (string)reader["Email"];
             conductor.Direccion = (string)reader["Direccion"];
-            conductor.Imagen = (string)reader["Imagen"];
+            conductor.Imagen = (byte[])reader["Imagen"];
             conductor.Licencia = (string)reader["Licencia"];
             conductor.Estado_Licencia = (string)reader["Estado licencia"];
             conductor.Fecha_vencimiento_licencia = (DateTime)reader["Fecha vencimiento licencia"];

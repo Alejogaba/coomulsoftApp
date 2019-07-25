@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -82,6 +83,8 @@ namespace Interfaz_Primaria
 
         public void Guardar()
         {
+            byte[] byteArrayImagen = ImageToByteArray(MarcoDeFoto.Image);
+
             string nombre, apellido, id, tel, dire, email, licencia, est_lic, cuenta_ban,imagen;
             DateTime lic_fecha,fecha_nac;
             nombre = txtNombres.Text;
@@ -90,32 +93,33 @@ namespace Interfaz_Primaria
             tel = txtTelefono.Text;
             dire = txtDireccion.Text;
             email = txtEmail.Text;
-            imagen = MarcoDeFoto.ImageLocation;
             licencia = txtEmail.Text;
             est_lic = "ok";
             cuenta_ban = "Bancolombia N°134324342 Ahorros";
             lic_fecha = Convert.ToDateTime(dtimeLicVence.Text);
             fecha_nac = Convert.ToDateTime(dtimeFechaNacimiento.Text);
 
-            Conductor conductor = new Conductor(nombre, apellido, id, fecha_nac, tel, dire, imagen, licencia,est_lic,lic_fecha,email,cuenta_ban);
+            Conductor conductor = new Conductor(nombre, apellido, id, fecha_nac, tel, dire, byteArrayImagen, licencia,est_lic,lic_fecha,email,cuenta_ban);
             result = MsgBox.Show(Service.Guardar(conductor), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
+            
             Guardar();
+        }
+
+
+        public byte[] ImageToByteArray(System.Drawing.Image imagen)
+        {
+            MemoryStream ms = new MemoryStream();
+            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            return ms.ToArray();
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                dataGridAddConductores.DataSource = Service.Consultar();
-            }
-            catch (Exception ex)
-            {
-                MsgBox.Show("Error"+ex.Message, "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Error);
-            }
+           
             
         }
     }
