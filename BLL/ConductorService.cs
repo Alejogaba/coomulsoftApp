@@ -131,5 +131,15 @@ namespace BLL
             }
 
         }
+        public IList<Conductor> Buscar_por_vehiculo(string veh)
+        {
+            conexion.Open();
+            conductores = new List<Conductor>();
+            conductores = ConductorRepository.Buscar_por_vehiculo(veh);
+            conexion.Close();
+            return conductores;
+
+
+        }
     }
 }

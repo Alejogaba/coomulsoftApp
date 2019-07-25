@@ -156,7 +156,7 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
                 btnAdmConductores.BackColor = Color.FromArgb(58, 58, 60);
             if (Application.OpenForms["AdmVehiculos"] == null)
                 btnAdmVehiculos.BackColor = Color.FromArgb(58, 58, 60);
-            if (Application.OpenForms["Reportes"] == null)
+            if (Application.OpenForms["Reportes"] ==null)
                 btnReporte.BackColor = Color.FromArgb(58, 58, 60);
         }
 

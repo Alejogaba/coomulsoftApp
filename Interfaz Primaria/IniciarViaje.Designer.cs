@@ -38,52 +38,50 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtimeFecha = new System.Windows.Forms.DateTimePicker();
-            this.btnSiguiente = new System.Windows.Forms.Button();
             this.PanelPlanilla = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelVehiculos = new System.Windows.Forms.Panel();
             this.txtLicencia = new System.Windows.Forms.Label();
             this.txtCelular = new System.Windows.Forms.Label();
             this.txtIdentificacion = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxconductor = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxBuscarConductor = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelClientes = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxDir = new System.Windows.Forms.TextBox();
+            this.textBoxTel = new System.Windows.Forms.TextBox();
+            this.textBoxApellidos = new System.Windows.Forms.TextBox();
+            this.textBoxNombres = new System.Windows.Forms.TextBox();
+            this.textBoxid = new System.Windows.Forms.TextBox();
+            this.labelmaximo = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.labelcontador = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.labelIdentificacion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtCantPasajeros = new System.Windows.Forms.Label();
             this.txtPlaca = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxvehiculo = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxBuscarVehiculo = new System.Windows.Forms.ComboBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
-            this.labelIdentificacion = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.labelcontador = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.labelmaximo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelPlanilla.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.panelVehiculos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxconductor)).BeginInit();
+            this.panelClientes.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxvehiculo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -175,58 +173,42 @@
             this.dtimeFecha.Size = new System.Drawing.Size(202, 20);
             this.dtimeFecha.TabIndex = 0;
             // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnSiguiente.FlatAppearance.BorderSize = 0;
-            this.btnSiguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSiguiente.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSiguiente.Location = new System.Drawing.Point(346, 484);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(109, 34);
-            this.btnSiguiente.TabIndex = 8;
-            this.btnSiguiente.Text = "SIGUIENTE";
-            this.btnSiguiente.UseVisualStyleBackColor = false;
-            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
-            // 
             // PanelPlanilla
             // 
             this.PanelPlanilla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelPlanilla.Controls.Add(this.panel4);
-            this.PanelPlanilla.Controls.Add(this.panel3);
+            this.PanelPlanilla.Controls.Add(this.panelVehiculos);
+            this.PanelPlanilla.Controls.Add(this.panelClientes);
             this.PanelPlanilla.Controls.Add(this.panel2);
             this.PanelPlanilla.Controls.Add(this.btnFinalizar);
             this.PanelPlanilla.Controls.Add(this.panel1);
-            this.PanelPlanilla.Controls.Add(this.btnSiguiente);
             this.PanelPlanilla.Location = new System.Drawing.Point(0, 0);
             this.PanelPlanilla.Name = "PanelPlanilla";
             this.PanelPlanilla.Size = new System.Drawing.Size(1000, 610);
             this.PanelPlanilla.TabIndex = 9;
             // 
-            // panel4
+            // panelVehiculos
             // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.txtLicencia);
-            this.panel4.Controls.Add(this.txtCelular);
-            this.panel4.Controls.Add(this.txtIdentificacion);
-            this.panel4.Controls.Add(this.txtNombre);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.comboBoxBuscarConductor);
-            this.panel4.Location = new System.Drawing.Point(569, 298);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(419, 138);
-            this.panel4.TabIndex = 12;
+            this.panelVehiculos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelVehiculos.BackColor = System.Drawing.SystemColors.Control;
+            this.panelVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelVehiculos.Controls.Add(this.txtLicencia);
+            this.panelVehiculos.Controls.Add(this.txtCelular);
+            this.panelVehiculos.Controls.Add(this.txtIdentificacion);
+            this.panelVehiculos.Controls.Add(this.txtNombre);
+            this.panelVehiculos.Controls.Add(this.pictureBoxconductor);
+            this.panelVehiculos.Controls.Add(this.label11);
+            this.panelVehiculos.Controls.Add(this.label10);
+            this.panelVehiculos.Controls.Add(this.label9);
+            this.panelVehiculos.Controls.Add(this.label8);
+            this.panelVehiculos.Controls.Add(this.comboBoxBuscarConductor);
+            this.panelVehiculos.Enabled = false;
+            this.panelVehiculos.Location = new System.Drawing.Point(569, 298);
+            this.panelVehiculos.Name = "panelVehiculos";
+            this.panelVehiculos.Size = new System.Drawing.Size(419, 138);
+            this.panelVehiculos.TabIndex = 12;
+            this.panelVehiculos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelVehiculos_Paint);
             // 
             // txtLicencia
             // 
@@ -268,16 +250,16 @@
             this.txtNombre.TabIndex = 14;
             this.txtNombre.Text = "--------------------------";
             // 
-            // pictureBox2
+            // pictureBoxconductor
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(276, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(131, 110);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxconductor.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxconductor.Image")));
+            this.pictureBoxconductor.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxconductor.InitialImage")));
+            this.pictureBoxconductor.Location = new System.Drawing.Point(276, 20);
+            this.pictureBoxconductor.Name = "pictureBoxconductor";
+            this.pictureBoxconductor.Size = new System.Drawing.Size(131, 110);
+            this.pictureBoxconductor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxconductor.TabIndex = 11;
+            this.pictureBoxconductor.TabStop = false;
             // 
             // label11
             // 
@@ -326,31 +308,149 @@
             this.comboBoxBuscarConductor.Name = "comboBoxBuscarConductor";
             this.comboBoxBuscarConductor.Size = new System.Drawing.Size(135, 21);
             this.comboBoxBuscarConductor.TabIndex = 0;
+            this.comboBoxBuscarConductor.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBuscarConductor_SelectedIndexChanged);
             // 
-            // panel3
+            // panelClientes
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.labelmaximo);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.labelcontador);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.labelIdentificacion);
-            this.panel3.Location = new System.Drawing.Point(12, 298);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(419, 138);
-            this.panel3.TabIndex = 11;
+            this.panelClientes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelClientes.BackColor = System.Drawing.SystemColors.Control;
+            this.panelClientes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelClientes.Controls.Add(this.button1);
+            this.panelClientes.Controls.Add(this.textBoxDir);
+            this.panelClientes.Controls.Add(this.textBoxTel);
+            this.panelClientes.Controls.Add(this.textBoxApellidos);
+            this.panelClientes.Controls.Add(this.textBoxNombres);
+            this.panelClientes.Controls.Add(this.textBoxid);
+            this.panelClientes.Controls.Add(this.labelmaximo);
+            this.panelClientes.Controls.Add(this.label12);
+            this.panelClientes.Controls.Add(this.labelcontador);
+            this.panelClientes.Controls.Add(this.label16);
+            this.panelClientes.Controls.Add(this.label15);
+            this.panelClientes.Controls.Add(this.label14);
+            this.panelClientes.Controls.Add(this.label13);
+            this.panelClientes.Controls.Add(this.labelIdentificacion);
+            this.panelClientes.Enabled = false;
+            this.panelClientes.Location = new System.Drawing.Point(12, 298);
+            this.panelClientes.Name = "panelClientes";
+            this.panelClientes.Size = new System.Drawing.Size(419, 138);
+            this.panelClientes.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(349, 92);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(39, 34);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "->";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // textBoxDir
+            // 
+            this.textBoxDir.Location = new System.Drawing.Point(137, 105);
+            this.textBoxDir.Name = "textBoxDir";
+            this.textBoxDir.Size = new System.Drawing.Size(166, 20);
+            this.textBoxDir.TabIndex = 12;
+            // 
+            // textBoxTel
+            // 
+            this.textBoxTel.Location = new System.Drawing.Point(137, 83);
+            this.textBoxTel.Name = "textBoxTel";
+            this.textBoxTel.Size = new System.Drawing.Size(166, 20);
+            this.textBoxTel.TabIndex = 11;
+            // 
+            // textBoxApellidos
+            // 
+            this.textBoxApellidos.Location = new System.Drawing.Point(137, 60);
+            this.textBoxApellidos.Name = "textBoxApellidos";
+            this.textBoxApellidos.Size = new System.Drawing.Size(166, 20);
+            this.textBoxApellidos.TabIndex = 10;
+            // 
+            // textBoxNombres
+            // 
+            this.textBoxNombres.Location = new System.Drawing.Point(137, 38);
+            this.textBoxNombres.Name = "textBoxNombres";
+            this.textBoxNombres.Size = new System.Drawing.Size(166, 20);
+            this.textBoxNombres.TabIndex = 9;
+            // 
+            // textBoxid
+            // 
+            this.textBoxid.Location = new System.Drawing.Point(137, 15);
+            this.textBoxid.Name = "textBoxid";
+            this.textBoxid.Size = new System.Drawing.Size(166, 20);
+            this.textBoxid.TabIndex = 8;
+            // 
+            // labelmaximo
+            // 
+            this.labelmaximo.AutoSize = true;
+            this.labelmaximo.Location = new System.Drawing.Point(203, -1);
+            this.labelmaximo.Name = "labelmaximo";
+            this.labelmaximo.Size = new System.Drawing.Size(16, 13);
+            this.labelmaximo.TabIndex = 7;
+            this.labelmaximo.Text = "---";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(177, -1);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(19, 13);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "de";
+            // 
+            // labelcontador
+            // 
+            this.labelcontador.AutoSize = true;
+            this.labelcontador.Location = new System.Drawing.Point(157, -1);
+            this.labelcontador.Name = "labelcontador";
+            this.labelcontador.Size = new System.Drawing.Size(13, 13);
+            this.labelcontador.TabIndex = 5;
+            this.labelcontador.Text = "1";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(29, 91);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Telefono";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(29, 113);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(52, 13);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Direccion";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(30, 67);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Apellidos";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(29, 45);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Nombres";
+            // 
+            // labelIdentificacion
+            // 
+            this.labelIdentificacion.AutoSize = true;
+            this.labelIdentificacion.Location = new System.Drawing.Point(29, 20);
+            this.labelIdentificacion.Name = "labelIdentificacion";
+            this.labelIdentificacion.Size = new System.Drawing.Size(70, 13);
+            this.labelIdentificacion.TabIndex = 0;
+            this.labelIdentificacion.Text = "Identificacion";
             // 
             // panel2
             // 
@@ -360,7 +460,7 @@
             this.panel2.Controls.Add(this.txtCantPasajeros);
             this.panel2.Controls.Add(this.txtPlaca);
             this.panel2.Controls.Add(this.txtCodigo);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pictureBoxvehiculo);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label3);
@@ -400,17 +500,18 @@
             this.txtCodigo.TabIndex = 11;
             this.txtCodigo.Text = "--------------------------";
             // 
-            // pictureBox1
+            // pictureBoxvehiculo
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(276, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxvehiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBoxvehiculo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxvehiculo.Image")));
+            this.pictureBoxvehiculo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxvehiculo.InitialImage")));
+            this.pictureBoxvehiculo.Location = new System.Drawing.Point(276, 17);
+            this.pictureBoxvehiculo.Name = "pictureBoxvehiculo";
+            this.pictureBoxvehiculo.Size = new System.Drawing.Size(131, 110);
+            this.pictureBoxvehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxvehiculo.TabIndex = 10;
+            this.pictureBoxvehiculo.TabStop = false;
+            this.pictureBoxvehiculo.Click += new System.EventHandler(this.PictureBoxvehiculo_Click);
             // 
             // label7
             // 
@@ -449,6 +550,7 @@
             this.comboBoxBuscarVehiculo.Name = "comboBoxBuscarVehiculo";
             this.comboBoxBuscarVehiculo.Size = new System.Drawing.Size(135, 21);
             this.comboBoxBuscarVehiculo.TabIndex = 0;
+            this.comboBoxBuscarVehiculo.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBuscarVehiculo_SelectedIndexChanged);
             // 
             // btnFinalizar
             // 
@@ -459,138 +561,13 @@
             this.btnFinalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFinalizar.Location = new System.Drawing.Point(536, 484);
+            this.btnFinalizar.Location = new System.Drawing.Point(450, 483);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(109, 34);
             this.btnFinalizar.TabIndex = 9;
             this.btnFinalizar.Text = "FINALIZAR";
             this.btnFinalizar.UseVisualStyleBackColor = false;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click_1);
-            // 
-            // labelIdentificacion
-            // 
-            this.labelIdentificacion.AutoSize = true;
-            this.labelIdentificacion.Location = new System.Drawing.Point(29, 20);
-            this.labelIdentificacion.Name = "labelIdentificacion";
-            this.labelIdentificacion.Size = new System.Drawing.Size(70, 13);
-            this.labelIdentificacion.TabIndex = 0;
-            this.labelIdentificacion.Text = "Identificacion";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(29, 45);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 13);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Nombres";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(30, 67);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 13);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Apellidos";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(29, 113);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 13);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Direccion";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(29, 91);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 13);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Telefono";
-            // 
-            // labelcontador
-            // 
-            this.labelcontador.AutoSize = true;
-            this.labelcontador.Location = new System.Drawing.Point(157, -1);
-            this.labelcontador.Name = "labelcontador";
-            this.labelcontador.Size = new System.Drawing.Size(13, 13);
-            this.labelcontador.TabIndex = 5;
-            this.labelcontador.Text = "1";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(177, -1);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(19, 13);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "de";
-            // 
-            // labelmaximo
-            // 
-            this.labelmaximo.AutoSize = true;
-            this.labelmaximo.Location = new System.Drawing.Point(203, -1);
-            this.labelmaximo.Name = "labelmaximo";
-            this.labelmaximo.Size = new System.Drawing.Size(16, 13);
-            this.labelmaximo.TabIndex = 7;
-            this.labelmaximo.Text = "---";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(137, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(137, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 20);
-            this.textBox2.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(137, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 20);
-            this.textBox3.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(137, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(166, 20);
-            this.textBox4.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(137, 105);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(166, 20);
-            this.textBox5.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(380, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "->";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(345, 102);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(29, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "<-";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // IniciarViaje
             // 
@@ -604,14 +581,14 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.PanelPlanilla.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelVehiculos.ResumeLayout(false);
+            this.panelVehiculos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxconductor)).EndInit();
+            this.panelClientes.ResumeLayout(false);
+            this.panelClientes.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxvehiculo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -623,20 +600,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Panel PanelPlanilla;
         private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.DateTimePicker dtimeHoraSalida;
         private System.Windows.Forms.ComboBox comboBoxDestino;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelVehiculos;
+        private System.Windows.Forms.Panel panelClientes;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxBuscarVehiculo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxvehiculo;
+        private System.Windows.Forms.PictureBox pictureBoxconductor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -650,13 +626,12 @@
         private System.Windows.Forms.Label txtCelular;
         private System.Windows.Forms.Label txtIdentificacion;
         private System.Windows.Forms.Label txtNombre;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDir;
+        private System.Windows.Forms.TextBox textBoxTel;
+        private System.Windows.Forms.TextBox textBoxApellidos;
+        private System.Windows.Forms.TextBox textBoxNombres;
+        private System.Windows.Forms.TextBox textBoxid;
         private System.Windows.Forms.Label labelmaximo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label labelcontador;
