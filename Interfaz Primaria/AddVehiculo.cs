@@ -16,7 +16,9 @@ namespace Interfaz_Primaria
 {
     public partial class AddVehiculo : Form
     {
-        VehiculosService service = new VehiculosService();
+        VehiculosService servicevehiculo = new VehiculosService();
+        ConductorService serviceconductor = new ConductorService();
+
         DialogResult result;
         public AddVehiculo()
         {
@@ -29,7 +31,7 @@ namespace Interfaz_Primaria
        public void Cargar_combobox()
         {
             comboBoxBuscarCodigo.Items.Clear();
-            foreach (var item in service.Consultar())
+            foreach (var item in servicevehiculo.Consultar())
             {
                 comboBoxBuscarCodigo.Items.Add(item.Codigo);
             }
@@ -91,9 +93,10 @@ namespace Interfaz_Primaria
             else
             {
                 Vehiculo vehiculo = new Vehiculo(byteArrayImagen, codigo, placa, nombre_modelo, tipo, capacidad_pasajeros, capacidad_maletero, gasolina);
-                  result = MsgBox.Show(service.Guardar(vehiculo), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                  result = MsgBox.Show(servicevehiculo.Guardar(vehiculo), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
                 Cargar_combobox();
                 panelconductor.Enabled = true;
+                cargarconductor();
             }
 
 
@@ -112,7 +115,7 @@ namespace Interfaz_Primaria
         private void Button1_Click_1(object sender, EventArgs e)
         {
             string cod = txtCodigo.Text;
-            result = MsgBox.Show(service.Eliminar(cod), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+            result = MsgBox.Show(servicevehiculo.Eliminar(cod), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
         }
 
         private void BtnBorrar_Click(object sender, EventArgs e)
@@ -123,16 +126,44 @@ namespace Interfaz_Primaria
         private void ComboBoxBuscarCodigo_SelectedIndexChanged(object sender, EventArgs e)
         {
             panelconductor.Enabled = true;
+            cargarconductor();
         }
 
         public void cargarconductor()
         {
-
+            comboBoxconductor.Items.Clear();
+            foreach (var item in serviceconductor.Filtro_sin_asignar())
+            {
+                comboBoxconductor.Items.Add(item.Identificacion);
+            }
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string cod = comboBoxconductor.Text;
+            Conductor con = new Conductor();
+            con = serviceconductor.Buscar(cod);
+            labelnombre.Text = con.Nombre;
+            labelapellido.Text = con.Apellido;
+            labetelefonno.Text = con.Telefono;
+            MemoryStream ms = new MemoryStream(con.Imagen);
+            Image returnImage = System.Drawing.Image.FromStream(ms);
+            pictureBoxconductor.Image = returnImage;
 
+        }
+
+        private void BtnAsignarVehiculo_Click(object sender, EventArgs e)
+        {
+            string codigo_vehiculo, cedula;
+            codigo_vehiculo = txtCodigo.Text;
+            cedula = comboBoxconductor.Text;
+            serviceconductor.Asignar_vehiculo(codigo_vehiculo,cedula);
+        }
+
+        private void BtnDesasignarVehiculo_Click(object sender, EventArgs e)
+        {
+            string cedula = comboBoxconductor.Text;
+            serviceconductor.Desasignar_vehiculo(cedula);
         }
     }
 }

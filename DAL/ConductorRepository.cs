@@ -165,6 +165,36 @@ namespace DAL
             return condu;
         }
 
+        public IList<Conductor> Filtro_sin_asignar()
+        {
+            Conductor condu = new Conductor();
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "SELECT * FROM Conductores WHERE [Vehiculo asignado]='No asignado'";
+                Reader = Comando.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    Conductor conductor = new Conductor();
+                    conductor = Map(Reader);
+                    conductores.Add(conductor);
+                }
+            }
+            return conductores;
+        }
+        public string Desasignar(string cedula)
+        {
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "UPDATE Conductores SET [Vehiculo asignado]='No asignado' WHERE Cedula=@cedula ";
+                Comando.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
+                int i = Comando.ExecuteNonQuery();
+
+                return (i > 0) ? "Desasignado con exito" : "Error al eliminar: No se encontro esa identificacion";
+            }
+
+
+        }
         public Conductor Map(SqlDataReader reader)
         {
             Conductor conductor = new Conductor();
