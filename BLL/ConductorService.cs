@@ -104,5 +104,32 @@ namespace BLL
             }
            
         }
+        public IList<Conductor> Filtro_sin_asignar()
+        {
+            conexion.Open();
+            conductores = new List<Conductor>();
+            conductores = ConductorRepository.Filtro_sin_asignar();
+            conexion.Close();
+            return conductores;
+
+
+        }
+        public string Desasignar_vehiculo(string cedula)
+        {
+            string msg;
+            try
+            {
+                conexion.Open();
+                msg = ConductorRepository.Desasignar(cedula);
+                conexion.Close();
+                return msg;
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                return ex.Message;
+            }
+
+        }
     }
 }
