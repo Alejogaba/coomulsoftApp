@@ -734,30 +734,8 @@
   <metadata name="ofdSeleccionarImagen.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>122, 17</value>
   </metadata>
-  <data name="btnRefresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAdhxAAHYcQFzn84mAAAAH3RF
-        WHRUaXRsZQBQYXBlciBTeW1ib2xpYyBJY29uIFRoZW1lF8QW1AAAArBJREFUWEfVlleLFUEQRq8JM+qD
-        iqKCIog5oZhfFBEMKPog6IpZMWHO2T/uOcuUlHNn5k7flZX94DA9PT1V1d3VYTBTNRsWwLIKy9b11azq
-        WSSdbIZTcBXuw/MKy9b5zTa2bdNc2A1LJt96SGP74TZ8hp+JHxW57hPYdh/UA5kDJ+AJLLdilNbDBHwD
-        jX+vEQHU6237Fa7BGlA6Pw5f4CU4dZ3aCi8gO47eWv4IGhLL4TgH5Psz0NYxiBHUbmcA2+A1ZGOW38Al
-        2AOOzoqKDbAXLsM7qAf9HnRuWToD0Ji9Cuc+HTYdr4WubHeYDcyEdNpyELncGsBCcM6jBzZ2eI/APOir
-        +XASDDwc9wrgAOTINaDzkjWubG+2FwVg7+9C7v1FKOm5imx3OWojOw+7jQFsgYjYRq8gllBfhfNIuLrz
-        sN0YwGmI3vu8ACVbZmwydsL/ddSE34b2AX9204gAzINdUCK3V3c4jdvDNvx+B5bCHy2GRxBRupZLht+R
-        cm93e7Vno9D5X4ltpdFFAJatmzb99wCcgscQAZROwZRlEl6HnIQ7YVp1BiIAn2dhrJtLTdow6ZzSwK16
-        SB6ZeSNyuayGqWoduMLMK/F43gRDWgT3IEbBIM6B0zOu3MavgDa19wsegDnXqMOg88At9SCMMxWu86NQ
-        P5D00SpH4SbkUfgABlEyEl48deRRrg1taVPbrb0PbYR8G/LpSHg2rISu0fCbeePlJR9IPj3ctN1LXrns
-        eRgIIyaRebEdVkFktU53wHnIt6n4T1ueFb3l/PmDUcd0hDHfvfF6P4zMfgtxc87OfdeGtkovNZNyyJy3
-        cB6G4z2Tv0XQt6D3sLfJpDkED8Geazx6mol627jUTMKRCVcij1uv615cbsBTiCmwbJ3f3ND+qeMmuczy
-        9mrZupmmweA3r9ignvrD5OwAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="conductoresBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>473, 17</value>
-  </metadata>
-  <metadata name="coomulsoftAppDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>295, 17</value>
   </metadata>
   <metadata name="coomulsoftAppDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>295, 17</value>

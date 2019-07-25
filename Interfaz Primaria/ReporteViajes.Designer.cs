@@ -34,6 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +98,11 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "pdf";
+            this.saveFileDialog1.FileName = "Reporte";
+            // 
             // ReporteViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,5 +127,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
