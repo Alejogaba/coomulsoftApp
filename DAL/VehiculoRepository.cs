@@ -27,17 +27,20 @@ namespace DAL
                 using (var cmd = Conexion.CreateCommand())
                 {
                     cmd.CommandText = "INSERT INTO Vehiculos(Imagen,Codigo,[Placa vehiculo],[Año modelo],[Tipo vehiculo],[Capacidad pasajeros],[Capacidad maletero],[Consumo gasolina por km])" +
-                   "VALUES(@cedula,@nombres,@apellidos,@fecha_nac,@telefono,@email,@direccion,@imagen,@licencia,@est_licencia,@fecha_licencia,@cuenta_bancaria,@vehiculo_a)";
+                   "VALUES(@imagen,@codigo,@placa,@anio,@tipo,@pasajeros,@maletero,@consumo)";
 
-
+                    cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = vehiculo.Imagen;
+                    cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = vehiculo.Codigo;
                     cmd.Parameters.Add("@placa", SqlDbType.VarChar).Value = vehiculo.Placa_Vehiculo;
-
-                 
-
+                    cmd.Parameters.Add("@anio", SqlDbType.VarChar).Value = vehiculo.Anio_Modelo;
+                    cmd.Parameters.Add("@tipo", SqlDbType.VarChar).Value = vehiculo.Tipo_vehiculo;
+                    cmd.Parameters.Add("@pasajeros", SqlDbType.Int).Value = vehiculo.Capacidad_pasajeros;
+                    cmd.Parameters.Add("@maletero", SqlDbType.Float).Value = vehiculo.Capacidad_maletero;
+                    cmd.Parameters.Add("@consumo", SqlDbType.Float).Value = vehiculo.Consumo_gasolina_km;
 
                     int i = cmd.ExecuteNonQuery();
 
-                    return (i > 0) ? "se agrego con exito" : "NO se agrego la persona";
+                    return (i > 0) ? "se agrego con exito" : "No se agrego";
 
                 }
 
@@ -57,26 +60,26 @@ namespace DAL
 
             using (var Comando = Conexion.CreateCommand())
             {
-                Comando.CommandText = "Select * from Conductores";
+                Comando.CommandText = "Select * from Vehiculos";
                 Reader = Comando.ExecuteReader();
 
                 while (Reader.Read())
                 {
 
-                    Vehiculo conductor = new Vehiculo();
-                    conductor = Map(Reader);
-                    vehiculos.Add(conductor);
+                    Vehiculo vehiculo = new Vehiculo();
+                    vehiculo = Map(Reader);
+                    vehiculos.Add(vehiculo);
                 }
             }
             return vehiculos;
         }
 
-        public string Eliminar(string cedula)
+        public string Eliminar(string codigo)
         {
             using (var Comando = Conexion.CreateCommand())
             {
-                Comando.CommandText = "DELETE FROM Conductores WHERE Cedula=@cedula";
-                Comando.Parameters.Add("@cedula", SqlDbType.Int).Value = cedula;
+                Comando.CommandText = "DELETE FROM Vehiculos WHERE Codigo=@codigo";
+                Comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value = codigo;
                 int i = Comando.ExecuteNonQuery();
 
                 return (i > 0) ? "Se elimino con exito" : "Error al eliminar: No se encontro esa identificacion";
@@ -86,13 +89,13 @@ namespace DAL
 
         }
 
-        public Vehiculo Buscar(string ced)
+        public Vehiculo Buscar(string cod)
         {
             Vehiculo condu = new Vehiculo();
             using (var Comando = Conexion.CreateCommand())
             {
-                Comando.CommandText = "SELECT * FROM Conductores WHERE Cedula=@cedula";
-                Comando.Parameters.Add("@cedula", SqlDbType.Int).Value = ced;
+                Comando.CommandText = "SELECT * FROM Vehiculos WHERE Codigo=@codigo";
+                Comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value = cod;
                 Reader = Comando.ExecuteReader();
 
                 while (Reader.Read())
@@ -108,10 +111,18 @@ namespace DAL
 
         public Vehiculo Map(SqlDataReader reader)
         {
-            Vehiculo conductor = new Vehiculo();
-            conductor.Placa_Vehiculo = (string)reader["Placa vehiculo"];
-            
-            return conductor;
+            Vehiculo vehiculo = new Vehiculo();
+            vehiculo.Imagen = (byte[])reader["Imagen"];
+            vehiculo.Codigo = (string)reader["Codigo"];
+            vehiculo.Placa_Vehiculo = (string)reader["Placa vehiculo"];
+            vehiculo.Anio_Modelo = (string)reader["Año modelo"];
+            vehiculo.Tipo_vehiculo = (string)reader["Tipo vehiculo"];
+            vehiculo.Capacidad_pasajeros = (int)reader["Capacidad pasajeros"];
+            vehiculo.Capacidad_maletero = (float)reader["Capacidad maletero"];
+            vehiculo.Consumo_gasolina_km = (float)reader["Consumo gasolina por km"];
+
+
+            return vehiculo;
         }
     }
 }

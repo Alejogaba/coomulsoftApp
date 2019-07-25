@@ -21,10 +21,7 @@ namespace Interfaz_Primaria
         public AdmConductores()
         {
             InitializeComponent();
-            foreach (var item in Service.Consultar())
-            {
-                comboBoxBuscarPorCedula.Items.Add(item.Identificacion);
-            }
+            
            
             this.ttMensaje.SetToolTip(this.btnBorrarFoto, "Borrar la foto");
             this.ttMensaje.SetToolTip(this.btnCargarFoto, "Subir la foto");
@@ -132,17 +129,23 @@ namespace Interfaz_Primaria
 
             }
         }
-
-        private void BtnRefresh_Click(object sender, EventArgs e)
+        public void Cargargrid()
         {
             try
             {
                 dataGridAddConductores.DataSource = Service.Consultar();
+                dataGridAddConductores.Refresh();
             }
             catch (Exception ex)
-            { 
-                result = MsgBox.Show("Error! "+ ex.Message, "Error", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+            {
+                result = MsgBox.Show("Error! " + ex.Message, "Error", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             }
+        }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+            Cargargrid();
+            
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -150,17 +153,28 @@ namespace Interfaz_Primaria
             string eliminar = txtId.Text;
             result = MsgBox.Show(Service.Eliminar(eliminar), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             dataGridAddConductores.DataSource = Service.Consultar();
+            
+        }
+
+
+        public void Limpiar()
+        {
+            
         }
 
         private void AdmConductores_Load(object sender, EventArgs e)
         {
-           
+            foreach (var item in Service.Consultar())
+            {
+                comboBoxBuscarPorCedula.Items.Add(item.Identificacion);
+            }
         }
 
         private void ComboBoxBuscarPorCedula_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
+                
                 string ced = comboBoxBuscarPorCedula.Text;
                 Conductor con = new Conductor();
                 con = Service.Buscar(ced);

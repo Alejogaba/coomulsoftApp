@@ -16,7 +16,7 @@ namespace BLL
         SqlConnection conexion;
         public ConductorService()
         {
-            conexion = new SqlConnection(@"Data Source=DESKTOP-4TM7H0H\SQLEXPRESS;Initial Catalog=CoomulsoftApp;Integrated Security=True");
+            conexion = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=CoomulsoftApp;Integrated Security=True");
             ConductorRepository = new ConductorRepository(conexion);  
 
         }
@@ -58,6 +58,24 @@ namespace BLL
             return conductores;
 
 
+        }
+
+        public string Asignar_vehiculo(string vehiculo,string cedula)
+        {
+            string msg;
+            try
+            {
+                conexion.Open();
+                msg = ConductorRepository.Asignar(vehiculo, cedula);
+                conexion.Close();
+                return msg;
+            }
+            catch (Exception e)
+            {
+                conexion.Close();
+                return "Error en la base de datos" + e.Message.ToString();
+
+            }
         }
         public Conductor Buscar(string ced)
         {

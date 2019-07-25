@@ -63,6 +63,35 @@ namespace DAL
 
         }
 
+        public string Asignar(string vehiculo,string ced)
+        {
+            try
+            {
+                using (var cmd = Conexion.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Conductores SET [Vehiculo asignado]=@vehiculo WHERE Cedula=@cedula ";
+
+
+                    cmd.Parameters.Add("@vehiculo", SqlDbType.VarChar).Value = vehiculo;
+                    cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = ced;
+
+
+                    int i = cmd.ExecuteNonQuery();
+
+                    return (i > 0) ? "Se asigno correctamente el vehiculo "+vehiculo : "No se pudo asignar";
+
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+
+
+        }
         public IList<Conductor> Consultar()
         {
 
@@ -81,6 +110,8 @@ namespace DAL
             }
             return conductores;
         }
+
+        
 
         public IList<Conductor> Filtro()
         {
@@ -106,7 +137,7 @@ namespace DAL
                 using (var Comando = Conexion.CreateCommand())
                 {
                     Comando.CommandText = "DELETE FROM Conductores WHERE Cedula=@cedula";
-                    Comando.Parameters.Add("@cedula", SqlDbType.Int).Value = cedula;
+                    Comando.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
                     int i = Comando.ExecuteNonQuery();
 
                     return (i > 0) ? "Se elimino con exito" : "Error al eliminar: No se encontro esa identificacion";
@@ -122,7 +153,7 @@ namespace DAL
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "SELECT * FROM Conductores WHERE Cedula=@cedula";
-                Comando.Parameters.Add("@cedula", SqlDbType.Int).Value = ced;
+                Comando.Parameters.Add("@cedula", SqlDbType.VarChar).Value = ced;
                 Reader = Comando.ExecuteReader();
 
                 while (Reader.Read())
