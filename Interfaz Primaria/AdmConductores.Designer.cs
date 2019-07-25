@@ -384,6 +384,7 @@
             // 
             // comboBoxBuscarPorCedula
             // 
+            this.comboBoxBuscarPorCedula.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBoxBuscarPorCedula.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.comboBoxBuscarPorCedula.FormattingEnabled = true;
             this.comboBoxBuscarPorCedula.Location = new System.Drawing.Point(618, 33);
