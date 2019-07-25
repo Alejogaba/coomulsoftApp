@@ -110,6 +110,7 @@ namespace Interfaz_Primaria
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Guardar();
+            Limpiar();
         }
 
         private void Button1_Click_1(object sender, EventArgs e)
@@ -164,6 +165,20 @@ namespace Interfaz_Primaria
         {
             string cedula = comboBoxconductor.Text;
             serviceconductor.Desasignar_vehiculo(cedula);
+        }
+
+        public void Limpiar()
+        {
+            txtAñoModelo.Clear();
+            txtCapacidadPasajeros.Clear();
+            txtCapacidaMaletero.Clear();
+            txtCodigo.Clear();
+            txtGasolina.Clear();
+            txtNombreModelo.Clear();
+            txtPlaca.Clear();
+            txtPlaca2.Clear();
+            txtTipo.Clear();
+
         }
     }
 }
