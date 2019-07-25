@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmConductores));
-            this.dataGridAddConductores = new System.Windows.Forms.DataGridView();
             this.labelnombre = new System.Windows.Forms.Label();
             this.labelapellidos = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,30 +60,16 @@
             this.btnBorrarFoto = new System.Windows.Forms.Button();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.ofdSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
-            this.btnRefresh = new System.Windows.Forms.PictureBox();
             this.comboBoxBuscarPorCedula = new System.Windows.Forms.ComboBox();
             this.conductoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coomulsoftAppDataSet = new Interfaz_Primaria.CoomulsoftAppDataSet();
             this.conductoresTableAdapter = new Interfaz_Primaria.CoomulsoftAppDataSetTableAdapters.ConductoresTableAdapter();
             this.webView1 = new EO.WebBrowser.WebView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridAddConductores
-            // 
-            this.dataGridAddConductores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridAddConductores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.dataGridAddConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAddConductores.Location = new System.Drawing.Point(66, 396);
-            this.dataGridAddConductores.Name = "dataGridAddConductores";
-            this.dataGridAddConductores.Size = new System.Drawing.Size(840, 175);
-            this.dataGridAddConductores.TabIndex = 17;
             // 
             // labelnombre
             // 
@@ -355,17 +340,6 @@
             this.ofdSeleccionarImagen.Filter = "JPEG (*.jpg*)|*.JPG|Archivo de mapas de bits (*.bmp*)|*.BMP|PNG (*.png*)|*.PNG*";
             this.ofdSeleccionarImagen.FileOk += new System.ComponentModel.CancelEventHandler(this.OfdSeleccionarImagen_FileOk);
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(870, 357);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(36, 33);
-            this.btnRefresh.TabIndex = 41;
-            this.btnRefresh.TabStop = false;
-            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
-            // 
             // comboBoxBuscarPorCedula
             // 
             this.comboBoxBuscarPorCedula.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -405,7 +379,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 610);
             this.Controls.Add(this.comboBoxBuscarPorCedula);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.MarcoDeFoto);
             this.Controls.Add(this.btnBorrarFoto);
             this.Controls.Add(this.btnCargarFoto);
@@ -423,7 +396,6 @@
             this.Controls.Add(this.txtEstadoLicencia);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.dataGridAddConductores);
             this.Controls.Add(this.pictur);
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.txtApellidos);
@@ -440,10 +412,8 @@
             this.Name = "AdmConductores";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.AdmConductores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -452,7 +422,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridAddConductores;
         private System.Windows.Forms.Label labelnombre;
         private System.Windows.Forms.Label labelapellidos;
         private System.Windows.Forms.Label label3;
@@ -483,7 +452,6 @@
         private System.Windows.Forms.Button btnBorrarFoto;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.OpenFileDialog ofdSeleccionarImagen;
-        private System.Windows.Forms.PictureBox btnRefresh;
         private System.Windows.Forms.ComboBox comboBoxBuscarPorCedula;
         private CoomulsoftAppDataSet coomulsoftAppDataSet;
         private System.Windows.Forms.BindingSource conductoresBindingSource;

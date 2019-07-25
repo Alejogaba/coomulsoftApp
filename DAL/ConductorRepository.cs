@@ -105,19 +105,20 @@ namespace DAL
 
         
 
-        public IList<Conductor> Filtro()
+        public IList<Conductor> Filtro(string identificacion)
         {
 
             using (var Comando = Conexion.CreateCommand())
             {
-                Comando.CommandText = "Select Cedula from Conductores";
+                Comando.CommandText = "Select * from Conductores Where Cedula=@cedula";
+                Comando.Parameters.Add("@cedula", SqlDbType.VarChar).Value = identificacion;
                 Reader = Comando.ExecuteReader();
 
                 while (Reader.Read())
                 {
 
                     Conductor conductor = new Conductor();
-                    conductor = Map2(Reader);
+                    conductor = Map(Reader);
                     conductores.Add(conductor);
                 }
             }

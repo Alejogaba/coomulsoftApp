@@ -29,7 +29,7 @@ namespace Interfaz_Primaria
             this.ttMensaje.SetToolTip(this.btnBorrarFoto, "Borrar la foto");
             this.ttMensaje.SetToolTip(this.btnCargarFoto, "Subir la foto");
             this.ttMensaje.SetToolTip(this.pictur, "Buscar Conductor");
-            this.ttMensaje.SetToolTip(this.btnRefresh, "Actualizar tabla");
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -144,17 +144,7 @@ namespace Interfaz_Primaria
             }
         }
 
-        private void BtnRefresh_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                dataGridAddConductores.DataSource = Service.Consultar();
-            }
-            catch (Exception ex)
-            { 
-                result = MsgBox.Show("Error! "+ ex.Message, "Error", MsgBox.Buttons.OK, MsgBox.Icon.Info);
-            }
-        }
+       
 
         private void Button3_Click(object sender, EventArgs e)
         {
@@ -216,7 +206,7 @@ namespace Interfaz_Primaria
                 result = MsgBox.Show("Error! " + ex.Message, "Error", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             }
 
-            dataGridAddConductores.DataSource = Service.Consultar();
+            
         }
 
         private void OfdSeleccionarImagen_FileOk(object sender, CancelEventArgs e)

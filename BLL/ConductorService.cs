@@ -49,11 +49,11 @@ namespace BLL
             
         }
 
-        public IList<Conductor> Filtro()
+        public IList<Conductor> Filtro(string ced)
         {
             conexion.Open();
             conductores = new List<Conductor>();
-            conductores = ConductorRepository.Filtro();
+            conductores = ConductorRepository.Filtro(ced);
             conexion.Close();
             return conductores;
 
