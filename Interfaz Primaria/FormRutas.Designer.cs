@@ -50,7 +50,6 @@
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnFinalizar = new System.Windows.Forms.Button();
             this.panelMapa.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -235,7 +234,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(2, 203);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(288, 341);
+            this.dataGridView1.Size = new System.Drawing.Size(288, 410);
             this.dataGridView1.TabIndex = 2;
             // 
             // label9
@@ -271,21 +270,6 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Rutas";
             // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnFinalizar.FlatAppearance.BorderSize = 0;
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFinalizar.Location = new System.Drawing.Point(109, 550);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(82, 25);
-            this.btnFinalizar.TabIndex = 16;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
-            // 
             // FormRutas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,7 +277,6 @@
             this.ClientSize = new System.Drawing.Size(1000, 610);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
@@ -335,6 +318,5 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTarifa;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnFinalizar;
     }
 }

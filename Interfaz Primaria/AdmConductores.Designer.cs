@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmConductores));
-            this.btnFinalizar = new System.Windows.Forms.Button();
             this.dataGridAddConductores = new System.Windows.Forms.DataGridView();
             this.labelnombre = new System.Windows.Forms.Label();
             this.labelapellidos = new System.Windows.Forms.Label();
@@ -75,21 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnFinalizar.FlatAppearance.BorderSize = 0;
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFinalizar.Location = new System.Drawing.Point(377, 577);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(74, 25);
-            this.btnFinalizar.TabIndex = 1;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // dataGridAddConductores
             // 
@@ -304,7 +288,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(479, 577);
+            this.button4.Location = new System.Drawing.Point(405, 577);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 25);
             this.button4.TabIndex = 34;
@@ -450,7 +434,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelapellidos);
-            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.labelnombre);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -469,7 +452,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.DataGridView dataGridAddConductores;
         private System.Windows.Forms.Label labelnombre;
         private System.Windows.Forms.Label labelapellidos;

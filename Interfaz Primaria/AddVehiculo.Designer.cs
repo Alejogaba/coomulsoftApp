@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.txtAñoModelo = new System.Windows.Forms.TextBox();
-            this.btnFinalizar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.txtNombreModelo = new System.Windows.Forms.TextBox();
@@ -89,7 +88,6 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtAñoModelo);
-            this.panel1.Controls.Add(this.btnFinalizar);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.btnBorrar);
             this.panel1.Controls.Add(this.txtNombreModelo);
@@ -127,7 +125,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(477, 287);
+            this.button1.Location = new System.Drawing.Point(519, 287);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 25);
             this.button1.TabIndex = 29;
@@ -141,21 +139,6 @@
             this.txtAñoModelo.Name = "txtAñoModelo";
             this.txtAñoModelo.Size = new System.Drawing.Size(65, 20);
             this.txtAñoModelo.TabIndex = 28;
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnFinalizar.FlatAppearance.BorderSize = 0;
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFinalizar.Location = new System.Drawing.Point(611, 287);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(102, 25);
-            this.btnFinalizar.TabIndex = 27;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            this.btnFinalizar.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnGuardar
             // 
@@ -640,7 +623,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.OpenFileDialog ofdSeleccionarImagen;
-        private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ToolTip ttMensajes;
         private System.Windows.Forms.TextBox txtAñoModelo;
