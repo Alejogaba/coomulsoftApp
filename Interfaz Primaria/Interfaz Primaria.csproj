@@ -96,6 +96,12 @@
     <Compile Include="AddVehiculo.Designer.cs">
       <DependentUpon>AddVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteConductores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteConductores.Designer.cs">
+      <DependentUpon>ReporteConductores.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportePasajeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdmConductores.resx">
       <DependentUpon>AdmConductores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteConductores.resx">
+      <DependentUpon>ReporteConductores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportePasajeros.resx">
       <DependentUpon>ReportePasajeros.cs</DependentUpon>
