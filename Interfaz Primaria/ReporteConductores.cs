@@ -20,14 +20,14 @@ namespace Interfaz_Primaria
         public ReporteConductores()
         {
             InitializeComponent();
-            dataGridView1.DataSource = service.Consultar();
+            
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            
-            dataGridView1.DataSource = service.Buscar(textBox1.Text);
-
+            string ced = textBox1.Text;
+            dataGridView1.DataSource = service.Filtro(ced);
+            dataGridView1.Refresh();
         }
 
         public void exportar_pdf()
