@@ -258,9 +258,15 @@ namespace Interfaz_Primaria
                 }
                 else
                 {
+                    if (string.IsNullOrEmpty(origen) || string.IsNullOrEmpty(destino) || string.IsNullOrEmpty(vehiculo) || string.IsNullOrEmpty(conductor))
+                    {
+                        result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                    }
                     result = MsgBox.Show(viajesService.Guardar(viaje), "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Info);
                     this.Close();
                 }
+
+
                 
             }
             
