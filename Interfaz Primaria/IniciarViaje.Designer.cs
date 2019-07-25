@@ -74,6 +74,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxBuscarVehiculo = new System.Windows.Forms.ComboBox();
+            this.buttonRegistrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelPlanilla.SuspendLayout();
             this.panelVehiculos.SuspendLayout();
@@ -108,6 +109,7 @@
             this.comboBoxOrigen.Name = "comboBoxOrigen";
             this.comboBoxOrigen.Size = new System.Drawing.Size(201, 21);
             this.comboBoxOrigen.TabIndex = 11;
+            this.comboBoxOrigen.SelectedIndexChanged += new System.EventHandler(this.ComboBoxOrigen_SelectedIndexChanged);
             // 
             // comboBoxDestino
             // 
@@ -177,6 +179,7 @@
             this.PanelPlanilla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelPlanilla.Controls.Add(this.buttonRegistrar);
             this.PanelPlanilla.Controls.Add(this.panelVehiculos);
             this.PanelPlanilla.Controls.Add(this.panelClientes);
             this.PanelPlanilla.Controls.Add(this.panel2);
@@ -550,6 +553,16 @@
             this.comboBoxBuscarVehiculo.TabIndex = 0;
             this.comboBoxBuscarVehiculo.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBuscarVehiculo_SelectedIndexChanged);
             // 
+            // buttonRegistrar
+            // 
+            this.buttonRegistrar.Location = new System.Drawing.Point(464, 506);
+            this.buttonRegistrar.Name = "buttonRegistrar";
+            this.buttonRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegistrar.TabIndex = 13;
+            this.buttonRegistrar.Text = "Registrar";
+            this.buttonRegistrar.UseVisualStyleBackColor = true;
+            this.buttonRegistrar.Click += new System.EventHandler(this.ButtonRegistrar_Click);
+            // 
             // IniciarViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,5 +633,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label labelIdentificacion;
+        private System.Windows.Forms.Button buttonRegistrar;
     }
 }

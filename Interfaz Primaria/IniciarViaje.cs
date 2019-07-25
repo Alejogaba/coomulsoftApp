@@ -20,13 +20,15 @@ namespace Interfaz_Primaria
         ViajesService viajesService = new ViajesService();
         VehiculosService vehiculosService = new VehiculosService();
         ConductorService conductorService = new ConductorService();
+        RutasService rutasService = new RutasService();
         int a = 0;
         DialogResult result;
 
         public IniciarViaje()
         {
             InitializeComponent();
-            
+            Cargar_vehiculos();
+            Cargar_origen_y_destino();
         }
         public void Cargar_vehiculos()
         {
@@ -34,6 +36,17 @@ namespace Interfaz_Primaria
             foreach (var item in vehiculosService.Consultar())
             {
                 comboBoxBuscarVehiculo.Items.Add(item.Codigo);
+            }
+        }
+
+        public void Cargar_origen_y_destino()
+        {
+            comboBoxOrigen.Items.Clear();
+            comboBoxDestino.Items.Clear();
+            foreach (var item in rutasService.Consultar())
+            {
+                comboBoxOrigen.Items.Add(item.Ciudad_Origen);
+                comboBoxDestino.Items.Add(item.Ciudad_Destino);
             }
         }
         public void Cargar_conductores(string veh)
@@ -214,6 +227,43 @@ namespace Interfaz_Primaria
             MemoryStream ms = new MemoryStream(con.Imagen);
             Image returnImage = System.Drawing.Image.FromStream(ms);
             pictureBoxconductor.Image = returnImage;
+        }
+
+        private void ComboBoxOrigen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonRegistrar_Click(object sender, EventArgs e)
+        {
+            string origen, destino,vehiculo,conductor;
+            DateTime hora_salida, fecha_salida;
+            origen = comboBoxOrigen.Text;
+            destino = comboBoxDestino.Text;
+            vehiculo = comboBoxBuscarVehiculo.Text;
+            conductor = comboBoxBuscarConductor.Text;
+            hora_salida = Convert.ToDateTime(dtimeHoraSalida.Text);
+            fecha_salida = Convert.ToDateTime(dtimeFecha.Text);
+            Viaje viaje = new Viaje(Codigo_viaje(), conductor, vehiculo, fecha_salida, hora_salida, origen, destino);
+            if (origen == destino)
+            {
+                result = MsgBox.Show("No ingrese el mismo destino y origen", "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
+            }
+            else
+            {
+                if (labelcontador.Text != txtCantPasajeros.Text)
+                {
+                    result = MsgBox.Show("Aun faltan pasajeros", "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
+
+                }
+                else
+                {
+                    result = MsgBox.Show(viajesService.Guardar(viaje), "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                    this.Close();
+                }
+                
+            }
+            
         }
     }
 }
