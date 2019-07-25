@@ -90,6 +90,14 @@ namespace Interfaz_Primaria
             lic_fecha = Convert.ToDateTime(dtimeLicVence.Text);
             fecha_nac = Convert.ToDateTime(dtimeFechaNacimiento.Text);
 
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(id) || string.IsNullOrEmpty(tel) || string.IsNullOrEmpty(dire) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(licencia) || string.IsNullOrEmpty(est_lic))
+            {
+                result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+            }
+            else
+            {
+
+            }
             Conductor conductor = new Conductor(nombre, apellido, id, fecha_nac, tel, dire, byteArrayImagen, licencia,est_lic,lic_fecha,email,cuenta_ban);
             result = MsgBox.Show(Service.Guardar(conductor), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
         }
