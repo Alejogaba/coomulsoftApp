@@ -95,6 +95,27 @@ namespace DAL
             return viaje;
         }
 
+        public IList<Viaje> Consultar_fecha(DateTime fecha)
+        {
+
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "Select * from Viajes where [Fecha salida]=@fecha";
+                Comando.Parameters.Add("@fecha", SqlDbType.Date).Value = fecha;
+                Reader = Comando.ExecuteReader();
+
+                while (Reader.Read())
+                {
+
+                    Viaje viaje = new Viaje();
+                    viaje = Map(Reader);
+                    viajes.Add(viaje);
+                }
+            }
+            return viajes;
+        }
+
+
 
 
         public Viaje Map(SqlDataReader reader)
@@ -105,8 +126,6 @@ namespace DAL
             viaje.Cod_vehiculo = (string)reader["Codigo vehiculo"];
             viaje.Fecha_salida = (DateTime)reader["Fecha salida"];
             viaje.Hora_salida = (DateTime)reader["Hora salida"];
-            viaje.Fecha_llegada = (DateTime)reader["Fecha llegada"];
-            viaje.Hora_llegada = (DateTime)reader["Hora llegada"];
             viaje.Ciudad_origen = (string)reader["Ciudad origen"];
             viaje.Ciudad_destino = (string)reader["Ciudad destino"];
             return viaje;

@@ -49,6 +49,16 @@ namespace BLL
 
         }
 
+        public IList<Viaje> Consultar_por_fecha(DateTime fecha)
+        {
+            conexion.Open();
+            viajes = new List<Viaje>();
+            viajes = viajesrepository.Consultar_fecha(fecha);
+            conexion.Close();
+            return viajes;
+
+
+        }
 
         public Viaje Buscar(int cod)
         {

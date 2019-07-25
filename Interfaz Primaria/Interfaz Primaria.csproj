@@ -96,6 +96,12 @@
     <Compile Include="AddVehiculo.Designer.cs">
       <DependentUpon>AddVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteViajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteViajes.Designer.cs">
+      <DependentUpon>ReporteViajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="xDialog\MsgBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdmConductores.resx">
       <DependentUpon>AdmConductores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteViajes.resx">
+      <DependentUpon>ReporteViajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="xDialog\MsgBox.resx">
       <DependentUpon>MsgBox.cs</DependentUpon>
