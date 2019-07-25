@@ -118,8 +118,8 @@ namespace DAL
             vehiculo.Anio_Modelo = (string)reader["Año modelo"];
             vehiculo.Tipo_vehiculo = (string)reader["Tipo vehiculo"];
             vehiculo.Capacidad_pasajeros = (int)reader["Capacidad pasajeros"];
-            vehiculo.Capacidad_maletero = (float)reader["Capacidad maletero"];
-            vehiculo.Consumo_gasolina_km = (float)reader["Consumo gasolina por km"];
+            vehiculo.Capacidad_maletero = (float)reader.GetDouble(6);
+            vehiculo.Consumo_gasolina_km = (float)reader.GetDouble(7);
 
 
             return vehiculo;
