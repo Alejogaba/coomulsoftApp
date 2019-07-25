@@ -16,6 +16,7 @@ namespace Interfaz_Primaria
 {
     public partial class ReporteConductores : Form
     {
+        private BindingSource binConductores = new BindingSource();
         ConductorService service = new ConductorService();
         public ReporteConductores()
         {
@@ -25,11 +26,27 @@ namespace Interfaz_Primaria
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            string ced = textBox1.Text;
-            dataGridView1.DataSource = service.Filtro(ced);
-            dataGridView1.Refresh();
+            //string ced = textBox1.Text;
+            //dataGridView1.DataSource = service.Filtro(ced);
+            //dataGridView1.Refresh();
         }
-
+        void actualizar()
+        {
+            binConductores.DataSource = service.Consultar();
+            dataGridView1.DataSource = binConductores;
+        }
+        void filtar(string filtro)
+        {
+            if (filtro == "")
+            {
+                binConductores.RemoveFilter();
+            }
+            else
+            {
+                binConductores.Filter = "identificacion like '" + filtro + "%'";
+            }
+            
+        }
         public void exportar_pdf()
         {
 
@@ -78,6 +95,16 @@ namespace Interfaz_Primaria
         private void Button2_Click(object sender, EventArgs e)
         {
             exportar_pdf();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            filtar(textBox1.Text);
+        }
+
+        private void ReporteConductores_Load(object sender, EventArgs e)
+        {
+            actualizar();
         }
     }
 }
