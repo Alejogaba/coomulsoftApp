@@ -42,10 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteService.cs" />
     <Compile Include="ConductorService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RutasService.cs" />
     <Compile Include="VehiculosService.cs" />
+    <Compile Include="ViajesService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

@@ -15,9 +15,8 @@ namespace Entity
         public DateTime Hora_llegada { get; set; }
         public String Ciudad_origen { get; set; }
         public String Ciudad_destino { get; set; }
-        public int Cantidad_de_pasajeros { get; set; }
 
-        public Viaje(int codigo_viaje, string cedula_conductor, string cod_vehiculo, DateTime fecha_salida, DateTime fecha_llegada, DateTime hora_salida, DateTime hora_llegada, string ciudad_origen, string ciudad_destino, int cantidad_de_pasajeros)
+        public Viaje(int codigo_viaje, string cedula_conductor, string cod_vehiculo, DateTime fecha_salida, DateTime fecha_llegada, DateTime hora_salida, DateTime hora_llegada, string ciudad_origen, string ciudad_destino)
         {
             Codigo_viaje = codigo_viaje;
             Cedula_conductor = cedula_conductor;
@@ -28,7 +27,10 @@ namespace Entity
             Hora_llegada = hora_llegada;
             Ciudad_origen = ciudad_origen;
             Ciudad_destino = ciudad_destino;
-            Cantidad_de_pasajeros = cantidad_de_pasajeros;
+        }
+
+        public Viaje()
+        {
         }
 
         public void Generar_codigo_viaje()

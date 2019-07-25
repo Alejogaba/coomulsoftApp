@@ -1,0 +1,65 @@
+﻿using DAL;
+using Entity;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BLL
+{
+    public class ViajesService
+    {
+        ViajesRepository viajesrepository;
+        IList<Viaje> viajes;
+        SqlConnection conexion;
+        public ViajesService()
+        {
+            conexion = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=CoomulsoftApp;Integrated Security=True");
+            viajesrepository = new ViajesRepository(conexion);
+
+        }
+        public string Guardar(Viaje viaje)
+        {
+            string msg;
+            try
+            {
+                conexion.Open();
+                msg = viajesrepository.Insertar(viaje);
+                conexion.Close();
+                return msg;
+            }
+            catch (Exception e)
+            {
+                conexion.Close();
+                return "Error en la base de datos" + e.Message.ToString();
+
+            }
+        }
+
+        public IList<Viaje> Consultar()
+        {
+            conexion.Open();
+            viajes = new List<Viaje>();
+            viajes = viajesrepository.Consultar();
+            conexion.Close();
+            return viajes;
+
+
+        }
+
+
+        public Rutas Buscar(int cod)
+        {
+            conexion.Open();
+            Rutas cd = new Rutas();
+            cd = viajesrepository.Buscar(cod);
+            conexion.Close();
+            return cd;
+
+
+        }
+        
+    }
+}

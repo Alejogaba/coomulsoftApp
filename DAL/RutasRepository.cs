@@ -94,7 +94,7 @@ namespace DAL
             Rutas ruta = new Rutas();
             using (var Comando = Conexion.CreateCommand())
             {
-                Comando.CommandText = "SELECT * FROM Vehiculos WHERE Codigo=@codigo";
+                Comando.CommandText = "SELECT * FROM Rutas WHERE (Origen=@origen && Destino=@destino)";
                 Comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value = cod;
                 Reader = Comando.ExecuteReader();
 
