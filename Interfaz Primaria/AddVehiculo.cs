@@ -117,6 +117,8 @@ namespace Interfaz_Primaria
         {
             string cod = txtCodigo.Text;
             result = MsgBox.Show(servicevehiculo.Eliminar(cod), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+
+            Limpiar();
         }
 
         private void BtnBorrar_Click(object sender, EventArgs e)

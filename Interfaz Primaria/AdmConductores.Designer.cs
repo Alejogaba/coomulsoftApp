@@ -42,7 +42,7 @@
             this.txtLicencia = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.pictur = new System.Windows.Forms.PictureBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtEstadoLicencia = new System.Windows.Forms.TextBox();
@@ -69,7 +69,7 @@
             this.conductoresTableAdapter = new Interfaz_Primaria.CoomulsoftAppDataSetTableAdapters.ConductoresTableAdapter();
             this.webView1 = new EO.WebBrowser.WebView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).BeginInit();
@@ -187,17 +187,17 @@
             this.txtNombres.Size = new System.Drawing.Size(227, 20);
             this.txtNombres.TabIndex = 14;
             // 
-            // btnBuscar
+            // pictur
             // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(857, 23);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(49, 38);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnBuscar.TabIndex = 15;
-            this.btnBuscar.TabStop = false;
+            this.pictur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictur.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictur.Image = ((System.Drawing.Image)(resources.GetObject("pictur.Image")));
+            this.pictur.Location = new System.Drawing.Point(857, 23);
+            this.pictur.Name = "pictur";
+            this.pictur.Size = new System.Drawing.Size(49, 38);
+            this.pictur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictur.TabIndex = 15;
+            this.pictur.TabStop = false;
             // 
             // txtTelefono
             // 
@@ -439,7 +439,7 @@
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.dataGridAddConductores);
-            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.pictur);
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtLicencia);
@@ -457,7 +457,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.AdmConductores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAddConductores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).EndInit();
@@ -480,7 +480,7 @@
         private System.Windows.Forms.TextBox txtLicencia;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombres;
-        private System.Windows.Forms.PictureBox btnBuscar;
+        private System.Windows.Forms.PictureBox pictur;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtEstadoLicencia;

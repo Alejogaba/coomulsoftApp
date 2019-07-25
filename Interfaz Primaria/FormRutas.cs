@@ -87,5 +87,107 @@ namespace Interfaz_Primaria
             string destino = textBoxDestino.Text;
             result = MsgBox.Show(service.Eliminar(origen,destino), "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
         }
+
+        private void textBoxDestino_Enter(object sender, EventArgs e)
+        {
+            if (textBoxDestino.Text == "           Ciudad")
+            {
+                textBoxDestino.Text = "";
+
+
+            }
+        }
+
+        private void textBoxDestino_Leave(object sender, EventArgs e)
+        {
+            if (textBoxDestino.Text == "")
+            {
+                textBoxDestino.Text = "           Ciudad";
+
+
+            }
+        }
+
+        private void textBoxDptoDestino_Enter(object sender, EventArgs e)
+        {
+            if (textBoxDptoDestino.Text == "    Departamento")
+            {
+                textBoxDptoDestino.Text = "";
+
+
+            }
+        }
+
+        private void textBoxDptoDestino_Leave(object sender, EventArgs e)
+        {
+            if (textBoxDptoDestino.Text == "")
+            {
+                textBoxDptoDestino.Text = "    Departamento";
+
+
+            }
+        }
+
+        private void textBoxCiudad_Enter(object sender, EventArgs e)
+        {
+            if (textBoxCiudad.Text == "           Ciudad")
+            {
+                textBoxCiudad.Text = "";
+
+
+            }
+        }
+
+        private void textBoxCiudad_Leave(object sender, EventArgs e)
+        {
+            if (textBoxCiudad.Text == "")
+            {
+                textBoxCiudad.Text = "           Ciudad";
+
+
+            }
+
+        }
+
+        private void textBoxDpto_Enter(object sender, EventArgs e)
+        {
+            if (textBoxDpto.Text == "    Departamento")
+            {
+                textBoxDpto.Text = "";
+
+
+            }
+        }
+
+        private void textBoxDpto_Leave(object sender, EventArgs e)
+        {
+            if (textBoxDpto.Text == "")
+            {
+                textBoxDpto.Text = "    Departamento";
+
+
+            }
+        }
+
+        private void txtTarifa_Enter(object sender, EventArgs e)
+        {
+            if (txtTarifa.Text == "           Tarifa")
+            {
+                txtTarifa.Text = "";
+
+
+            }
+        }
+
+        private void txtTarifa_Leave(object sender, EventArgs e)
+        {
+            if (txtTarifa.Text == "")
+            {
+                txtTarifa.Text = "           Tarifa";
+
+
+            }
+
+        }
     }
 }
