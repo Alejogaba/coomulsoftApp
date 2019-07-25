@@ -73,23 +73,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddConductor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddConductor.Designer.cs">
-      <DependentUpon>AddConductor.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdmConductores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdmConductores.Designer.cs">
       <DependentUpon>AdmConductores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdmVehiculos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdmVehiculos.Designer.cs">
-      <DependentUpon>AdmVehiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="CoomulsoftAppDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,17 +113,11 @@
     <Compile Include="FormRutas.Designer.cs">
       <DependentUpon>FormRutas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddConductor.resx">
-      <DependentUpon>AddConductor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddVehiculo.resx">
       <DependentUpon>AddVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdmConductores.resx">
       <DependentUpon>AdmConductores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdmVehiculos.resx">
-      <DependentUpon>AdmVehiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="xDialog\MsgBox.resx">
       <DependentUpon>MsgBox.cs</DependentUpon>
