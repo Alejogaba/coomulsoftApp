@@ -146,5 +146,43 @@ namespace Interfaz_Primaria
             result = MsgBox.Show(Service.Eliminar(eliminar), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             dataGridAddConductores.DataSource = Service.Consultar();
         }
+
+        private void AdmConductores_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'coomulsoftAppDataSet.Conductores' Puede moverla o quitarla según sea necesario.
+            this.conductoresTableAdapter.Fill(this.coomulsoftAppDataSet.Conductores);
+
+        }
+
+        private void ComboBoxBuscarPorCedula_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string ced = comboBoxBuscarPorCedula.Text;
+                Conductor con = new Conductor();
+                con = Service.Buscar(ced);
+                txtNombres.Text = con.Nombre;
+                MemoryStream ms = new MemoryStream(con.Imagen);
+                System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+                MarcoDeFoto.Image = returnImage;
+                txtApellidos.Text = con.Apellido;
+            }
+            catch (Exception ex)
+            {
+               
+            }
+            
+
+        }
+
+        private void OfdSeleccionarImagen_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void BtnBorrarFoto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

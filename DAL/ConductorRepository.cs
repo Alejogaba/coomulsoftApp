@@ -15,6 +15,8 @@ namespace DAL
         private SqlConnection Conexion;
         private SqlDataReader Reader;
         IList<Conductor> conductores = new List<Conductor>();
+        
+
         public ConductorRepository(SqlConnection conexion)
         {
             Conexion = conexion;
@@ -93,6 +95,24 @@ namespace DAL
           
             
            
+        }
+
+        public Conductor Buscar(string ced)
+        {
+            Conductor condu = new Conductor();
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "SELECT * FROM Conductores WHERE Cedula=@cedula";
+                Comando.Parameters.Add("@cedula", SqlDbType.Int).Value = ced;
+                Reader = Comando.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                   
+                    condu = Map(Reader);
+                }
+            }
+            return condu;
         }
 
         public Conductor Map(SqlDataReader reader)
