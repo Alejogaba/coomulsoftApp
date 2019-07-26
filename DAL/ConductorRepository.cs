@@ -107,7 +107,7 @@ namespace DAL
 
         public IList<Conductor> Filtro(string identificacion)
         {
-            conductores.Clear();
+
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "Select * from Conductores Where Cedula=@cedula";
@@ -192,8 +192,6 @@ namespace DAL
                     Conductor conductor = new Conductor();
                     conductor = Map(Reader);
                     conductores.Add(conductor);
-                    
-                    
                 }
             }
             return conductores;
@@ -223,7 +221,7 @@ namespace DAL
             conductor.Direccion = (string)reader["Direccion"];
             conductor.Imagen = (byte[])reader["Imagen"];
             conductor.Licencia = (string)reader["Licencia"];
-            conductor.Estado_Licencia = (string)reader.GetString(9);
+            conductor.Estado_Licencia = (string)reader["Estado licencia"];
             conductor.Fecha_vencimiento_licencia = (DateTime)reader["Fecha vencimiento licencia"];
             conductor.Cuenta_bancaria = (string)reader["Cuenta bancaria"];
             conductor.Vehiculo_asignado = (string)reader["Vehiculo asignado"];
