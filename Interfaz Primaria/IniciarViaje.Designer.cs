@@ -130,40 +130,44 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(33, 80);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(39, 16);
             this.label5.TabIndex = 5;
             this.label5.Text = "Fecha";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(33, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Destino";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(33, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hora de Salida";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(33, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Origen";
             // 
@@ -231,40 +235,44 @@
             // txtLicencia
             // 
             this.txtLicencia.AutoSize = true;
-            this.txtLicencia.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtLicencia.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLicencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.txtLicencia.Location = new System.Drawing.Point(106, 113);
             this.txtLicencia.Name = "txtLicencia";
-            this.txtLicencia.Size = new System.Drawing.Size(85, 13);
+            this.txtLicencia.Size = new System.Drawing.Size(138, 16);
             this.txtLicencia.TabIndex = 17;
             this.txtLicencia.Text = "--------------------------";
             // 
             // txtCelular
             // 
             this.txtCelular.AutoSize = true;
-            this.txtCelular.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtCelular.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.txtCelular.Location = new System.Drawing.Point(106, 91);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(85, 13);
+            this.txtCelular.Size = new System.Drawing.Size(138, 16);
             this.txtCelular.TabIndex = 16;
             this.txtCelular.Text = "--------------------------";
             // 
             // txtIdentificacion
             // 
             this.txtIdentificacion.AutoSize = true;
-            this.txtIdentificacion.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtIdentificacion.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.txtIdentificacion.Location = new System.Drawing.Point(106, 45);
             this.txtIdentificacion.Name = "txtIdentificacion";
-            this.txtIdentificacion.Size = new System.Drawing.Size(85, 13);
+            this.txtIdentificacion.Size = new System.Drawing.Size(138, 16);
             this.txtIdentificacion.TabIndex = 15;
             this.txtIdentificacion.Text = "--------------------------";
             // 
             // txtNombre
             // 
             this.txtNombre.AutoSize = true;
-            this.txtNombre.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.txtNombre.Location = new System.Drawing.Point(106, 67);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(85, 13);
+            this.txtNombre.Size = new System.Drawing.Size(138, 16);
             this.txtNombre.TabIndex = 14;
             this.txtNombre.Text = "--------------------------";
             // 
@@ -282,40 +290,44 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label11.Location = new System.Drawing.Point(22, 67);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 13);
+            this.label11.Size = new System.Drawing.Size(51, 16);
             this.label11.TabIndex = 4;
             this.label11.Text = "Nombre";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label10.Location = new System.Drawing.Point(21, 91);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.Size = new System.Drawing.Size(44, 16);
             this.label10.TabIndex = 3;
             this.label10.Text = "Celular";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label9.Location = new System.Drawing.Point(21, 113);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
+            this.label9.Size = new System.Drawing.Size(67, 16);
             this.label9.TabIndex = 2;
             this.label9.Text = "N° Licencia";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label8.Location = new System.Drawing.Point(21, 45);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 13);
+            this.label8.Size = new System.Drawing.Size(80, 16);
             this.label8.TabIndex = 1;
             this.label8.Text = "Identificacion";
             // 
@@ -407,72 +419,80 @@
             // labelmaximo
             // 
             this.labelmaximo.AutoSize = true;
+            this.labelmaximo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelmaximo.Location = new System.Drawing.Point(203, -1);
             this.labelmaximo.Name = "labelmaximo";
-            this.labelmaximo.Size = new System.Drawing.Size(16, 13);
+            this.labelmaximo.Size = new System.Drawing.Size(23, 16);
             this.labelmaximo.TabIndex = 7;
             this.labelmaximo.Text = "---";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(177, -1);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(19, 13);
+            this.label12.Size = new System.Drawing.Size(21, 16);
             this.label12.TabIndex = 6;
             this.label12.Text = "de";
             // 
             // labelcontador
             // 
             this.labelcontador.AutoSize = true;
+            this.labelcontador.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelcontador.Location = new System.Drawing.Point(157, -1);
             this.labelcontador.Name = "labelcontador";
-            this.labelcontador.Size = new System.Drawing.Size(13, 13);
+            this.labelcontador.Size = new System.Drawing.Size(15, 16);
             this.labelcontador.TabIndex = 5;
             this.labelcontador.Text = "1";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(29, 91);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.Size = new System.Drawing.Size(54, 16);
             this.label16.TabIndex = 4;
             this.label16.Text = "Telefono";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(29, 113);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 13);
+            this.label15.Size = new System.Drawing.Size(58, 16);
             this.label15.TabIndex = 3;
             this.label15.Text = "Direccion";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(30, 67);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 13);
+            this.label14.Size = new System.Drawing.Size(57, 16);
             this.label14.TabIndex = 2;
             this.label14.Text = "Apellidos";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(29, 45);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 13);
+            this.label13.Size = new System.Drawing.Size(56, 16);
             this.label13.TabIndex = 1;
             this.label13.Text = "Nombres";
             // 
             // labelIdentificacion
             // 
             this.labelIdentificacion.AutoSize = true;
+            this.labelIdentificacion.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIdentificacion.Location = new System.Drawing.Point(29, 20);
             this.labelIdentificacion.Name = "labelIdentificacion";
-            this.labelIdentificacion.Size = new System.Drawing.Size(70, 13);
+            this.labelIdentificacion.Size = new System.Drawing.Size(80, 16);
             this.labelIdentificacion.TabIndex = 0;
             this.labelIdentificacion.Text = "Identificacion";
             // 
@@ -497,30 +517,33 @@
             // txtCantPasajeros
             // 
             this.txtCantPasajeros.AutoSize = true;
-            this.txtCantPasajeros.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCantPasajeros.Location = new System.Drawing.Point(106, 110);
+            this.txtCantPasajeros.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantPasajeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.txtCantPasajeros.Location = new System.Drawing.Point(106, 114);
             this.txtCantPasajeros.Name = "txtCantPasajeros";
-            this.txtCantPasajeros.Size = new System.Drawing.Size(85, 13);
+            this.txtCantPasajeros.Size = new System.Drawing.Size(138, 16);
             this.txtCantPasajeros.TabIndex = 13;
             this.txtCantPasajeros.Text = "--------------------------";
             // 
             // txtPlaca
             // 
             this.txtPlaca.AutoSize = true;
-            this.txtPlaca.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtPlaca.Location = new System.Drawing.Point(106, 77);
+            this.txtPlaca.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.txtPlaca.Location = new System.Drawing.Point(106, 82);
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(85, 13);
+            this.txtPlaca.Size = new System.Drawing.Size(138, 16);
             this.txtPlaca.TabIndex = 12;
             this.txtPlaca.Text = "--------------------------";
             // 
             // txtCodigo
             // 
             this.txtCodigo.AutoSize = true;
-            this.txtCodigo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCodigo.Location = new System.Drawing.Point(106, 43);
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.txtCodigo.Location = new System.Drawing.Point(106, 46);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(85, 13);
+            this.txtCodigo.Size = new System.Drawing.Size(138, 16);
             this.txtCodigo.TabIndex = 11;
             this.txtCodigo.Text = "--------------------------";
             // 
@@ -540,30 +563,33 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(22, 77);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.Size = new System.Drawing.Size(36, 16);
             this.label7.TabIndex = 3;
             this.label7.Text = "Placa";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(22, 111);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 2;
             this.label6.Text = "Cant pasajeros";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(22, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Codigo";
             // 

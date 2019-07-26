@@ -49,33 +49,35 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 127);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(870, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(968, 454);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 59);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 13);
+            this.label1.Size = new System.Drawing.Size(176, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Viajes realizados por este cliente";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F);
-            this.label2.Location = new System.Drawing.Point(13, 13);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label2.Location = new System.Drawing.Point(3, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 23);
+            this.label2.Size = new System.Drawing.Size(200, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Buscar por cedula";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(215, 18);
+            this.textBox1.Location = new System.Drawing.Point(218, 34);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 20);
             this.textBox1.TabIndex = 3;
@@ -104,15 +106,15 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(41, 68);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 479);
+            this.panel1.Size = new System.Drawing.Size(976, 586);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(791, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(839, 24);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(99, 64);
             this.pictureBox2.TabIndex = 6;
@@ -122,7 +124,7 @@
             // 
             this.btnBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBusqueda.Image = ((System.Drawing.Image)(resources.GetObject("btnBusqueda.Image")));
-            this.btnBusqueda.Location = new System.Drawing.Point(413, 8);
+            this.btnBusqueda.Location = new System.Drawing.Point(416, 24);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(52, 44);
             this.btnBusqueda.TabIndex = 5;
