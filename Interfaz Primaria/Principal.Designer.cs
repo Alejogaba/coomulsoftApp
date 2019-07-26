@@ -32,13 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormularios = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnHome = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnRutas = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.PictureBox();
             this.btnNuevoViaje = new System.Windows.Forms.Button();
             this.PanelDesplegableReportes = new System.Windows.Forms.Panel();
             this.btnConductores = new System.Windows.Forms.Button();
@@ -55,9 +54,9 @@
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.panelContenedor.SuspendLayout();
             this.panelFormularios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.PanelDesplegableReportes.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -84,7 +83,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFormularios.BackColor = System.Drawing.Color.White;
-            this.panelFormularios.Controls.Add(this.panel1);
             this.panelFormularios.Controls.Add(this.pictureBox1);
             this.panelFormularios.Controls.Add(this.label1);
             this.panelFormularios.Location = new System.Drawing.Point(200, 40);
@@ -92,46 +90,11 @@
             this.panelFormularios.Size = new System.Drawing.Size(1000, 610);
             this.panelFormularios.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1050, 134);
-            this.panel1.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(34, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 23);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "COOMULSOFT";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(55, 6);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(101, 101);
-            this.btnHome.TabIndex = 5;
-            this.btnHome.TabStop = false;
-            this.btnHome.Click += new System.EventHandler(this.PictureBox2_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(456, 210);
+            this.pictureBox1.Location = new System.Drawing.Point(456, 205);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(147, 115);
             this.pictureBox1.TabIndex = 2;
@@ -143,7 +106,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 77F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.label1.Location = new System.Drawing.Point(160, 300);
+            this.label1.Location = new System.Drawing.Point(160, 295);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(743, 122);
             this.label1.TabIndex = 1;
@@ -166,6 +129,20 @@
             this.panelMenu.Size = new System.Drawing.Size(200, 610);
             this.panelMenu.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(34, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "COOMULSOFT";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
+            // 
             // btnRutas
             // 
             this.btnRutas.FlatAppearance.BorderSize = 0;
@@ -180,9 +157,21 @@
             this.btnRutas.Name = "btnRutas";
             this.btnRutas.Size = new System.Drawing.Size(200, 42);
             this.btnRutas.TabIndex = 4;
-            this.btnRutas.Text = "Rutas";
+            this.btnRutas.Text = "                     Rutas";
+            this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRutas.UseVisualStyleBackColor = true;
             this.btnRutas.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(55, 6);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(101, 101);
+            this.btnHome.TabIndex = 5;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // btnNuevoViaje
             // 
@@ -191,8 +180,8 @@
             this.btnNuevoViaje.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnNuevoViaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnNuevoViaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoViaje.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnNuevoViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoViaje.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuevoViaje.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoViaje.Image")));
             this.btnNuevoViaje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevoViaje.Location = new System.Drawing.Point(3, 130);
@@ -228,7 +217,7 @@
             this.btnConductores.Name = "btnConductores";
             this.btnConductores.Size = new System.Drawing.Size(188, 51);
             this.btnConductores.TabIndex = 2;
-            this.btnConductores.Text = "Conductores";
+            this.btnConductores.Text = "    Conductores";
             this.btnConductores.UseVisualStyleBackColor = true;
             this.btnConductores.Click += new System.EventHandler(this.btnConductores_Click);
             // 
@@ -246,7 +235,8 @@
             this.btnPasajeros.Name = "btnPasajeros";
             this.btnPasajeros.Size = new System.Drawing.Size(188, 51);
             this.btnPasajeros.TabIndex = 1;
-            this.btnPasajeros.Text = "Pasajeros";
+            this.btnPasajeros.Text = "                   Pasajeros";
+            this.btnPasajeros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPasajeros.UseVisualStyleBackColor = true;
             this.btnPasajeros.Click += new System.EventHandler(this.btnPasajeros_Click);
             // 
@@ -264,7 +254,8 @@
             this.btnViajes.Name = "btnViajes";
             this.btnViajes.Size = new System.Drawing.Size(188, 51);
             this.btnViajes.TabIndex = 0;
-            this.btnViajes.Text = "Viajes";
+            this.btnViajes.Text = "                   Viajes";
+            this.btnViajes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViajes.UseVisualStyleBackColor = true;
             this.btnViajes.Click += new System.EventHandler(this.btnViajes_Click);
             // 
@@ -282,7 +273,7 @@
             this.btnAdmVehiculos.Name = "btnAdmVehiculos";
             this.btnAdmVehiculos.Size = new System.Drawing.Size(200, 42);
             this.btnAdmVehiculos.TabIndex = 3;
-            this.btnAdmVehiculos.Text = "               Adm Vehiculos";
+            this.btnAdmVehiculos.Text = "        Adm Vehiculos";
             this.btnAdmVehiculos.UseVisualStyleBackColor = true;
             this.btnAdmVehiculos.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -300,7 +291,8 @@
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(200, 42);
             this.btnReporte.TabIndex = 2;
-            this.btnReporte.Text = "    Reporte";
+            this.btnReporte.Text = "                     Reporte";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporte.UseVisualStyleBackColor = true;
             this.btnReporte.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -406,10 +398,10 @@
             this.panelContenedor.ResumeLayout(false);
             this.panelFormularios.ResumeLayout(false);
             this.panelFormularios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.PanelDesplegableReportes.ResumeLayout(false);
             this.panelTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
@@ -441,7 +433,6 @@
         private System.Windows.Forms.Button btnViajes;
         private System.Windows.Forms.Button btnNuevoViaje;
         private System.Windows.Forms.Button btnRutas;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolTip ttMensaje;
