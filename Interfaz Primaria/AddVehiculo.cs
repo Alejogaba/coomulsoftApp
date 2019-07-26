@@ -76,24 +76,25 @@ namespace Interfaz_Primaria
             byte[] byteArrayImagen = ImageToByteArray(pictureBoxVehiculo.Image);
             string placa, codigo, nombre_modelo, año_modelo, tipo;
                int capacidad_pasajeros;
-            float gasolina, capacidad_maletero;
-            placa = txtPlaca.Text + "-" + txtPlaca2.Text;
+            float capacidad_maletero;
+            placa = txtPlaca.Text;
             codigo = txtCodigo.Text;
             nombre_modelo = txtNombreModelo.Text;
             año_modelo = txtAñoModelo.Text;
             tipo = txtTipo.Text;
             capacidad_pasajeros = int.Parse(txtCapacidadPasajeros.Text);
-            gasolina = float.Parse(txtGasolina.Text);
             capacidad_maletero = float.Parse(txtCapacidaMaletero.Text);
 
-            if (string.IsNullOrEmpty(placa)||string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(Convert.ToString(capacidad_pasajeros)) || string.IsNullOrEmpty(Convert.ToString(gasolina)) || string.IsNullOrEmpty(Convert.ToString(capacidad_maletero)))
+            if (string.IsNullOrEmpty(placa)||string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(Convert.ToString(capacidad_pasajeros)) || string.IsNullOrEmpty(Convert.ToString(capacidad_maletero)))
             {
-                result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                result = MsgBox.Show("NO DEJE ESPACIOS EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
             }
             else
             {
-                Vehiculo vehiculo = new Vehiculo(byteArrayImagen, codigo, placa, nombre_modelo, tipo, capacidad_pasajeros, capacidad_maletero, gasolina);
-                  result = MsgBox.Show(servicevehiculo.Guardar(vehiculo), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                
+                
+                Vehiculo vehiculo = new Vehiculo(byteArrayImagen, codigo,nombre_modelo,placa,año_modelo, tipo, capacidad_pasajeros, capacidad_maletero);
+                 result = MsgBox.Show(servicevehiculo.Guardar(vehiculo), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
                 Cargar_combobox();
                 panelconductor.Enabled = true;
                 cargarconductor();
@@ -203,10 +204,10 @@ namespace Interfaz_Primaria
             txtCapacidadPasajeros.Clear();
             txtCapacidaMaletero.Clear();
             txtCodigo.Clear();
-            txtGasolina.Clear();
+
             txtNombreModelo.Clear();
             txtPlaca.Clear();
-            txtPlaca2.Clear();
+           
             txtTipo.Clear();
 
         }

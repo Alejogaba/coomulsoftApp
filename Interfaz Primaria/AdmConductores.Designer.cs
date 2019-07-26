@@ -42,14 +42,12 @@
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtEstadoLicencia = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.MarcoDeFoto = new System.Windows.Forms.PictureBox();
@@ -65,10 +63,12 @@
             this.conductoresTableAdapter = new Interfaz_Primaria.CoomulsoftAppDataSetTableAdapters.ConductoresTableAdapter();
             this.webView1 = new EO.WebBrowser.WebView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxLicencia = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLicencia)).BeginInit();
             this.SuspendLayout();
             // 
             // labelnombre
@@ -94,7 +94,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 215);
+            this.label3.Location = new System.Drawing.Point(36, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 5;
@@ -104,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 248);
+            this.label4.Location = new System.Drawing.Point(37, 299);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 6;
@@ -113,7 +113,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 283);
+            this.label5.Location = new System.Drawing.Point(37, 334);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 7;
@@ -158,28 +158,21 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(143, 280);
+            this.txtTelefono.Location = new System.Drawing.Point(144, 331);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(227, 20);
             this.txtTelefono.TabIndex = 21;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(143, 245);
+            this.txtDireccion.Location = new System.Drawing.Point(143, 292);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(227, 20);
             this.txtDireccion.TabIndex = 22;
             // 
-            // txtEstadoLicencia
-            // 
-            this.txtEstadoLicencia.Location = new System.Drawing.Point(144, 212);
-            this.txtEstadoLicencia.Name = "txtEstadoLicencia";
-            this.txtEstadoLicencia.Size = new System.Drawing.Size(136, 20);
-            this.txtEstadoLicencia.TabIndex = 23;
-            // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(143, 315);
+            this.txtEmail.Location = new System.Drawing.Point(144, 366);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(227, 20);
             this.txtEmail.TabIndex = 24;
@@ -213,7 +206,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(36, 318);
+            this.label9.Location = new System.Drawing.Point(37, 369);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 13);
             this.label9.TabIndex = 29;
@@ -228,17 +221,6 @@
             this.label6.TabIndex = 30;
             this.label6.Text = "Lic. Vence";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(312, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 48);
-            this.button1.TabIndex = 31;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
@@ -246,7 +228,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(296, 364);
+            this.button3.Location = new System.Drawing.Point(369, 501);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 25);
             this.button3.TabIndex = 33;
@@ -261,7 +243,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(39, 364);
+            this.button4.Location = new System.Drawing.Point(206, 501);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 25);
             this.button4.TabIndex = 34;
@@ -274,7 +256,7 @@
             this.MarcoDeFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MarcoDeFoto.Image = ((System.Drawing.Image)(resources.GetObject("MarcoDeFoto.Image")));
             this.MarcoDeFoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("MarcoDeFoto.InitialImage")));
-            this.MarcoDeFoto.Location = new System.Drawing.Point(604, 58);
+            this.MarcoDeFoto.Location = new System.Drawing.Point(722, 58);
             this.MarcoDeFoto.Name = "MarcoDeFoto";
             this.MarcoDeFoto.Size = new System.Drawing.Size(163, 168);
             this.MarcoDeFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -287,6 +269,7 @@
             this.dtimeLicVence.Name = "dtimeLicVence";
             this.dtimeLicVence.Size = new System.Drawing.Size(137, 20);
             this.dtimeLicVence.TabIndex = 36;
+            this.dtimeLicVence.ValueChanged += new System.EventHandler(this.DtimeLicVence_ValueChanged);
             // 
             // dtimeFechaNacimiento
             // 
@@ -303,7 +286,7 @@
             this.btnCargarFoto.FlatAppearance.BorderSize = 0;
             this.btnCargarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarFoto.Image")));
-            this.btnCargarFoto.Location = new System.Drawing.Point(604, 232);
+            this.btnCargarFoto.Location = new System.Drawing.Point(722, 232);
             this.btnCargarFoto.Name = "btnCargarFoto";
             this.btnCargarFoto.Size = new System.Drawing.Size(78, 44);
             this.btnCargarFoto.TabIndex = 38;
@@ -318,7 +301,7 @@
             this.btnBorrarFoto.FlatAppearance.BorderSize = 0;
             this.btnBorrarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrarFoto.Image")));
-            this.btnBorrarFoto.Location = new System.Drawing.Point(689, 232);
+            this.btnBorrarFoto.Location = new System.Drawing.Point(807, 232);
             this.btnBorrarFoto.Name = "btnBorrarFoto";
             this.btnBorrarFoto.Size = new System.Drawing.Size(78, 44);
             this.btnBorrarFoto.TabIndex = 39;
@@ -335,7 +318,7 @@
             this.comboBoxBuscarPorCedula.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxBuscarPorCedula.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.comboBoxBuscarPorCedula.FormattingEnabled = true;
-            this.comboBoxBuscarPorCedula.Location = new System.Drawing.Point(571, 8);
+            this.comboBoxBuscarPorCedula.Location = new System.Drawing.Point(689, 8);
             this.comboBoxBuscarPorCedula.Name = "comboBoxBuscarPorCedula";
             this.comboBoxBuscarPorCedula.Size = new System.Drawing.Size(226, 21);
             this.comboBoxBuscarPorCedula.TabIndex = 42;
@@ -367,6 +350,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBoxLicencia);
             this.panel1.Controls.Add(this.comboBoxBuscarPorCedula);
             this.panel1.Controls.Add(this.MarcoDeFoto);
             this.panel1.Controls.Add(this.btnBorrarFoto);
@@ -375,14 +359,12 @@
             this.panel1.Controls.Add(this.dtimeLicVence);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.txtEstadoLicencia);
             this.panel1.Controls.Add(this.txtDireccion);
             this.panel1.Controls.Add(this.txtTelefono);
             this.panel1.Controls.Add(this.txtNombres);
@@ -395,10 +377,20 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.labelapellidos);
             this.panel1.Controls.Add(this.labelnombre);
-            this.panel1.Location = new System.Drawing.Point(79, 30);
+            this.panel1.Location = new System.Drawing.Point(34, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(836, 417);
+            this.panel1.Size = new System.Drawing.Size(954, 568);
             this.panel1.TabIndex = 43;
+            // 
+            // pictureBoxLicencia
+            // 
+            this.pictureBoxLicencia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLicencia.BackgroundImage")));
+            this.pictureBoxLicencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLicencia.Location = new System.Drawing.Point(143, 221);
+            this.pictureBoxLicencia.Name = "pictureBoxLicencia";
+            this.pictureBoxLicencia.Size = new System.Drawing.Size(35, 35);
+            this.pictureBoxLicencia.TabIndex = 43;
+            this.pictureBoxLicencia.TabStop = false;
             // 
             // AdmConductores
             // 
@@ -416,6 +408,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLicencia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,14 +426,12 @@
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtEstadoLicencia;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox MarcoDeFoto;
@@ -456,5 +447,6 @@
         private CoomulsoftAppDataSetTableAdapters.ConductoresTableAdapter conductoresTableAdapter;
         private EO.WebBrowser.WebView webView1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBoxLicencia;
     }
 }

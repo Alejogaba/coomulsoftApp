@@ -162,7 +162,14 @@ namespace Interfaz_Primaria
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
-            exportar_pdf();
+            try
+            {
+                exportar_pdf();
+            }
+            catch (Exception)
+            {
+            }
+            
         }
 
         private void Label1_Click(object sender, EventArgs e)

@@ -26,17 +26,18 @@ namespace DAL
             {
                 using (var cmd = Conexion.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Vehiculos(Imagen,Codigo,[Placa vehiculo],[Año modelo],[Tipo vehiculo],[Capacidad pasajeros],[Capacidad maletero],[Consumo gasolina por km])" +
-                   "VALUES(@imagen,@codigo,@placa,@anio,@tipo,@pasajeros,@maletero,@consumo)";
+                    cmd.CommandText = "INSERT INTO Vehiculos(Imagen,Codigo,Modelo,[Placa vehiculo],[Año modelo],[Tipo vehiculo],[Capacidad pasajeros],[Capacidad maletero])" +
+                   "VALUES(@imagen,@codigo,@modelo,@placa,@anio,@tipo,@pasajeros,@maletero)";
 
                     cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = vehiculo.Imagen;
                     cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = vehiculo.Codigo;
+                    cmd.Parameters.Add("@modelo", SqlDbType.VarChar).Value = vehiculo.Modelo;
                     cmd.Parameters.Add("@placa", SqlDbType.VarChar).Value = vehiculo.Placa_Vehiculo;
                     cmd.Parameters.Add("@anio", SqlDbType.VarChar).Value = vehiculo.Anio_Modelo;
                     cmd.Parameters.Add("@tipo", SqlDbType.VarChar).Value = vehiculo.Tipo_vehiculo;
                     cmd.Parameters.Add("@pasajeros", SqlDbType.Int).Value = vehiculo.Capacidad_pasajeros;
                     cmd.Parameters.Add("@maletero", SqlDbType.Float).Value = vehiculo.Capacidad_maletero;
-                    cmd.Parameters.Add("@consumo", SqlDbType.Float).Value = vehiculo.Consumo_gasolina_km;
+                   
 
                     int i = cmd.ExecuteNonQuery();
 
@@ -114,12 +115,13 @@ namespace DAL
             Vehiculo vehiculo = new Vehiculo();
             vehiculo.Imagen = (byte[])reader["Imagen"];
             vehiculo.Codigo = (string)reader["Codigo"];
+            vehiculo.Modelo = (string)reader["Modelo"];
             vehiculo.Placa_Vehiculo = (string)reader["Placa vehiculo"];
             vehiculo.Anio_Modelo = (string)reader["Año modelo"];
             vehiculo.Tipo_vehiculo = (string)reader["Tipo vehiculo"];
             vehiculo.Capacidad_pasajeros = (int)reader["Capacidad pasajeros"];
             vehiculo.Capacidad_maletero = (float)reader.GetDouble(6);
-            vehiculo.Consumo_gasolina_km = (float)reader.GetDouble(7);
+      
 
 
             return vehiculo;

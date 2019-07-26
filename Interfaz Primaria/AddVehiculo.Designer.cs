@@ -44,12 +44,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtCapacidaMaletero = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtGasolina = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPlaca2 = new System.Windows.Forms.TextBox();
             this.pictureBoxVehiculo = new System.Windows.Forms.PictureBox();
             this.txtCapacidadPasajeros = new System.Windows.Forms.TextBox();
             this.txtPlaca = new System.Windows.Forms.TextBox();
@@ -99,12 +95,8 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.txtCapacidaMaletero);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.txtGasolina);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtTipo);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtPlaca2);
             this.panel1.Controls.Add(this.pictureBoxVehiculo);
             this.panel1.Controls.Add(this.txtCapacidadPasajeros);
             this.panel1.Controls.Add(this.txtPlaca);
@@ -231,11 +223,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(595, 191);
+            this.label11.Location = new System.Drawing.Point(219, 202);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(32, 13);
+            this.label11.Size = new System.Drawing.Size(24, 13);
             this.label11.TabIndex = 18;
-            this.label11.Text = "Litros";
+            this.label11.Text = "cm³";
             // 
             // label10
             // 
@@ -249,7 +241,7 @@
             // 
             // txtCapacidaMaletero
             // 
-            this.txtCapacidaMaletero.Location = new System.Drawing.Point(524, 188);
+            this.txtCapacidaMaletero.Location = new System.Drawing.Point(148, 199);
             this.txtCapacidaMaletero.Name = "txtCapacidaMaletero";
             this.txtCapacidaMaletero.Size = new System.Drawing.Size(65, 20);
             this.txtCapacidaMaletero.TabIndex = 16;
@@ -258,28 +250,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(406, 192);
+            this.label9.Location = new System.Drawing.Point(30, 203);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 13);
             this.label9.TabIndex = 15;
             this.label9.Text = "Capacidad Maletero";
-            // 
-            // txtGasolina
-            // 
-            this.txtGasolina.Location = new System.Drawing.Point(143, 195);
-            this.txtGasolina.Name = "txtGasolina";
-            this.txtGasolina.Size = new System.Drawing.Size(150, 20);
-            this.txtGasolina.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(29, 202);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Consumo de gasolina";
             // 
             // txtTipo
             // 
@@ -292,28 +267,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(37, 135);
+            this.label7.Location = new System.Drawing.Point(30, 138);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 11;
-            this.label7.Text = "TIPO";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(516, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(10, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "-";
-            // 
-            // txtPlaca2
-            // 
-            this.txtPlaca2.Location = new System.Drawing.Point(538, 23);
-            this.txtPlaca2.Name = "txtPlaca2";
-            this.txtPlaca2.Size = new System.Drawing.Size(51, 20);
-            this.txtPlaca2.TabIndex = 9;
+            this.label7.Text = "Tipo vehiculo";
             // 
             // pictureBoxVehiculo
             // 
@@ -339,7 +297,7 @@
             // 
             this.txtPlaca.Location = new System.Drawing.Point(446, 23);
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(51, 20);
+            this.txtPlaca.Size = new System.Drawing.Size(156, 20);
             this.txtPlaca.TabIndex = 5;
             // 
             // txtCodigo
@@ -355,9 +313,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(401, 83);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "AÑO MODELO";
+            this.label4.Text = "Año modelo";
             // 
             // label3
             // 
@@ -365,9 +323,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(384, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "N° PLACA";
+            this.label3.Text = "N° Placa";
             // 
             // label2
             // 
@@ -385,9 +343,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(37, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "CODIGO";
+            this.label1.Text = "Codigo";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // panelconductor
@@ -598,14 +556,10 @@
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.PictureBox pictureBoxVehiculo;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPlaca2;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCapacidaMaletero;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtGasolina;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panelconductor;

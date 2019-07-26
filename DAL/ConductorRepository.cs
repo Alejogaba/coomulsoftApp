@@ -27,8 +27,8 @@ namespace DAL
             {
                 using(var cmd = Conexion.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Conductores(Cedula,Nombres,Apellidos,[Fecha nacimiento],Telefono,Email,Direccion,Imagen,Licencia,[Estado licencia],[Fecha vencimiento licencia],[Cuenta bancaria],[Vehiculo asignado])" +
-                   "VALUES(@cedula,@nombres,@apellidos,@fecha_nac,@telefono,@email,@direccion,@imagen,@licencia,@est_licencia,@fecha_licencia,@cuenta_bancaria,@vehiculo_a)";
+                    cmd.CommandText = "INSERT INTO Conductores(Cedula,Nombres,Apellidos,[Fecha nacimiento],Telefono,Email,Direccion,Imagen,Licencia,[Estado licencia],[Fecha vencimiento licencia],[Vehiculo asignado])" +
+                   "VALUES(@cedula,@nombres,@apellidos,@fecha_nac,@telefono,@email,@direccion,@imagen,@licencia,@est_licencia,@fecha_licencia,@vehiculo_a)";
 
                
                     cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = conductor.Identificacion;
@@ -42,7 +42,6 @@ namespace DAL
                     cmd.Parameters.Add("@licencia", SqlDbType.VarChar).Value = conductor.Licencia;
                     cmd.Parameters.Add("@est_licencia", SqlDbType.VarChar).Value = conductor.Estado_Licencia;
                     cmd.Parameters.Add("@fecha_licencia", SqlDbType.Date).Value = conductor.Fecha_vencimiento_licencia;
-                    cmd.Parameters.Add("@cuenta_bancaria", SqlDbType.VarChar).Value = conductor.Cuenta_bancaria;
                     cmd.Parameters.Add("@vehiculo_a", SqlDbType.VarChar).Value = conductor.Vehiculo_asignado;
        
 
@@ -223,7 +222,6 @@ namespace DAL
             conductor.Licencia = (string)reader["Licencia"];
             conductor.Estado_Licencia = (string)reader["Estado licencia"];
             conductor.Fecha_vencimiento_licencia = (DateTime)reader["Fecha vencimiento licencia"];
-            conductor.Cuenta_bancaria = (string)reader["Cuenta bancaria"];
             conductor.Vehiculo_asignado = (string)reader["Vehiculo asignado"];
             return conductor;
         }

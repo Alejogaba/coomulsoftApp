@@ -12,7 +12,6 @@ namespace Entity
         public DateTime Fecha_naciemiento { get; set; }
         public DateTime Fecha_vencimiento_licencia { get; set; }
         public string Email { get; set; }
-        public string Cuenta_bancaria { get; set; }
         public string Vehiculo_asignado { get; set; }
 
         public Conductor()
@@ -20,7 +19,7 @@ namespace Entity
         }
 
         public Conductor(string nombre, string apellido, string identificacion, DateTime fe_na, string telefono,string direccion, byte[] imagen,string licencia,string est_lic,
-            DateTime fecha, string email,string bank)
+            DateTime fecha, string email)
         {
             Nombre = nombre;
             Apellido = apellido;
@@ -33,7 +32,6 @@ namespace Entity
             Fecha_vencimiento_licencia = fecha;
             Estado_Licencia = est_lic;
             Email = email;
-            Cuenta_bancaria = bank;
             Vehiculo_asignado = "No asignado";
    
         }

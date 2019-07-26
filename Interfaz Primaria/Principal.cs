@@ -17,6 +17,7 @@ namespace Interfaz_Primaria
         {
             InitializeComponent();
             this.ttMensaje.SetToolTip(this.btnHome, "Cerrar todos los Formularios");
+            this.Icon = Properties.Resources.ic_local_taxi_128_28442; 
         }
         
 

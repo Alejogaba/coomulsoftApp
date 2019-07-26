@@ -76,7 +76,7 @@ namespace Interfaz_Primaria
         {
             byte[] byteArrayImagen = ImageToByteArray(MarcoDeFoto.Image);
 
-            string nombre, apellido, id, tel, dire, email, licencia, est_lic, cuenta_ban,imagen;
+            string nombre, apellido, id, tel, dire, email, licencia,imagen;
             DateTime lic_fecha,fecha_nac;
             nombre = txtNombres.Text;
             apellido = txtApellidos.Text;
@@ -85,21 +85,21 @@ namespace Interfaz_Primaria
             dire = txtDireccion.Text;
             email = txtEmail.Text;
             licencia = txtEmail.Text;
-            est_lic = "ok";
-            cuenta_ban = "Bancolombia N°134324342 Ahorros";
+       
+           
             lic_fecha = Convert.ToDateTime(dtimeLicVence.Text);
             fecha_nac = Convert.ToDateTime(dtimeFechaNacimiento.Text);
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(id) || string.IsNullOrEmpty(tel) || string.IsNullOrEmpty(dire) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(licencia) || string.IsNullOrEmpty(est_lic))
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(id) || string.IsNullOrEmpty(tel) || string.IsNullOrEmpty(dire) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(licencia))
             {
                 result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             }
             else
             {
-
+                Conductor conductor = new Conductor(nombre, apellido, id, fecha_nac, tel, dire, byteArrayImagen, licencia, Comprobar_licencia(), lic_fecha, email);
+                result = MsgBox.Show(Service.Guardar(conductor), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
             }
-            Conductor conductor = new Conductor(nombre, apellido, id, fecha_nac, tel, dire, byteArrayImagen, licencia,est_lic,lic_fecha,email,cuenta_ban);
-            result = MsgBox.Show(Service.Guardar(conductor), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+            
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -159,7 +159,6 @@ namespace Interfaz_Primaria
             txtApellidos.Clear();
             txtDireccion.Clear();
             txtEmail.Clear();
-            txtEstadoLicencia.Clear();
             txtId.Clear();
             txtLicencia.Clear();
             txtNombres.Clear();
@@ -190,7 +189,6 @@ namespace Interfaz_Primaria
                 txtApellidos.Text = con.Apellido;
                 txtDireccion.Text = con.Direccion;
                 txtEmail.Text = con.Email;
-                txtEstadoLicencia.Text = con.Estado_Licencia;
                 txtLicencia.Text = con.Licencia;
                 txtTelefono.Text = con.Telefono;
                 txtId.Text = con.Identificacion;
@@ -217,6 +215,36 @@ namespace Interfaz_Primaria
         private void BtnBorrarFoto_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public string Comprobar_licencia()
+        {
+            DateTime actual = DateTime.Now;
+            DateTime vence = Convert.ToDateTime(dtimeLicVence.Text);
+            int a = DateTime.Compare(vence, actual);
+            
+            if (a<0)
+            {
+                result = MsgBox.Show("Licencia Vencida", "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
+                pictureBoxLicencia.BackgroundImage = Properties.Resources.trafficlight_red_40428;
+                return "Vencida";
+                
+            }
+            else
+            {
+                pictureBoxLicencia.BackgroundImage = Properties.Resources.trafficlight_green_40427;
+                return "Ok";
+            }
+        }
+
+        private void DtimeLicVence_ValueChanged(object sender, EventArgs e)
+        {
+            Comprobar_licencia();
         }
     }
 }
