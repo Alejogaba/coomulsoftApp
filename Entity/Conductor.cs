@@ -6,6 +6,7 @@ namespace Entity
 {
     public class Conductor : Personas
     {
+        public string NOmbr { get; set; }
         public byte[] Imagen { get; set; }
         public string Licencia { get; set; }
         public string Estado_Licencia { get; set; }

@@ -227,11 +227,6 @@ namespace DAL
             conductor.Vehiculo_asignado = (string)reader["Vehiculo asignado"];
             return conductor;
         }
-        public Conductor Map2(SqlDataReader reader)
-        {
-            Conductor conductor = new Conductor();
-            conductor.Identificacion = (string)reader["Cedula"];
-            return conductor;
-        }
+        
     }
 }
