@@ -79,7 +79,17 @@ namespace Interfaz_Primaria
         }
         private void Button2_Click(object sender, EventArgs e)
         {
-            exportar_pdf();
+            
+        }
+
+        private void PictureBox3_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBoxPdf.BackColor = SystemColors.GradientInactiveCaption;
+        }
+
+        private void PictureBoxPdf_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxPdf.BackColor = SystemColors.Control;
         }
     }
 }

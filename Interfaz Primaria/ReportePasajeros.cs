@@ -38,5 +38,20 @@ namespace Interfaz_Primaria
       
             }
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = SystemColors.GradientInactiveCaption;
+        }
+
+        private void PictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = SystemColors.Control;
+        }
     }
 }
