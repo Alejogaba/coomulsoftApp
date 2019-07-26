@@ -139,20 +139,22 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.label7.Location = new System.Drawing.Point(430, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 24);
+            this.label7.Size = new System.Drawing.Size(94, 28);
             this.label7.TabIndex = 13;
             this.label7.Text = "Destino";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.label6.Location = new System.Drawing.Point(122, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 24);
+            this.label6.Size = new System.Drawing.Size(84, 28);
             this.label6.TabIndex = 12;
             this.label6.Text = "Origen";
             // 
@@ -243,10 +245,11 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.label9.Location = new System.Drawing.Point(-1, 187);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 13);
+            this.label9.Size = new System.Drawing.Size(77, 16);
             this.label9.TabIndex = 15;
             this.label9.Text = "Lista de rutas";
             // 
@@ -264,11 +267,11 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.DarkRed;
-            this.label8.Location = new System.Drawing.Point(116, 134);
+            this.label8.Location = new System.Drawing.Point(106, 129);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 20);
+            this.label8.Size = new System.Drawing.Size(72, 28);
             this.label8.TabIndex = 18;
             this.label8.Text = "Rutas";
             // 
