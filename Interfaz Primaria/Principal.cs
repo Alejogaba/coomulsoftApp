@@ -133,7 +133,7 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            btnReporte.BackColor = Color.FromArgb(7, 124, 131);
             if (PanelDesplegableReportes.Visible ==true)
             {
                 PanelDesplegableReportes.Visible = false;
@@ -162,6 +162,10 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
                 btnAdmConductores.BackColor = Color.FromArgb(58, 58, 60);
             if (Application.OpenForms["AdmVehiculos"] == null)
                 btnAdmVehiculos.BackColor = Color.FromArgb(58, 58, 60);
+            if (Application.OpenForms["IniciarViaje"] == null)
+                btnNuevoViaje.BackColor = Color.FromArgb(58, 58, 60);
+            if (Application.OpenForms["FormRutas"] == null)
+                btnRutas.BackColor = Color.FromArgb(58, 58, 60);
             if (Application.OpenForms["Reportes"] ==null)
                 btnReporte.BackColor = Color.FromArgb(58, 58, 60);
             if (Application.OpenForms["ReporteConductores"] == null)
@@ -214,6 +218,7 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
         private void btnNuevoViaje_Click(object sender, EventArgs e)
         {
             AbrirFormulario<IniciarViaje>();
+           btnNuevoViaje.BackColor = Color.FromArgb(7, 124, 131);
         }
 
         private void btnAddConductor_Click(object sender, EventArgs e)
@@ -224,6 +229,7 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
         private void Button1_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario<FormRutas>();
+            btnRutas.BackColor = Color.FromArgb(7, 124, 131);
         }
 
         private void PictureBox2_Click(object sender, EventArgs e)
@@ -242,7 +248,9 @@ private void AbrirFormulario<MiForm>()where MiForm : Form, new()
                 Application.OpenForms["ReportePasajeros"].Close();
             if (Application.OpenForms.OfType<ReporteViajes>().Any())
                 Application.OpenForms["ReporteViajes"].Close();
-            
+            if (Application.OpenForms["Reportes"] == null)
+                btnReporte.BackColor = Color.FromArgb(58, 58, 60);
+
             if (PanelDesplegableReportes.Visible == true)
             {
                 PanelDesplegableReportes.Visible = false;
