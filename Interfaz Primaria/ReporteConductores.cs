@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BLL;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using Entity;
 
 namespace Interfaz_Primaria
 {
@@ -20,15 +21,51 @@ namespace Interfaz_Primaria
         public ReporteConductores()
         {
             InitializeComponent();
+            cargargrid();
             
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                if (dataGridView1.Columns[i] is DataGridViewImageColumn)
+                {
+                    ((DataGridViewImageColumn)dataGridView1.Columns[i]).ImageLayout = DataGridViewImageCellLayout.Stretch;
+                    break;
+                }
+            for (int i = 1; i < dataGridView1.Columns.Count; i++)
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             string ced = textBox1.Text;
-            dataGridView1.DataSource = service.Filtro(ced);
-            dataGridView1.Refresh();
+            IList<Conductor> datos = service.Filtro(ced);
+            datos = null;
+            Filtragrid();
+            
+       }
+        
+
+        public void Filtragrid()
+        {
+            string ced = textBox1.Text;
+            IList<Conductor> datos = service.Filtro(ced);
+            DataTable data;
+            data = ToDataTables<Conductor>(datos);
+            dataGridView1.DataSource = data;
         }
+
+        public void cargargrid()
+        {
+            IList<Conductor> datos = service.Consultar();
+            DataTable data;
+            data = ToDataTables<Conductor>(datos);
+            
+            dataGridView1.DataSource = data;
+        }
+
+      
+
+
 
         public void exportar_pdf()
         {
@@ -77,7 +114,41 @@ namespace Interfaz_Primaria
 
         private void Button2_Click(object sender, EventArgs e)
         {
+           
+        }
+        public DataTable ToDataTables<T>(IList<T> data)
+        {
+            PropertyDescriptorCollection props = TypeDescriptor.GetProperties(typeof(T));
+            DataTable table = new DataTable();
+            for (int i = 0; i < props.Count; i++)
+            {
+                PropertyDescriptor prp = props[i];
+                table.Columns.Add(prp.Name, prp.PropertyType);
+            }
+            object[] values = new object[props.Count];
+            foreach (T item in data)
+            {
+                for (int i = 0; i < values.Length; i++)
+                {
+                    values[i] = props[i].GetValue(item);
+                    
+                }
+                
+                table.Rows.Add(values);
+            }
+            return table;
+        }
+    
+
+
+
+    private void Button1_Click_1(object sender, EventArgs e)
+        {
             exportar_pdf();
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }

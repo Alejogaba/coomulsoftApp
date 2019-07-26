@@ -42,6 +42,7 @@ namespace BLL
         {
                 conexion.Open();
                 conductores = new List<Conductor>();
+           
                 conductores = ConductorRepository.Consultar();
                 conexion.Close();
                 return conductores;
@@ -53,6 +54,7 @@ namespace BLL
         {
             conexion.Open();
             conductores = new List<Conductor>();
+            conductores.Clear();
             conductores = ConductorRepository.Filtro(ced);
             conexion.Close();
             return conductores;
