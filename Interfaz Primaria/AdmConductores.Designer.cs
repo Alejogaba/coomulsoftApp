@@ -74,9 +74,10 @@
             // labelnombre
             // 
             this.labelnombre.AutoSize = true;
+            this.labelnombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelnombre.Location = new System.Drawing.Point(36, 43);
             this.labelnombre.Name = "labelnombre";
-            this.labelnombre.Size = new System.Drawing.Size(49, 13);
+            this.labelnombre.Size = new System.Drawing.Size(56, 16);
             this.labelnombre.TabIndex = 0;
             this.labelnombre.Text = "Nombres";
             this.labelnombre.Click += new System.EventHandler(this.label1_Click);
@@ -84,9 +85,10 @@
             // labelapellidos
             // 
             this.labelapellidos.AutoSize = true;
+            this.labelapellidos.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelapellidos.Location = new System.Drawing.Point(36, 77);
             this.labelapellidos.Name = "labelapellidos";
-            this.labelapellidos.Size = new System.Drawing.Size(55, 13);
+            this.labelapellidos.Size = new System.Drawing.Size(63, 16);
             this.labelapellidos.TabIndex = 4;
             this.labelapellidos.Text = "Aapellidos";
             this.labelapellidos.Click += new System.EventHandler(this.label2_Click);
@@ -94,9 +96,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(36, 232);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.Size = new System.Drawing.Size(89, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Estado Licencia";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -104,27 +107,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(37, 299);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(58, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Direccion";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(37, 334);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(54, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Telefono";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.Size = new System.Drawing.Size(19, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "ID";
             // 
@@ -180,44 +186,49 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(36, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(99, 16);
             this.label2.TabIndex = 25;
             this.label2.Text = "Fecha De Nacim..";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(36, 144);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.Size = new System.Drawing.Size(51, 16);
             this.label7.TabIndex = 27;
             this.label7.Text = "Licencia";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(63, 318);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 28;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(37, 369);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
+            this.label9.Size = new System.Drawing.Size(50, 16);
             this.label9.TabIndex = 29;
             this.label9.Text = "Email @";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(36, 180);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.Size = new System.Drawing.Size(61, 16);
             this.label6.TabIndex = 30;
             this.label6.Text = "Lic. Vence";
             // 
@@ -228,7 +239,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(369, 501);
+            this.button3.Location = new System.Drawing.Point(248, 442);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 25);
             this.button3.TabIndex = 33;
@@ -243,7 +254,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(206, 501);
+            this.button4.Location = new System.Drawing.Point(85, 442);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 25);
             this.button4.TabIndex = 34;
