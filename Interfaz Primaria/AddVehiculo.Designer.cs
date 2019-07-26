@@ -122,6 +122,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -144,6 +145,7 @@
             // 
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -159,6 +161,7 @@
             // 
             this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.FlatAppearance.BorderSize = 0;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -212,6 +215,7 @@
             // 
             this.btnCargar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnCargar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargar.FlatAppearance.BorderSize = 0;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -411,6 +415,7 @@
             // btnDesasignarVehiculo
             // 
             this.btnDesasignarVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnDesasignarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDesasignarVehiculo.FlatAppearance.BorderSize = 0;
             this.btnDesasignarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesasignarVehiculo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -425,6 +430,7 @@
             // btnAsignarVehiculo
             // 
             this.btnAsignarVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnAsignarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAsignarVehiculo.FlatAppearance.BorderSize = 0;
             this.btnAsignarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsignarVehiculo.ForeColor = System.Drawing.SystemColors.ControlLightLight;

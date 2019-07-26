@@ -19,6 +19,7 @@ namespace Interfaz_Primaria
         public ReportePasajeros()
         {
             InitializeComponent();
+            this.ttMensajes.SetToolTip(this.btnBusqueda, "Buscar Reporte");
         }
 
         private void Button1_Click(object sender, EventArgs e)

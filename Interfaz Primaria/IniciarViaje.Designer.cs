@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtimeFecha = new System.Windows.Forms.DateTimePicker();
             this.PanelPlanilla = new System.Windows.Forms.Panel();
+            this.buttonRegistrar = new System.Windows.Forms.Button();
             this.panelVehiculos = new System.Windows.Forms.Panel();
             this.txtLicencia = new System.Windows.Forms.Label();
             this.txtCelular = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxBuscarVehiculo = new System.Windows.Forms.ComboBox();
-            this.buttonRegistrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelPlanilla.SuspendLayout();
             this.panelVehiculos.SuspendLayout();
@@ -188,6 +188,23 @@
             this.PanelPlanilla.Name = "PanelPlanilla";
             this.PanelPlanilla.Size = new System.Drawing.Size(1000, 610);
             this.PanelPlanilla.TabIndex = 9;
+            // 
+            // buttonRegistrar
+            // 
+            this.buttonRegistrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.buttonRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRegistrar.FlatAppearance.BorderSize = 0;
+            this.buttonRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonRegistrar.Location = new System.Drawing.Point(464, 506);
+            this.buttonRegistrar.Name = "buttonRegistrar";
+            this.buttonRegistrar.Size = new System.Drawing.Size(79, 30);
+            this.buttonRegistrar.TabIndex = 13;
+            this.buttonRegistrar.Text = "Registrar";
+            this.buttonRegistrar.UseVisualStyleBackColor = false;
+            this.buttonRegistrar.Click += new System.EventHandler(this.ButtonRegistrar_Click);
             // 
             // panelVehiculos
             // 
@@ -338,12 +355,18 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(349, 92);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 34);
             this.button1.TabIndex = 13;
             this.button1.Text = "->";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // textBoxDir
@@ -552,16 +575,6 @@
             this.comboBoxBuscarVehiculo.Size = new System.Drawing.Size(135, 21);
             this.comboBoxBuscarVehiculo.TabIndex = 0;
             this.comboBoxBuscarVehiculo.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBuscarVehiculo_SelectedIndexChanged);
-            // 
-            // buttonRegistrar
-            // 
-            this.buttonRegistrar.Location = new System.Drawing.Point(464, 506);
-            this.buttonRegistrar.Name = "buttonRegistrar";
-            this.buttonRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.buttonRegistrar.TabIndex = 13;
-            this.buttonRegistrar.Text = "Registrar";
-            this.buttonRegistrar.UseVisualStyleBackColor = true;
-            this.buttonRegistrar.Click += new System.EventHandler(this.ButtonRegistrar_Click);
             // 
             // IniciarViaje
             // 
