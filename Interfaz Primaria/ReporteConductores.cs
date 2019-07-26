@@ -22,26 +22,30 @@ namespace Interfaz_Primaria
         {
             InitializeComponent();
             cargargrid();
+            Organizar_grid();
             
+
+        }
+
+        public void Organizar_grid()
+        {
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
                 if (dataGridView1.Columns[i] is DataGridViewImageColumn)
                 {
                     ((DataGridViewImageColumn)dataGridView1.Columns[i]).ImageLayout = DataGridViewImageCellLayout.Stretch;
                     break;
                 }
+            }
             for (int i = 1; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
-
         }
+
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            string ced = textBox1.Text;
-            IList<Conductor> datos = service.Filtro(ced);
-            datos = null;
-            Filtragrid();
-            //fsd
+            
        }
         
 
@@ -59,8 +63,8 @@ namespace Interfaz_Primaria
             IList<Conductor> datos = service.Consultar();
             DataTable data;
             data = ToDataTables<Conductor>(datos);
-            
-            dataGridView1.DataSource = data;
+
+            dataGridView1.DataSource = service.Consultar();
         }
 
       
@@ -149,6 +153,46 @@ namespace Interfaz_Primaria
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void BtnBusqueda_Click(object sender, EventArgs e)
+        {
+            Filtragrid();
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            exportar_pdf();
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            cargargrid();
+        }
+
+        private void PictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = SystemColors.GradientInactiveCaption;
+        }
+
+        private void PictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = SystemColors.Control;
+        }
+
+        private void BtnBusqueda_MouseEnter(object sender, EventArgs e)
+        {
+            btnBusqueda.BackColor = SystemColors.GradientInactiveCaption;
+        }
+
+        private void BtnBusqueda_MouseLeave(object sender, EventArgs e)
+        {
+            btnBusqueda.BackColor = SystemColors.Control;
         }
     }
 }

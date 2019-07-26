@@ -86,7 +86,7 @@ namespace DAL
         }
         public IList<Conductor> Consultar()
         {
-
+            conductores.Clear();
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "Select * from Conductores";
@@ -107,7 +107,7 @@ namespace DAL
 
         public IList<Conductor> Filtro(string identificacion)
         {
-
+            conductores.Clear();
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "Select * from Conductores Where Cedula=@cedula";
