@@ -365,6 +365,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.comboBoxBuscarPorCedula);
             this.panel1.Controls.Add(this.MarcoDeFoto);
