@@ -40,6 +40,7 @@
             this.btnPdf = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.ttMensajes = new System.Windows.Forms.ToolTip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBusqueda)).BeginInit();
@@ -90,6 +91,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnBusqueda);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -141,6 +143,15 @@
             this.saveFileDialog1.DefaultExt = "pdf";
             this.saveFileDialog1.FileName = "Reporte";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Reporte de Viajes";
+            // 
             // ReporteViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,5 +183,6 @@
         private System.Windows.Forms.PictureBox btnBusqueda;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip ttMensajes;
+        private System.Windows.Forms.Label label2;
     }
 }
