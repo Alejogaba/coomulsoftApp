@@ -40,7 +40,6 @@
             this.txtLicencia = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
-            this.pictur = new System.Windows.Forms.PictureBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtEstadoLicencia = new System.Windows.Forms.TextBox();
@@ -65,7 +64,6 @@
             this.coomulsoftAppDataSet = new Interfaz_Primaria.CoomulsoftAppDataSet();
             this.conductoresTableAdapter = new Interfaz_Primaria.CoomulsoftAppDataSetTableAdapters.ConductoresTableAdapter();
             this.webView1 = new EO.WebBrowser.WebView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).BeginInit();
@@ -156,18 +154,6 @@
             this.txtNombres.Size = new System.Drawing.Size(227, 20);
             this.txtNombres.TabIndex = 14;
             // 
-            // pictur
-            // 
-            this.pictur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictur.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictur.Image = ((System.Drawing.Image)(resources.GetObject("pictur.Image")));
-            this.pictur.Location = new System.Drawing.Point(857, 23);
-            this.pictur.Name = "pictur";
-            this.pictur.Size = new System.Drawing.Size(49, 38);
-            this.pictur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictur.TabIndex = 15;
-            this.pictur.TabStop = false;
-            // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(197, 304);
@@ -255,10 +241,11 @@
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(586, 577);
+            this.button3.Location = new System.Drawing.Point(553, 437);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 25);
             this.button3.TabIndex = 33;
@@ -270,10 +257,11 @@
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(405, 577);
+            this.button4.Location = new System.Drawing.Point(411, 437);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 25);
             this.button4.TabIndex = 34;
@@ -311,6 +299,7 @@
             // 
             this.btnCargarFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCargarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnCargarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargarFoto.FlatAppearance.BorderSize = 0;
             this.btnCargarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarFoto.Image")));
@@ -325,6 +314,7 @@
             // 
             this.btnBorrarFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBorrarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnBorrarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrarFoto.FlatAppearance.BorderSize = 0;
             this.btnBorrarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrarFoto.Image")));
@@ -345,7 +335,7 @@
             this.comboBoxBuscarPorCedula.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBoxBuscarPorCedula.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.comboBoxBuscarPorCedula.FormattingEnabled = true;
-            this.comboBoxBuscarPorCedula.Location = new System.Drawing.Point(618, 33);
+            this.comboBoxBuscarPorCedula.Location = new System.Drawing.Point(646, 33);
             this.comboBoxBuscarPorCedula.Name = "comboBoxBuscarPorCedula";
             this.comboBoxBuscarPorCedula.Size = new System.Drawing.Size(226, 21);
             this.comboBoxBuscarPorCedula.TabIndex = 42;
@@ -396,7 +386,6 @@
             this.Controls.Add(this.txtEstadoLicencia);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.pictur);
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtLicencia);
@@ -412,7 +401,6 @@
             this.Name = "AdmConductores";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.AdmConductores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).EndInit();
@@ -432,7 +420,6 @@
         private System.Windows.Forms.TextBox txtLicencia;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombres;
-        private System.Windows.Forms.PictureBox pictur;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtEstadoLicencia;

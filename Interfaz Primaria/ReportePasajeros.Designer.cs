@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportePasajeros));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -35,12 +36,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBusqueda = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnBusqueda = new System.Windows.Forms.PictureBox();
+            this.ttMensajes = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBusqueda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -93,6 +95,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnBusqueda);
@@ -106,6 +109,15 @@
             this.panel1.Size = new System.Drawing.Size(907, 479);
             this.panel1.TabIndex = 5;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(791, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(99, 64);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnBusqueda
             // 
             this.btnBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -115,15 +127,6 @@
             this.btnBusqueda.Size = new System.Drawing.Size(52, 44);
             this.btnBusqueda.TabIndex = 5;
             this.btnBusqueda.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(791, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(99, 64);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
             // 
             // ReportePasajeros
             // 
@@ -137,8 +140,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBusqueda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBusqueda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,5 +156,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnBusqueda;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip ttMensajes;
     }
 }
