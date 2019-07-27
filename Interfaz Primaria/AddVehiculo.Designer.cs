@@ -40,10 +40,6 @@
             this.comboBoxBuscarCodigo = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtCapacidaMaletero = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBoxVehiculo = new System.Windows.Forms.PictureBox();
@@ -70,6 +66,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.ofdSeleccionarImagen = new System.Windows.Forms.OpenFileDialog();
             this.ttMensajes = new System.Windows.Forms.ToolTip(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVehiculo)).BeginInit();
             this.panelconductor.SuspendLayout();
@@ -82,6 +79,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtAñoModelo);
             this.panel1.Controls.Add(this.btnGuardar);
@@ -91,10 +89,6 @@
             this.panel1.Controls.Add(this.comboBoxBuscarCodigo);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.btnCargar);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txtCapacidaMaletero);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtTipo);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pictureBoxVehiculo);
@@ -117,8 +111,9 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(519, 287);
+            this.button1.Location = new System.Drawing.Point(553, 268);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 25);
             this.button1.TabIndex = 29;
@@ -128,9 +123,13 @@
             // 
             // txtAñoModelo
             // 
-            this.txtAñoModelo.Location = new System.Drawing.Point(524, 80);
+            this.txtAñoModelo.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtAñoModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAñoModelo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAñoModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.txtAñoModelo.Location = new System.Drawing.Point(565, 119);
             this.txtAñoModelo.Name = "txtAñoModelo";
-            this.txtAñoModelo.Size = new System.Drawing.Size(65, 20);
+            this.txtAñoModelo.Size = new System.Drawing.Size(108, 24);
             this.txtAñoModelo.TabIndex = 28;
             // 
             // btnGuardar
@@ -140,8 +139,9 @@
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGuardar.Location = new System.Drawing.Point(338, 287);
+            this.btnGuardar.Location = new System.Drawing.Point(266, 268);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(102, 25);
             this.btnGuardar.TabIndex = 26;
@@ -167,19 +167,23 @@
             // 
             // txtNombreModelo
             // 
-            this.txtNombreModelo.Location = new System.Drawing.Point(143, 76);
+            this.txtNombreModelo.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtNombreModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombreModelo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.txtNombreModelo.Location = new System.Drawing.Point(166, 118);
             this.txtNombreModelo.Name = "txtNombreModelo";
-            this.txtNombreModelo.Size = new System.Drawing.Size(213, 20);
+            this.txtNombreModelo.Size = new System.Drawing.Size(213, 24);
             this.txtNombreModelo.TabIndex = 24;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label21.Location = new System.Drawing.Point(30, 76);
+            this.label21.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label21.Location = new System.Drawing.Point(11, 115);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(94, 16);
+            this.label21.Size = new System.Drawing.Size(134, 19);
             this.label21.TabIndex = 23;
             this.label21.Text = "Nombre modelo";
             // 
@@ -187,7 +191,7 @@
             // 
             this.comboBoxBuscarCodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBoxBuscarCodigo.FormattingEnabled = true;
-            this.comboBoxBuscarCodigo.Location = new System.Drawing.Point(809, 23);
+            this.comboBoxBuscarCodigo.Location = new System.Drawing.Point(836, 27);
             this.comboBoxBuscarCodigo.Name = "comboBoxBuscarCodigo";
             this.comboBoxBuscarCodigo.Size = new System.Drawing.Size(121, 21);
             this.comboBoxBuscarCodigo.TabIndex = 22;
@@ -197,11 +201,11 @@
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label20.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.label20.Location = new System.Drawing.Point(684, 26);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(117, 17);
+            this.label20.Size = new System.Drawing.Size(132, 19);
             this.label20.TabIndex = 21;
             this.label20.Text = "Buscar por codigo";
             // 
@@ -221,60 +225,24 @@
             this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.label11.Location = new System.Drawing.Point(219, 202);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 16);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "cm³";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(299, 198);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 13);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Galon/kilometro";
-            // 
-            // txtCapacidaMaletero
-            // 
-            this.txtCapacidaMaletero.Location = new System.Drawing.Point(148, 199);
-            this.txtCapacidaMaletero.Name = "txtCapacidaMaletero";
-            this.txtCapacidaMaletero.Size = new System.Drawing.Size(65, 20);
-            this.txtCapacidaMaletero.TabIndex = 16;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(30, 203);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 16);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Capacidad Maletero";
-            // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(143, 135);
+            this.txtTipo.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTipo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.Location = new System.Drawing.Point(166, 198);
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(215, 20);
+            this.txtTipo.Size = new System.Drawing.Size(215, 24);
             this.txtTipo.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(30, 138);
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label7.Location = new System.Drawing.Point(29, 200);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 16);
+            this.label7.Size = new System.Drawing.Size(110, 19);
             this.label7.TabIndex = 11;
             this.label7.Text = "Tipo vehiculo";
             // 
@@ -293,70 +261,76 @@
             // 
             // txtCapacidadPasajeros
             // 
-            this.txtCapacidadPasajeros.Location = new System.Drawing.Point(524, 132);
+            this.txtCapacidadPasajeros.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtCapacidadPasajeros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCapacidadPasajeros.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCapacidadPasajeros.Location = new System.Drawing.Point(596, 202);
             this.txtCapacidadPasajeros.Name = "txtCapacidadPasajeros";
-            this.txtCapacidadPasajeros.Size = new System.Drawing.Size(65, 20);
+            this.txtCapacidadPasajeros.Size = new System.Drawing.Size(77, 24);
             this.txtCapacidadPasajeros.TabIndex = 6;
             // 
             // txtPlaca
             // 
-            this.txtPlaca.Location = new System.Drawing.Point(519, 19);
+            this.txtPlaca.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPlaca.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaca.Location = new System.Drawing.Point(519, 41);
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(96, 20);
+            this.txtPlaca.Size = new System.Drawing.Size(154, 24);
             this.txtPlaca.TabIndex = 5;
             // 
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.Color.Gainsboro;
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodigo.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.txtCodigo.Location = new System.Drawing.Point(143, 26);
+            this.txtCodigo.Location = new System.Drawing.Point(166, 42);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(140, 27);
+            this.txtCodigo.Size = new System.Drawing.Size(140, 24);
             this.txtCodigo.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(401, 83);
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label4.Location = new System.Drawing.Point(426, 118);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 16);
+            this.label4.Size = new System.Drawing.Size(102, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Año modelo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(401, 26);
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label3.Location = new System.Drawing.Point(411, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "N° Placa";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(401, 135);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label2.Location = new System.Drawing.Point(411, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 16);
+            this.label2.Size = new System.Drawing.Size(164, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Capacidad Pasajeros";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(30, 26);
+            this.label1.Location = new System.Drawing.Point(53, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 22);
+            this.label1.Size = new System.Drawing.Size(63, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
@@ -389,10 +363,12 @@
             this.btnDesasignarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDesasignarVehiculo.FlatAppearance.BorderSize = 0;
             this.btnDesasignarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesasignarVehiculo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesasignarVehiculo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDesasignarVehiculo.Location = new System.Drawing.Point(673, 128);
+            this.btnDesasignarVehiculo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDesasignarVehiculo.Location = new System.Drawing.Point(754, 120);
             this.btnDesasignarVehiculo.Name = "btnDesasignarVehiculo";
-            this.btnDesasignarVehiculo.Size = new System.Drawing.Size(120, 23);
+            this.btnDesasignarVehiculo.Size = new System.Drawing.Size(121, 31);
             this.btnDesasignarVehiculo.TabIndex = 30;
             this.btnDesasignarVehiculo.Text = "Desasignar vehiculo";
             this.btnDesasignarVehiculo.UseVisualStyleBackColor = false;
@@ -404,10 +380,11 @@
             this.btnAsignarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAsignarVehiculo.FlatAppearance.BorderSize = 0;
             this.btnAsignarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsignarVehiculo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignarVehiculo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAsignarVehiculo.Location = new System.Drawing.Point(673, 82);
+            this.btnAsignarVehiculo.Location = new System.Drawing.Point(754, 61);
             this.btnAsignarVehiculo.Name = "btnAsignarVehiculo";
-            this.btnAsignarVehiculo.Size = new System.Drawing.Size(120, 23);
+            this.btnAsignarVehiculo.Size = new System.Drawing.Size(121, 35);
             this.btnAsignarVehiculo.TabIndex = 29;
             this.btnAsignarVehiculo.Text = "Asignar vehiculo";
             this.btnAsignarVehiculo.UseVisualStyleBackColor = false;
@@ -449,33 +426,33 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label16.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.label16.Location = new System.Drawing.Point(228, 139);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(57, 16);
+            this.label16.Size = new System.Drawing.Size(66, 17);
             this.label16.TabIndex = 25;
             this.label16.Text = "Telefono:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.label15.Location = new System.Drawing.Point(228, 92);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 16);
+            this.label15.Size = new System.Drawing.Size(67, 17);
             this.label15.TabIndex = 24;
             this.label15.Text = "Apellido: ";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.label14.Location = new System.Drawing.Point(228, 44);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 16);
+            this.label14.Size = new System.Drawing.Size(61, 17);
             this.label14.TabIndex = 23;
             this.label14.Text = "Nombre:";
             // 
@@ -493,11 +470,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(484, 12);
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label13.Location = new System.Drawing.Point(433, 14);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(197, 16);
+            this.label13.Size = new System.Drawing.Size(247, 19);
             this.label13.TabIndex = 21;
             this.label13.Text = "Buscar conductor por identificacion";
             // 
@@ -505,10 +482,12 @@
             // 
             this.comboBoxconductor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxconductor.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxconductor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.comboBoxconductor.FormattingEnabled = true;
             this.comboBoxconductor.Location = new System.Drawing.Point(686, 12);
             this.comboBoxconductor.Name = "comboBoxconductor";
-            this.comboBoxconductor.Size = new System.Drawing.Size(272, 21);
+            this.comboBoxconductor.Size = new System.Drawing.Size(272, 24);
             this.comboBoxconductor.TabIndex = 4;
             this.comboBoxconductor.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
@@ -543,6 +522,22 @@
             this.ofdSeleccionarImagen.FileName = "openFileDialog1";
             this.ofdSeleccionarImagen.Filter = "JPEG (*.jpg*)|*.JPG|Archivo de mapas de bits (*.bmp*)|*.BMP|PNG (*.png*)|*.PNG*";
             this.ofdSeleccionarImagen.Title = "Seleccionar Imagen";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(415, 268);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 25);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Modificar";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // AddVehiculo
             // 
@@ -580,10 +575,6 @@
         private System.Windows.Forms.PictureBox pictureBoxVehiculo;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCapacidaMaletero;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panelconductor;
         private System.Windows.Forms.ComboBox comboBoxconductor;
         private System.Windows.Forms.Label label5;
@@ -609,5 +600,6 @@
         private System.Windows.Forms.ToolTip ttMensajes;
         private System.Windows.Forms.TextBox txtAñoModelo;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

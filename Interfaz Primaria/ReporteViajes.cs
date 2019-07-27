@@ -24,7 +24,7 @@ namespace Interfaz_Primaria
         {
             InitializeComponent();
             this.ttMensajes.SetToolTip(this.btnBusqueda, "Buscar Reporte");
-            this.ttMensajes.SetToolTip(this.btnPdf, "Exportar PDF");
+
         }
 
         private void Button1_Click(object sender, EventArgs e)

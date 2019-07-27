@@ -64,6 +64,8 @@
             this.webView1 = new EO.WebBrowser.WebView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxLicencia = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MarcoDeFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coomulsoftAppDataSet)).BeginInit();
@@ -76,7 +78,7 @@
             this.labelnombre.AutoSize = true;
             this.labelnombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelnombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.labelnombre.Location = new System.Drawing.Point(36, 43);
+            this.labelnombre.Location = new System.Drawing.Point(37, 62);
             this.labelnombre.Name = "labelnombre";
             this.labelnombre.Size = new System.Drawing.Size(86, 22);
             this.labelnombre.TabIndex = 0;
@@ -88,7 +90,7 @@
             this.labelapellidos.AutoSize = true;
             this.labelapellidos.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelapellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.labelapellidos.Location = new System.Drawing.Point(36, 77);
+            this.labelapellidos.Location = new System.Drawing.Point(34, 111);
             this.labelapellidos.Name = "labelapellidos";
             this.labelapellidos.Size = new System.Drawing.Size(87, 22);
             this.labelapellidos.TabIndex = 4;
@@ -98,10 +100,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 247);
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label3.Location = new System.Drawing.Point(34, 308);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 16);
+            this.label3.Size = new System.Drawing.Size(133, 22);
             this.label3.TabIndex = 5;
             this.label3.Text = "Estado Licencia";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -109,29 +112,32 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(37, 299);
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label4.Location = new System.Drawing.Point(37, 358);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.Size = new System.Drawing.Size(86, 22);
             this.label4.TabIndex = 6;
             this.label4.Text = "Direccion";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 334);
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label5.Location = new System.Drawing.Point(37, 413);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 16);
+            this.label5.Size = new System.Drawing.Size(81, 22);
             this.label5.TabIndex = 7;
             this.label5.Text = "Telefono";
+            this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(36, 12);
+            this.label1.Location = new System.Drawing.Point(77, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 22);
             this.label1.TabIndex = 8;
@@ -146,21 +152,29 @@
             this.txtId.Location = new System.Drawing.Point(143, 9);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(362, 26);
-            this.txtId.TabIndex = 9;
+            this.txtId.TabIndex = 1;
             // 
             // txtLicencia
             // 
-            this.txtLicencia.Location = new System.Drawing.Point(143, 141);
+            this.txtLicencia.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtLicencia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLicencia.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLicencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.txtLicencia.Location = new System.Drawing.Point(144, 215);
             this.txtLicencia.Name = "txtLicencia";
-            this.txtLicencia.Size = new System.Drawing.Size(227, 20);
-            this.txtLicencia.TabIndex = 11;
+            this.txtLicencia.Size = new System.Drawing.Size(360, 28);
+            this.txtLicencia.TabIndex = 5;
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(144, 82);
+            this.txtApellidos.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.txtApellidos.Location = new System.Drawing.Point(143, 105);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(227, 20);
-            this.txtApellidos.TabIndex = 13;
+            this.txtApellidos.Size = new System.Drawing.Size(361, 28);
+            this.txtApellidos.TabIndex = 3;
             // 
             // txtNombres
             // 
@@ -168,49 +182,64 @@
             this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.txtNombres.Location = new System.Drawing.Point(143, 48);
+            this.txtNombres.Location = new System.Drawing.Point(144, 58);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(362, 26);
-            this.txtNombres.TabIndex = 14;
+            this.txtNombres.TabIndex = 2;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(144, 331);
+            this.txtTelefono.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.txtTelefono.Location = new System.Drawing.Point(153, 410);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(227, 20);
-            this.txtTelefono.TabIndex = 21;
+            this.txtTelefono.Size = new System.Drawing.Size(352, 28);
+            this.txtTelefono.TabIndex = 8;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.TxtTelefono_TextChanged);
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(143, 292);
+            this.txtDireccion.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.txtDireccion.Location = new System.Drawing.Point(153, 351);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(227, 20);
-            this.txtDireccion.TabIndex = 22;
+            this.txtDireccion.Size = new System.Drawing.Size(352, 28);
+            this.txtDireccion.TabIndex = 7;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(144, 366);
+            this.txtEmail.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.txtEmail.Location = new System.Drawing.Point(153, 472);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(227, 20);
-            this.txtEmail.TabIndex = 24;
+            this.txtEmail.Size = new System.Drawing.Size(352, 28);
+            this.txtEmail.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 111);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label2.Location = new System.Drawing.Point(8, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 16);
+            this.label2.Size = new System.Drawing.Size(181, 22);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Fecha De Nacim..";
+            this.label2.Text = "Fecha De Nacimiento";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(36, 144);
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label7.Location = new System.Drawing.Point(37, 217);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 16);
+            this.label7.Size = new System.Drawing.Size(73, 22);
             this.label7.TabIndex = 27;
             this.label7.Text = "Licencia";
             // 
@@ -226,22 +255,24 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(37, 369);
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label9.Location = new System.Drawing.Point(46, 475);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 16);
+            this.label9.Size = new System.Drawing.Size(59, 22);
             this.label9.TabIndex = 29;
-            this.label9.Text = "Email @";
+            this.label9.Text = "Email ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 180);
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label6.Location = new System.Drawing.Point(35, 259);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 16);
+            this.label6.Size = new System.Drawing.Size(125, 22);
             this.label6.TabIndex = 30;
-            this.label6.Text = "Lic. Vence";
+            this.label6.Text = "Licencia Vence";
             // 
             // button3
             // 
@@ -249,11 +280,12 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(321, 442);
+            this.button3.Location = new System.Drawing.Point(590, 538);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 25);
-            this.button3.TabIndex = 33;
+            this.button3.Size = new System.Drawing.Size(76, 34);
+            this.button3.TabIndex = 13;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
@@ -264,11 +296,12 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(85, 442);
+            this.button4.Location = new System.Drawing.Point(333, 538);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 25);
-            this.button4.TabIndex = 34;
+            this.button4.Size = new System.Drawing.Size(79, 34);
+            this.button4.TabIndex = 11;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
@@ -278,27 +311,31 @@
             this.MarcoDeFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MarcoDeFoto.Image = ((System.Drawing.Image)(resources.GetObject("MarcoDeFoto.Image")));
             this.MarcoDeFoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("MarcoDeFoto.InitialImage")));
-            this.MarcoDeFoto.Location = new System.Drawing.Point(722, 58);
+            this.MarcoDeFoto.Location = new System.Drawing.Point(689, 100);
             this.MarcoDeFoto.Name = "MarcoDeFoto";
-            this.MarcoDeFoto.Size = new System.Drawing.Size(163, 168);
+            this.MarcoDeFoto.Size = new System.Drawing.Size(186, 215);
             this.MarcoDeFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MarcoDeFoto.TabIndex = 35;
             this.MarcoDeFoto.TabStop = false;
             // 
             // dtimeLicVence
             // 
-            this.dtimeLicVence.Location = new System.Drawing.Point(143, 176);
+            this.dtimeLicVence.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtimeLicVence.Location = new System.Drawing.Point(190, 261);
             this.dtimeLicVence.Name = "dtimeLicVence";
-            this.dtimeLicVence.Size = new System.Drawing.Size(137, 20);
-            this.dtimeLicVence.TabIndex = 36;
+            this.dtimeLicVence.Size = new System.Drawing.Size(304, 24);
+            this.dtimeLicVence.TabIndex = 6;
             this.dtimeLicVence.ValueChanged += new System.EventHandler(this.DtimeLicVence_ValueChanged);
             // 
             // dtimeFechaNacimiento
             // 
-            this.dtimeFechaNacimiento.Location = new System.Drawing.Point(144, 108);
+            this.dtimeFechaNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtimeFechaNacimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.dtimeFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtimeFechaNacimiento.Location = new System.Drawing.Point(207, 161);
             this.dtimeFechaNacimiento.Name = "dtimeFechaNacimiento";
-            this.dtimeFechaNacimiento.Size = new System.Drawing.Size(226, 20);
-            this.dtimeFechaNacimiento.TabIndex = 37;
+            this.dtimeFechaNacimiento.Size = new System.Drawing.Size(299, 22);
+            this.dtimeFechaNacimiento.TabIndex = 4;
             // 
             // btnCargarFoto
             // 
@@ -308,10 +345,10 @@
             this.btnCargarFoto.FlatAppearance.BorderSize = 0;
             this.btnCargarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarFoto.Image")));
-            this.btnCargarFoto.Location = new System.Drawing.Point(722, 232);
+            this.btnCargarFoto.Location = new System.Drawing.Point(689, 335);
             this.btnCargarFoto.Name = "btnCargarFoto";
             this.btnCargarFoto.Size = new System.Drawing.Size(78, 44);
-            this.btnCargarFoto.TabIndex = 38;
+            this.btnCargarFoto.TabIndex = 10;
             this.btnCargarFoto.UseVisualStyleBackColor = false;
             this.btnCargarFoto.Click += new System.EventHandler(this.btnCargarFoto_Click);
             // 
@@ -323,7 +360,7 @@
             this.btnBorrarFoto.FlatAppearance.BorderSize = 0;
             this.btnBorrarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrarFoto.Image")));
-            this.btnBorrarFoto.Location = new System.Drawing.Point(807, 232);
+            this.btnBorrarFoto.Location = new System.Drawing.Point(797, 335);
             this.btnBorrarFoto.Name = "btnBorrarFoto";
             this.btnBorrarFoto.Size = new System.Drawing.Size(78, 44);
             this.btnBorrarFoto.TabIndex = 39;
@@ -338,11 +375,14 @@
             // comboBoxBuscarPorCedula
             // 
             this.comboBoxBuscarPorCedula.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxBuscarPorCedula.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.comboBoxBuscarPorCedula.BackColor = System.Drawing.Color.White;
+            this.comboBoxBuscarPorCedula.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxBuscarPorCedula.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBuscarPorCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.comboBoxBuscarPorCedula.FormattingEnabled = true;
-            this.comboBoxBuscarPorCedula.Location = new System.Drawing.Point(689, 8);
+            this.comboBoxBuscarPorCedula.Location = new System.Drawing.Point(725, 19);
             this.comboBoxBuscarPorCedula.Name = "comboBoxBuscarPorCedula";
-            this.comboBoxBuscarPorCedula.Size = new System.Drawing.Size(226, 21);
+            this.comboBoxBuscarPorCedula.Size = new System.Drawing.Size(248, 24);
             this.comboBoxBuscarPorCedula.TabIndex = 42;
             this.comboBoxBuscarPorCedula.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBuscarPorCedula_SelectedIndexChanged);
             this.comboBoxBuscarPorCedula.Enter += new System.EventHandler(this.comboBoxBuscarPorCedula_Enter);
@@ -371,7 +411,8 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBoxLicencia);
             this.panel1.Controls.Add(this.comboBoxBuscarPorCedula);
             this.panel1.Controls.Add(this.MarcoDeFoto);
@@ -399,20 +440,46 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.labelapellidos);
             this.panel1.Controls.Add(this.labelnombre);
-            this.panel1.Location = new System.Drawing.Point(34, 30);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(954, 568);
+            this.panel1.Size = new System.Drawing.Size(976, 586);
             this.panel1.TabIndex = 43;
             // 
             // pictureBoxLicencia
             // 
             this.pictureBoxLicencia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLicencia.BackgroundImage")));
             this.pictureBoxLicencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLicencia.Location = new System.Drawing.Point(153, 241);
+            this.pictureBoxLicencia.Location = new System.Drawing.Point(191, 302);
             this.pictureBoxLicencia.Name = "pictureBoxLicencia";
             this.pictureBoxLicencia.Size = new System.Drawing.Size(35, 35);
             this.pictureBoxLicencia.TabIndex = 43;
             this.pictureBoxLicencia.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(453, 538);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 34);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Modificar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label10.Location = new System.Drawing.Point(565, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(154, 22);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "Buscar por cedula";
             // 
             // AdmConductores
             // 
@@ -470,5 +537,7 @@
         private EO.WebBrowser.WebView webView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBoxLicencia;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
     }
 }

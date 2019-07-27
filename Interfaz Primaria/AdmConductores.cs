@@ -246,5 +246,15 @@ namespace Interfaz_Primaria
         {
             Comprobar_licencia();
         }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

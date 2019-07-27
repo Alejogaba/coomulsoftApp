@@ -83,7 +83,7 @@ namespace Interfaz_Primaria
             año_modelo = txtAñoModelo.Text;
             tipo = txtTipo.Text;
             capacidad_pasajeros = int.Parse(txtCapacidadPasajeros.Text);
-            capacidad_maletero = float.Parse(txtCapacidaMaletero.Text);
+            capacidad_maletero = 0;
 
             if (string.IsNullOrEmpty(placa)||string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(Convert.ToString(capacidad_pasajeros)) || string.IsNullOrEmpty(Convert.ToString(capacidad_maletero)))
             {
@@ -136,7 +136,7 @@ namespace Interfaz_Primaria
             txtCodigo.Text = con.Codigo;
             txtAñoModelo.Text = con.Anio_Modelo;
             txtCapacidadPasajeros.Text = Convert.ToString(con.Capacidad_pasajeros);
-            txtCapacidaMaletero.Text = Convert.ToString(con.Capacidad_maletero);
+          
             txtPlaca.Text = con.Placa_Vehiculo;
             txtTipo.Text = con.Tipo_vehiculo;
             //txtNombreModelo.Text = con.
@@ -202,7 +202,6 @@ namespace Interfaz_Primaria
         {
             txtAñoModelo.Clear();
             txtCapacidadPasajeros.Clear();
-            txtCapacidaMaletero.Clear();
             txtCodigo.Clear();
 
             txtNombreModelo.Clear();
