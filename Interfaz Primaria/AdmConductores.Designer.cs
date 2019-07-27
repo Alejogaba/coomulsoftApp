@@ -74,10 +74,11 @@
             // labelnombre
             // 
             this.labelnombre.AutoSize = true;
-            this.labelnombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelnombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelnombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.labelnombre.Location = new System.Drawing.Point(36, 43);
             this.labelnombre.Name = "labelnombre";
-            this.labelnombre.Size = new System.Drawing.Size(56, 16);
+            this.labelnombre.Size = new System.Drawing.Size(86, 22);
             this.labelnombre.TabIndex = 0;
             this.labelnombre.Text = "Nombres";
             this.labelnombre.Click += new System.EventHandler(this.label1_Click);
@@ -85,12 +86,13 @@
             // labelapellidos
             // 
             this.labelapellidos.AutoSize = true;
-            this.labelapellidos.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelapellidos.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelapellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.labelapellidos.Location = new System.Drawing.Point(36, 77);
             this.labelapellidos.Name = "labelapellidos";
-            this.labelapellidos.Size = new System.Drawing.Size(63, 16);
+            this.labelapellidos.Size = new System.Drawing.Size(87, 22);
             this.labelapellidos.TabIndex = 4;
-            this.labelapellidos.Text = "Aapellidos";
+            this.labelapellidos.Text = "Apellidos";
             this.labelapellidos.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -127,18 +129,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.label1.Location = new System.Drawing.Point(36, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 16);
+            this.label1.Size = new System.Drawing.Size(28, 22);
             this.label1.TabIndex = 8;
             this.label1.Text = "ID";
             // 
             // txtId
             // 
+            this.txtId.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.txtId.Location = new System.Drawing.Point(143, 9);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(227, 20);
+            this.txtId.Size = new System.Drawing.Size(345, 26);
             this.txtId.TabIndex = 9;
             // 
             // txtLicencia
@@ -157,7 +164,7 @@
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(143, 40);
+            this.txtNombres.Location = new System.Drawing.Point(143, 48);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(227, 20);
             this.txtNombres.TabIndex = 14;
@@ -239,7 +246,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(248, 442);
+            this.button3.Location = new System.Drawing.Point(321, 442);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 25);
             this.button3.TabIndex = 33;
