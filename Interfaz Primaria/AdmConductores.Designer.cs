@@ -99,7 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 232);
+            this.label3.Location = new System.Drawing.Point(34, 247);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 16);
             this.label3.TabIndex = 5;
@@ -145,7 +145,7 @@
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.txtId.Location = new System.Drawing.Point(143, 9);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(345, 26);
+            this.txtId.Size = new System.Drawing.Size(362, 26);
             this.txtId.TabIndex = 9;
             // 
             // txtLicencia
@@ -157,16 +157,20 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(143, 74);
+            this.txtApellidos.Location = new System.Drawing.Point(144, 82);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(227, 20);
             this.txtApellidos.TabIndex = 13;
             // 
             // txtNombres
             // 
+            this.txtNombres.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.txtNombres.Location = new System.Drawing.Point(143, 48);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(227, 20);
+            this.txtNombres.Size = new System.Drawing.Size(362, 26);
             this.txtNombres.TabIndex = 14;
             // 
             // txtTelefono
@@ -404,7 +408,7 @@
             // 
             this.pictureBoxLicencia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLicencia.BackgroundImage")));
             this.pictureBoxLicencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLicencia.Location = new System.Drawing.Point(143, 221);
+            this.pictureBoxLicencia.Location = new System.Drawing.Point(153, 241);
             this.pictureBoxLicencia.Name = "pictureBoxLicencia";
             this.pictureBoxLicencia.Size = new System.Drawing.Size(35, 35);
             this.pictureBoxLicencia.TabIndex = 43;
