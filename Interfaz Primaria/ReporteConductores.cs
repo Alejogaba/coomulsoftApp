@@ -64,10 +64,6 @@ namespace Interfaz_Primaria
             DataTable data;
             data = ToDataTables<Conductor>(datos);
 
-            foreach (var item in service.Consultar())
-            {
-                dataGridView1.Columns["Imagen"].DisplayIndex = 0;
-            }
             dataGridView1.DataSource = service.Consultar();
         }
 
