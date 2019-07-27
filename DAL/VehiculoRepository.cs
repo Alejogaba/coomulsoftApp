@@ -61,8 +61,8 @@ namespace DAL
             {
                 using (var cmd = Conexion.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Vehiculos(Imagen=@imagen,Codigo=@codigo,Modelo=@modelo,[Placa vehiculo]=@placa,[Año modelo]=@anio," +
-                        "[Tipo vehiculo]=@tipo,[Capacidad pasajeros]=@pasajeros,[Capacidad maletero]=@maletero) WHERE Codigo=@codigobuscado";
+                    cmd.CommandText = "UPDATE Vehiculos Imagen=@imagen,Codigo=@codigo,Modelo=@modelo,[Placa vehiculo]=@placa,[Año modelo]=@anio," +
+                        "[Tipo vehiculo]=@tipo,[Capacidad pasajeros]=@pasajeros,[Capacidad maletero]=@maletero WHERE Codigo=@codigobuscado";
 
                     cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = vehiculo.Imagen;
                     cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = vehiculo.Codigo;

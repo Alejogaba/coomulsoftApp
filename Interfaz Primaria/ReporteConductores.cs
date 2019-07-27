@@ -40,6 +40,7 @@ namespace Interfaz_Primaria
             for (int i = 1; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
+            
         }
 
 

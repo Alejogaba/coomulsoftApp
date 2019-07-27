@@ -39,7 +39,7 @@ namespace Interfaz_Primaria
                 comboBoxBuscarVehiculo.Items.Add(item.Codigo);
             }
         }
-
+        
         public void Cargar_origen_y_destino()
         {
             comboBoxOrigen.Items.Clear();
@@ -55,7 +55,7 @@ namespace Interfaz_Primaria
             comboBoxBuscarConductor.Items.Clear();
             foreach (var item in conductorService.Buscar_por_vehiculo(veh))
             {
-                comboBoxBuscarVehiculo.Items.Add(item.Identificacion);
+                comboBoxBuscarConductor.Items.Add(item.Identificacion);
             }
         }
         public int Codigo_viaje()
@@ -160,28 +160,34 @@ namespace Interfaz_Primaria
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            
-            int max =  int.Parse(txtCantPasajeros.Text);
-
-            i++;
-            Limpiar_cliente();
-                    labelcontador.Text = Convert.ToString(i);
-                    string id, nombre, apellidos, direccion, tel;
-                    apellidos = textBoxApellidos.Text;
-                    id = textBoxid.Text;
-                    nombre = textBoxNombres.Text;
-                    direccion = textBoxDir.Text;
-                    tel = textBoxTel.Text;
-                    Cliente cliente = new Cliente(Codigo_viaje(), nombre, apellidos, id, tel, direccion);
-                    clienteService.Guardar(cliente);
-           
-            if (i > max)
+            int max = int.Parse(txtCantPasajeros.Text);
+            if (i == max)
             {
                 this.button1.Enabled = false;
+
             }
-                    
-            
-            
+            else
+            {
+                i++;
+                Limpiar_cliente();
+                labelcontador.Text = Convert.ToString(i);
+                string id, nombre, apellidos, direccion, tel;
+                apellidos = textBoxApellidos.Text;
+                id = textBoxid.Text;
+                nombre = textBoxNombres.Text;
+                direccion = textBoxDir.Text;
+                tel = textBoxTel.Text;
+                Cliente cliente = new Cliente(Codigo_viaje(), nombre, apellidos, id, tel, direccion);
+                clienteService.Guardar(cliente);
+
+            }
+
+
+
+
+
+
+
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -226,15 +232,18 @@ namespace Interfaz_Primaria
         {
 
             Conductor con = new Conductor();
-            string cod = comboBoxBuscarVehiculo.Text;
+            string cod = comboBoxBuscarConductor.Text;
             con = conductorService.Buscar(cod);
             txtNombre.Text = con.Nombre;
             txtIdentificacion.Text = con.Identificacion;
             txtLicencia.Text = con.Licencia;
             txtCelular.Text = con.Telefono;
-            MemoryStream ms = new MemoryStream(con.Imagen);
-            Image returnImage = System.Drawing.Image.FromStream(ms);
-            pictureBoxconductor.Image = returnImage;
+            using (MemoryStream ms = new MemoryStream(con.Imagen))
+            {
+                Image returnImage = System.Drawing.Image.FromStream(ms);
+                pictureBoxconductor.Image = returnImage;
+            }
+            
         }
 
         private void ComboBoxOrigen_SelectedIndexChanged(object sender, EventArgs e)

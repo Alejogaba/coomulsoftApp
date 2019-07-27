@@ -67,6 +67,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.labelIdentificacion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelmodelo = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.txtCantPasajeros = new System.Windows.Forms.Label();
             this.txtPlaca = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.Label();
@@ -75,8 +77,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxBuscarVehiculo = new System.Windows.Forms.ComboBox();
-            this.labelmodelo = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.PanelPlanilla.SuspendLayout();
             this.panelVehiculos.SuspendLayout();
@@ -292,8 +292,8 @@
             this.pictureBoxconductor.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxconductor.InitialImage")));
             this.pictureBoxconductor.Location = new System.Drawing.Point(286, 20);
             this.pictureBoxconductor.Name = "pictureBoxconductor";
-            this.pictureBoxconductor.Size = new System.Drawing.Size(121, 143);
-            this.pictureBoxconductor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxconductor.Size = new System.Drawing.Size(128, 147);
+            this.pictureBoxconductor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxconductor.TabIndex = 11;
             this.pictureBoxconductor.TabStop = false;
             // 
@@ -533,6 +533,28 @@
             this.panel2.Size = new System.Drawing.Size(419, 231);
             this.panel2.TabIndex = 10;
             // 
+            // labelmodelo
+            // 
+            this.labelmodelo.AutoSize = true;
+            this.labelmodelo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelmodelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.labelmodelo.Location = new System.Drawing.Point(106, 183);
+            this.labelmodelo.Name = "labelmodelo";
+            this.labelmodelo.Size = new System.Drawing.Size(83, 16);
+            this.labelmodelo.TabIndex = 15;
+            this.labelmodelo.Text = "---------------";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.label18.Location = new System.Drawing.Point(22, 179);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(61, 19);
+            this.label18.TabIndex = 14;
+            this.label18.Text = "Modelo";
+            // 
             // txtCantPasajeros
             // 
             this.txtCantPasajeros.AutoSize = true;
@@ -575,7 +597,7 @@
             this.pictureBoxvehiculo.Location = new System.Drawing.Point(222, 46);
             this.pictureBoxvehiculo.Name = "pictureBoxvehiculo";
             this.pictureBoxvehiculo.Size = new System.Drawing.Size(192, 100);
-            this.pictureBoxvehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxvehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxvehiculo.TabIndex = 10;
             this.pictureBoxvehiculo.TabStop = false;
             this.pictureBoxvehiculo.Click += new System.EventHandler(this.PictureBoxvehiculo_Click);
@@ -623,28 +645,6 @@
             this.comboBoxBuscarVehiculo.Size = new System.Drawing.Size(198, 27);
             this.comboBoxBuscarVehiculo.TabIndex = 0;
             this.comboBoxBuscarVehiculo.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBuscarVehiculo_SelectedIndexChanged);
-            // 
-            // labelmodelo
-            // 
-            this.labelmodelo.AutoSize = true;
-            this.labelmodelo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelmodelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.labelmodelo.Location = new System.Drawing.Point(106, 183);
-            this.labelmodelo.Name = "labelmodelo";
-            this.labelmodelo.Size = new System.Drawing.Size(83, 16);
-            this.labelmodelo.TabIndex = 15;
-            this.labelmodelo.Text = "---------------";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.label18.Location = new System.Drawing.Point(22, 179);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 19);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "Modelo";
             // 
             // IniciarViaje
             // 

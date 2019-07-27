@@ -8,7 +8,7 @@ namespace Entity
     {
         public int Codigo_viaje { get; set; }
         public String Cedula_conductor { get; set; }
-        public string Cod_vehiculo { get; set; }
+        public string Codigo_vehiculo { get; set; }
         public DateTime Fecha_salida { get; set; }
   
         public DateTime Hora_salida { get; set; }
@@ -20,7 +20,7 @@ namespace Entity
         {
             Codigo_viaje = codigo_viaje;
             Cedula_conductor = cedula_conductor;
-            Cod_vehiculo = cod_vehiculo;
+            Codigo_vehiculo = cod_vehiculo;
             Fecha_salida = fecha_salida;
          
             Hora_salida = hora_salida;

@@ -32,7 +32,7 @@ namespace DAL
 
                     cmd.Parameters.Add("@codigo_viaje", SqlDbType.Int).Value = viaje.Codigo_viaje;
                     cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = viaje.Cedula_conductor;
-                    cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = viaje.Cod_vehiculo;
+                    cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = viaje.Codigo_vehiculo;
                     cmd.Parameters.Add("@fecha_salida", SqlDbType.Date).Value = viaje.Fecha_salida;
                     cmd.Parameters.Add("@hora_salida", SqlDbType.Date).Value = viaje.Hora_salida;
                     cmd.Parameters.Add("@origen", SqlDbType.VarChar).Value = viaje.Ciudad_origen;
@@ -143,7 +143,7 @@ namespace DAL
             Viaje viaje = new Viaje();
             viaje.Codigo_viaje = (int)reader["Codigo viaje"];
             viaje.Cedula_conductor = (string)reader["Cedula conductor"];
-            viaje.Cod_vehiculo = (string)reader["Codigo vehiculo"];
+            viaje.Codigo_vehiculo = (string)reader["Codigo vehiculo"];
             viaje.Fecha_salida = (DateTime)reader["Fecha salida"];
             viaje.Hora_salida = (DateTime)reader["Hora salida"];
             viaje.Ciudad_origen = (string)reader["Ciudad origen"];
