@@ -74,7 +74,7 @@ namespace Interfaz_Primaria
         public void Guardar ()
         {
             byte[] byteArrayImagen = ImageToByteArray(pictureBoxVehiculo.Image);
-            string placa, codigo, nombre_modelo, año_modelo, tipo;
+            string placa, codigo, nombre_modelo, año_modelo, tipo,codigo_antiguo;
                int capacidad_pasajeros;
             float capacidad_maletero;
             placa = txtPlaca.Text;
@@ -91,13 +91,55 @@ namespace Interfaz_Primaria
             }
             else
             {
-                
-                
-                Vehiculo vehiculo = new Vehiculo(byteArrayImagen, codigo,nombre_modelo,placa,año_modelo, tipo, capacidad_pasajeros, capacidad_maletero);
-                 result = MsgBox.Show(servicevehiculo.Guardar(vehiculo), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                Vehiculo vehiculo = new Vehiculo(byteArrayImagen, codigo, nombre_modelo, placa, año_modelo, tipo, capacidad_pasajeros, capacidad_maletero);
+                result = MsgBox.Show(servicevehiculo.Guardar(vehiculo), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
                 Cargar_combobox();
                 panelconductor.Enabled = true;
                 cargarconductor();
+
+
+            }
+
+
+        }
+        public void Modificar()
+        {
+            byte[] byteArrayImagen = ImageToByteArray(pictureBoxVehiculo.Image);
+            string placa, codigo, nombre_modelo, año_modelo, tipo, codigo_antiguo;
+            int capacidad_pasajeros;
+            float capacidad_maletero;
+            placa = txtPlaca.Text;
+            codigo = txtCodigo.Text;
+            nombre_modelo = txtNombreModelo.Text;
+            año_modelo = txtAñoModelo.Text;
+            tipo = txtTipo.Text;
+            capacidad_pasajeros = int.Parse(txtCapacidadPasajeros.Text);
+            capacidad_maletero = 0;
+            codigo_antiguo = comboBoxBuscarCodigo.Text;
+
+            if (string.IsNullOrEmpty(placa) || string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(nombre_modelo) || string.IsNullOrEmpty(año_modelo) || string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(Convert.ToString(capacidad_pasajeros)) || string.IsNullOrEmpty(Convert.ToString(capacidad_maletero)))
+            {
+                result = MsgBox.Show("NO DEJE ESPACIOS EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
+            }
+            else
+            {
+                
+
+                    if (string.IsNullOrEmpty(codigo_antiguo))
+                    {
+                        result = MsgBox.Show("Seleccione vehiculo a modificar de la lista", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
+                    }
+                    else
+                    {
+                        Vehiculo vehiculo = new Vehiculo(byteArrayImagen, codigo, nombre_modelo, placa, año_modelo, tipo, capacidad_pasajeros, capacidad_maletero);
+                        result = MsgBox.Show(servicevehiculo.Guardar(vehiculo), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                        Cargar_combobox();
+                        panelconductor.Enabled = true;
+                        cargarconductor();
+                    }
+                
+
+
             }
 
 
@@ -139,11 +181,12 @@ namespace Interfaz_Primaria
           
             txtPlaca.Text = con.Placa_Vehiculo;
             txtTipo.Text = con.Tipo_vehiculo;
+            txtNombreModelo.Text = con.Modelo;
             //txtNombreModelo.Text = con.
             
             MemoryStream ms = new MemoryStream(con.Imagen);
             Image returnImage = System.Drawing.Image.FromStream(ms);
-            pictureBoxconductor.Image = returnImage;
+           pictureBoxVehiculo.Image = returnImage;
 
             panelconductor.Enabled = true;
             cargarconductor();
@@ -174,20 +217,38 @@ namespace Interfaz_Primaria
 
         private void BtnAsignarVehiculo_Click(object sender, EventArgs e)
         {
-            string codigo_vehiculo, cedula;
-            codigo_vehiculo = txtCodigo.Text;
-            cedula = comboBoxconductor.Text;
-            serviceconductor.Asignar_vehiculo(codigo_vehiculo,cedula);
-            Limpiar_conductor();
-            cargarconductor();
+            if (string.IsNullOrEmpty(comboBoxconductor.Text) || string.IsNullOrEmpty(comboBoxBuscarCodigo.Text))
+            {
+                result = MsgBox.Show("Seleccione un conductor y vehiculo de la lista", "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
+            }
+            else
+            {
+                string codigo_vehiculo, cedula;
+                codigo_vehiculo = txtCodigo.Text;
+                cedula = comboBoxconductor.Text;
+                result = MsgBox.Show(serviceconductor.Asignar_vehiculo(codigo_vehiculo, cedula), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+               
+                Limpiar_conductor();
+                cargarconductor();
+            }
+            
         }
 
         private void BtnDesasignarVehiculo_Click(object sender, EventArgs e)
         {
-            string cedula = comboBoxconductor.Text;
-            serviceconductor.Desasignar_vehiculo(cedula);
-            Limpiar_conductor();
-            cargarconductor();
+            if (string.IsNullOrEmpty(comboBoxconductor.Text) || string.IsNullOrEmpty(comboBoxBuscarCodigo.Text))
+            {
+                result = MsgBox.Show("Seleccione un conductor y vehiculo de la lista", "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
+            }
+            else
+            {
+                string cedula = comboBoxconductor.Text;
+                serviceconductor.Desasignar_vehiculo(cedula);
+                Limpiar_conductor();
+                
+                cargarconductor();
+            }
+
         }
 
         public void Limpiar_conductor()
@@ -208,7 +269,13 @@ namespace Interfaz_Primaria
             txtPlaca.Clear();
            
             txtTipo.Clear();
+            pictureBoxVehiculo.Image = pictureBoxVehiculo.InitialImage;
 
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Modificar();
         }
     }
 }

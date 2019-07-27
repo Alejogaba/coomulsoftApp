@@ -57,7 +57,7 @@ namespace DAL
 
         public IList<Cliente> Consultar_por_codigo(string id)
         {
-
+            clientes.Clear();
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "Select * from Clientes Where Identificacion=@id";

@@ -13,6 +13,7 @@ using iTextSharp.text.html;
 using iTextSharp.text.pdf;
 using iTextSharp.text.html.simpleparser;
 using System.IO;
+using Entity;
 
 namespace Interfaz_Primaria
 {
@@ -24,7 +25,13 @@ namespace Interfaz_Primaria
         {
             InitializeComponent();
             this.ttMensajes.SetToolTip(this.btnBusqueda, "Buscar Reporte");
+            cargar();
+        }
 
+        public void cargar()
+        {
+            dataGridView1.DataSource = service.Consultar();
+            dataGridView1.Refresh();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -90,6 +97,51 @@ namespace Interfaz_Primaria
         private void PictureBoxPdf_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxPdf.BackColor = SystemColors.Control;
+        }
+
+        private void PictureBoxPdf_Click(object sender, EventArgs e)
+        {
+            exportar_pdf();
+        }
+      
+        public DataTable ToDataTables<T>(IList<T> data)
+        {
+            PropertyDescriptorCollection props = TypeDescriptor.GetProperties(typeof(T));
+            DataTable table = new DataTable();
+            for (int i = 0; i < props.Count; i++)
+            {
+                PropertyDescriptor prp = props[i];
+                table.Columns.Add(prp.Name, prp.PropertyType);
+            }
+            object[] values = new object[props.Count];
+            foreach (T item in data)
+            {
+                for (int i = 0; i < values.Length; i++)
+                {
+                    values[i] = props[i].GetValue(item);
+
+                }
+
+                table.Rows.Add(values);
+            }
+            return table;
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            cargar();
+        }
+        public void Filtragridfecha()
+        {
+            DateTime fecha= Convert.ToDateTime(dateTimePicker1.Text);
+            IList<Viaje> datos = service.Consultar_por_fecha(fecha);
+            DataTable data;
+            data = ToDataTables<Viaje>(datos);
+            dataGridView1.DataSource = data;
+        }
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            Filtragridfecha();
         }
     }
 }

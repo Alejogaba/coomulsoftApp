@@ -18,18 +18,24 @@ namespace Interfaz_Primaria
     {
         ConductorService Service = new ConductorService();
         DialogResult result;
+        string estado_licencia;
         public AdmConductores()
         {
             InitializeComponent();
-            foreach (var item in Service.Consultar())
-            {
-                comboBoxBuscarPorCedula.Items.Add(item.Identificacion);
-            }
+            cargar();
            
             this.ttMensaje.SetToolTip(this.btnBorrarFoto, "Borrar la foto");
             this.ttMensaje.SetToolTip(this.btnCargarFoto, "Subir la foto");
             
            
+        }
+
+        public void cargar()
+        {
+            foreach (var item in Service.Consultar())
+            {
+                comboBoxBuscarPorCedula.Items.Add(item.Identificacion);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -96,10 +102,45 @@ namespace Interfaz_Primaria
             }
             else
             {
-                Conductor conductor = new Conductor(nombre, apellido, id, fecha_nac, tel, dire, byteArrayImagen, licencia, Comprobar_licencia(), lic_fecha, email);
+                Conductor conductor = new Conductor(nombre, apellido, id, fecha_nac, tel, dire, byteArrayImagen, licencia, estado_licencia, lic_fecha, email);
                 result = MsgBox.Show(Service.Guardar(conductor), "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                cargar();
+                comboBoxBuscarPorCedula.Refresh();
             }
             
+        }
+
+        public void Modificar()
+        {
+            byte[] byteArrayImagen = ImageToByteArray(MarcoDeFoto.Image);
+
+            string nombre, apellido, id, tel, dire, email, licencia, antigua_ced;
+            DateTime lic_fecha, fecha_nac;
+            nombre = txtNombres.Text;
+            apellido = txtApellidos.Text;
+            id = txtId.Text;
+            tel = txtTelefono.Text;
+            dire = txtDireccion.Text;
+            email = txtEmail.Text;
+            licencia = txtEmail.Text;
+            antigua_ced = comboBoxBuscarPorCedula.Text;
+
+
+            lic_fecha = Convert.ToDateTime(dtimeLicVence.Text);
+            fecha_nac = Convert.ToDateTime(dtimeFechaNacimiento.Text);
+
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(id) || string.IsNullOrEmpty(tel) || string.IsNullOrEmpty(dire) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(licencia))
+            {
+                result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+            }
+            else
+            {
+                
+                        Conductor conductor = new Conductor(nombre, apellido, id, fecha_nac, tel, dire, byteArrayImagen, licencia, estado_licencia, lic_fecha, email);
+                        result = MsgBox.Show(Service.Modificar(conductor,antigua_ced) , "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                    
+            }
+
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -164,8 +205,7 @@ namespace Interfaz_Primaria
             txtNombres.Clear();
             txtTelefono.Clear();
             dtimeFechaNacimiento.ResetText();
-            dtimeLicVence.ResetText();
-            
+            pictureBoxLicencia.Image = pictureBoxLicencia.InitialImage;
 
         }
       
@@ -214,7 +254,7 @@ namespace Interfaz_Primaria
 
         private void BtnBorrarFoto_Click(object sender, EventArgs e)
         {
-
+            Limpiar();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -222,7 +262,7 @@ namespace Interfaz_Primaria
 
         }
 
-        public string Comprobar_licencia()
+        public void Comprobar_licencia()
         {
             DateTime actual = DateTime.Now;
             DateTime vence = Convert.ToDateTime(dtimeLicVence.Text);
@@ -232,13 +272,13 @@ namespace Interfaz_Primaria
             {
                 result = MsgBox.Show("Licencia Vencida", "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
                 pictureBoxLicencia.BackgroundImage = Properties.Resources.trafficlight_red_40428;
-                return "Vencida";
+                estado_licencia= "Vencida";
                 
             }
             else
             {
                 pictureBoxLicencia.BackgroundImage = Properties.Resources.trafficlight_green_40427;
-                return "Ok";
+                estado_licencia= "Ok";
             }
         }
 
@@ -255,6 +295,11 @@ namespace Interfaz_Primaria
         private void TxtTelefono_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            Modificar();
         }
     }
 }

@@ -60,16 +60,26 @@ namespace BLL
 
         }
 
-        public Viaje Buscar(int cod)
+        public Viaje Buscar_por_cedula(string cod)
         {
             conexion.Open();
             Viaje cd = new Viaje();
-            cd = viajesrepository.Buscar(cod);
+            cd = viajesrepository.Buscar_Por_cedula(cod);
             conexion.Close();
             return cd;
 
 
         }
-        
+        public Viaje Buscar_por_codigo(int cod)
+        {
+            conexion.Open();
+            Viaje cd = new Viaje();
+            cd = viajesrepository.Buscar_Por_codigo(cod);
+            conexion.Close();
+            return cd;
+
+
+        }
+
     }
 }

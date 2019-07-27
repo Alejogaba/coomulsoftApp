@@ -56,7 +56,7 @@ namespace DAL
 
         public IList<Rutas> Consultar()
         {
-
+            rutas.Clear();
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "Select * from Rutas";
@@ -91,6 +91,7 @@ namespace DAL
 
         public Rutas Buscar(string cod)
         {
+            rutas.Clear();
             Rutas ruta = new Rutas();
             using (var Comando = Conexion.CreateCommand())
             {
@@ -112,9 +113,9 @@ namespace DAL
         public Rutas Map(SqlDataReader reader)
         {
             Rutas rutas = new Rutas();
-            rutas.Ciudad_Origen = (string)reader["Origen"];
+            rutas.Ciudad_Origen = (string)reader["Ciudad origen"];
             rutas.Dpto_Origen = (string)reader["Departamento origen"];
-            rutas.Ciudad_Destino = (string)reader["Destino"];
+            rutas.Ciudad_Destino = (string)reader["Ciudad destino"];
             rutas.Dpto_Destino = (string)reader["Departamento destino"];
             rutas.Tarifa= (int)reader["Tarifa"];
 

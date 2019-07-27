@@ -22,6 +22,7 @@ namespace Interfaz_Primaria
         ConductorService conductorService = new ConductorService();
         RutasService rutasService = new RutasService();
         int a = 0;
+        int i = 1;
         DialogResult result;
 
         public IniciarViaje()
@@ -159,22 +160,27 @@ namespace Interfaz_Primaria
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            int i = 1;
+            
             int max =  int.Parse(txtCantPasajeros.Text);
-            while (i <= max)
+
+            i++;
+            Limpiar_cliente();
+                    labelcontador.Text = Convert.ToString(i);
+                    string id, nombre, apellidos, direccion, tel;
+                    apellidos = textBoxApellidos.Text;
+                    id = textBoxid.Text;
+                    nombre = textBoxNombres.Text;
+                    direccion = textBoxDir.Text;
+                    tel = textBoxTel.Text;
+                    Cliente cliente = new Cliente(Codigo_viaje(), nombre, apellidos, id, tel, direccion);
+                    clienteService.Guardar(cliente);
+           
+            if (i > max)
             {
-                Limpiar_cliente();
-                labelcontador.Text = Convert.ToString(i);
-                string id, nombre, apellidos, direccion, tel;
-                apellidos=textBoxApellidos.Text;
-                id = textBoxid.Text;
-                nombre= textBoxNombres.Text;
-                direccion =textBoxDir.Text;
-                tel=textBoxTel.Text;
-                Cliente cliente = new Cliente(Codigo_viaje(), nombre, apellidos, id, tel, direccion);
-                clienteService.Guardar(cliente);
+                this.button1.Enabled = false;
             }
-            this.button1.Enabled = false;
+                    
+            
             
         }
 
@@ -191,6 +197,7 @@ namespace Interfaz_Primaria
             txtCodigo.Text = con.Codigo;
             txtPlaca.Text = con.Placa_Vehiculo;
             txtCantPasajeros.Text = Convert.ToString(con.Capacidad_pasajeros);
+            labelmodelo.Text = con.Modelo;
           
 
             MemoryStream ms = new MemoryStream(con.Imagen);
@@ -201,7 +208,8 @@ namespace Interfaz_Primaria
             panelClientes.Enabled = true;
             panelVehiculos.Enabled = true;
             labelmaximo.Text= txtCantPasajeros.Text;
-            Cargar_conductores(cod);
+            string codigo = txtCodigo.Text;
+            Cargar_conductores(codigo);
         }
 
         private void PanelVehiculos_Paint(object sender, PaintEventArgs e)
@@ -262,8 +270,12 @@ namespace Interfaz_Primaria
                     {
                         result = MsgBox.Show("HAY ESPACIO EN BLANCO", "Aviso", MsgBox.Buttons.OK, MsgBox.Icon.Info);
                     }
-                    result = MsgBox.Show(viajesService.Guardar(viaje), "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Info);
-                    this.Close();
+                    else
+                    {
+                        result = MsgBox.Show(viajesService.Guardar(viaje), "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                        this.Close();
+                    }
+                    
                 }
 
 

@@ -469,6 +469,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Modificar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // label10
             // 

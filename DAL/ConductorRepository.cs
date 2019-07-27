@@ -62,7 +62,48 @@ namespace DAL
 
         }
 
-       
+        public string Modififcar(Conductor conductor,string antigua_cedula)
+        {
+            try
+            {
+                using (var cmd = Conexion.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Conductores SET Cedula=@cedula,Nombres=@nombres,Apellidos=@apellidos,[Fecha nacimiento]=@fecha_nac," +
+                        "Telefono=@telefono,Email=@email,Direccion=@direccion,Imagen=@imagen,Licencia=@licencia,[Estado licencia]=@est_licencia," +
+                        "[Fecha vencimiento licencia]=@fecha_licencia WHERE Cedula=@cedulabuscada";
+
+
+                    cmd.Parameters.Add("@cedula", SqlDbType.VarChar).Value = conductor.Identificacion;
+                    cmd.Parameters.Add("@nombres", SqlDbType.VarChar).Value = conductor.Nombre;
+                    cmd.Parameters.Add("@apellidos", SqlDbType.VarChar).Value = conductor.Apellido;
+                    cmd.Parameters.Add("@fecha_nac", SqlDbType.Date).Value = conductor.Fecha_naciemiento;
+                    cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = conductor.Telefono;
+                    cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = conductor.Email;
+                    cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = conductor.Direccion;
+                    cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = conductor.Imagen;
+                    cmd.Parameters.Add("@licencia", SqlDbType.VarChar).Value = conductor.Licencia;
+                    cmd.Parameters.Add("@est_licencia", SqlDbType.VarChar).Value = conductor.Estado_Licencia;
+                    cmd.Parameters.Add("@fecha_licencia", SqlDbType.Date).Value = conductor.Fecha_vencimiento_licencia;
+                    cmd.Parameters.Add("@vehiculo_a", SqlDbType.VarChar).Value = conductor.Vehiculo_asignado;
+                    cmd.Parameters.Add("@cedulabuscada", SqlDbType.VarChar).Value = antigua_cedula;
+
+
+                    int i = cmd.ExecuteNonQuery();
+
+                    return (i > 0) ? "se modifico con exito" : "NO se pudo modificar";
+
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+
+
+        }
         public string Asignar(string vehiculo,string ced)
         {
            
@@ -160,6 +201,7 @@ namespace DAL
 
         public IList<Conductor> Buscar_por_vehiculo(string veh)
         {
+            conductores.Clear();
             Conductor condu = new Conductor();
             using (var Comando = Conexion.CreateCommand())
             {

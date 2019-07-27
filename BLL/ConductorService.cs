@@ -37,6 +37,23 @@ namespace BLL
                 
             }
         }
+        public string Modificar(Conductor conductor,string cedula_vieja)
+        {
+            string msg;
+            try
+            {
+                conexion.Open();
+                msg = ConductorRepository.Modififcar(conductor, cedula_vieja);
+                conexion.Close();
+                return msg;
+            }
+            catch (Exception e)
+            {
+                conexion.Close();
+                return "Error en la base de datos" + e.Message.ToString();
+
+            }
+        }
 
         public IList<Conductor> Consultar()
         {

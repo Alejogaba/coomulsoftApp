@@ -36,7 +36,11 @@ namespace Entity
         public int Generar_codigo_viaje()
         {
             Random random = new Random();
-            Codigo_viaje = random.Next(10000,99999);
+            for (int i = 0; i < 2; i++)
+            {
+                Codigo_viaje = random.Next(100, 999);
+                
+            }
             return Codigo_viaje;
         }
         

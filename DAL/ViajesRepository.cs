@@ -59,7 +59,7 @@ namespace DAL
 
         public IList<Viaje> Consultar()
         {
-
+            viajes.Clear();
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "Select * from Viajes";
@@ -77,8 +77,28 @@ namespace DAL
         }
 
 
-        public Viaje Buscar(int cod)
+        public Viaje Buscar_Por_cedula(string cod)
         {
+            viajes.Clear();
+            Viaje viaje = new Viaje();
+            using (var Comando = Conexion.CreateCommand())
+            {
+                Comando.CommandText = "SELECT * FROM Viajes WHERE [Cedula conductor]=@codigo";
+                Comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value = cod;
+                Reader = Comando.ExecuteReader();
+
+                while (Reader.Read())
+                {
+
+                    viaje = Map(Reader);
+                }
+            }
+            return viaje;
+        }
+
+        public Viaje Buscar_Por_codigo(int cod)
+        {
+            viajes.Clear();
             Viaje viaje = new Viaje();
             using (var Comando = Conexion.CreateCommand())
             {
@@ -97,7 +117,7 @@ namespace DAL
 
         public IList<Viaje> Consultar_fecha(DateTime fecha)
         {
-
+            viajes.Clear();
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "Select * from Viajes where [Fecha salida]=@fecha";

@@ -55,10 +55,44 @@ namespace DAL
 
 
         }
+        public string Modificar(Vehiculo vehiculo,string codigo)
+        {
+            try
+            {
+                using (var cmd = Conexion.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Vehiculos(Imagen=@imagen,Codigo=@codigo,Modelo=@modelo,[Placa vehiculo]=@placa,[Año modelo]=@anio," +
+                        "[Tipo vehiculo]=@tipo,[Capacidad pasajeros]=@pasajeros,[Capacidad maletero]=@maletero) WHERE Codigo=@codigobuscado";
 
+                    cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = vehiculo.Imagen;
+                    cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = vehiculo.Codigo;
+                    cmd.Parameters.Add("@modelo", SqlDbType.VarChar).Value = vehiculo.Modelo;
+                    cmd.Parameters.Add("@placa", SqlDbType.VarChar).Value = vehiculo.Placa_Vehiculo;
+                    cmd.Parameters.Add("@anio", SqlDbType.VarChar).Value = vehiculo.Anio_Modelo;
+                    cmd.Parameters.Add("@tipo", SqlDbType.VarChar).Value = vehiculo.Tipo_vehiculo;
+                    cmd.Parameters.Add("@pasajeros", SqlDbType.Int).Value = vehiculo.Capacidad_pasajeros;
+                    cmd.Parameters.Add("@maletero", SqlDbType.Float).Value = vehiculo.Capacidad_maletero;
+                    cmd.Parameters.Add("@codigobuscado", SqlDbType.VarChar).Value = codigo;
+
+                    int i = cmd.ExecuteNonQuery();
+
+                    return (i > 0) ? "se modifico con exito" : "No se pudo modificar";
+
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+
+
+        }
         public IList<Vehiculo> Consultar()
         {
-
+            vehiculos.Clear();
             using (var Comando = Conexion.CreateCommand())
             {
                 Comando.CommandText = "Select * from Vehiculos";
@@ -92,6 +126,7 @@ namespace DAL
 
         public Vehiculo Buscar(string cod)
         {
+            vehiculos.Clear();
             Vehiculo condu = new Vehiculo();
             using (var Comando = Conexion.CreateCommand())
             {
@@ -120,7 +155,7 @@ namespace DAL
             vehiculo.Anio_Modelo = (string)reader["Año modelo"];
             vehiculo.Tipo_vehiculo = (string)reader["Tipo vehiculo"];
             vehiculo.Capacidad_pasajeros = (int)reader["Capacidad pasajeros"];
-            vehiculo.Capacidad_maletero = (float)reader.GetDouble(6);
+           
       
 
 

@@ -38,6 +38,24 @@ namespace BLL
             }
         }
 
+        public string Modificar(Vehiculo vehiculo,string codigo_a_buscar)
+        {
+            string msg;
+            try
+            {
+                conexion.Open();
+                msg = vehiculosrepository.Modificar(vehiculo, codigo_a_buscar);
+                conexion.Close();
+                return msg;
+            }
+            catch (Exception e)
+            {
+                conexion.Close();
+                return "Error en la base de datos" + e.Message.ToString();
+
+            }
+        }
+
         public IList<Vehiculo> Consultar()
         {
             conexion.Open();

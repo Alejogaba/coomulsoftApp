@@ -26,6 +26,7 @@ namespace Interfaz_Primaria
         {
             InitializeComponent();
             this.ttMensaje.SetToolTip(this.btnBuscar, "Buscar Ruta");
+            CargarRutas();
         }
 
         
@@ -66,6 +67,7 @@ namespace Interfaz_Primaria
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            
             string ciudad = textBoxCiudad.Text;
             string dpto = textBoxDpto.Text;
             string destino = textBoxDestino.Text;
@@ -73,8 +75,30 @@ namespace Interfaz_Primaria
             int tarifa = int.Parse(txtTarifa.Text);
             Rutas rutas = new Rutas(ciudad, dpto, destino, dpto2,tarifa);
             Rutas rutas2 = new Rutas(destino, dpto2, ciudad, dpto, tarifa);
-            result = MsgBox.Show(service.Guardar(rutas), "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
-            service.Guardar(rutas2);
+            
+               
+                    if (ciudad == destino)
+                    {
+                        result = MsgBox.Show("No ingrese el mismo valor en Origen y Destino", "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            result = MsgBox.Show(service.Guardar(rutas), "Informacion", MsgBox.Buttons.OK, MsgBox.Icon.Info);
+                            service.Guardar(rutas2);
+                            actualizar();
+                        }
+                        catch (Exception ex)
+                        {
+                            result = MsgBox.Show(ex.Message, "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Error);
+                        }
+                        
+                        
+                    }
+                
+            
+            
 
         }
 
@@ -88,6 +112,8 @@ namespace Interfaz_Primaria
             string origen = textBoxCiudad.Text;
             string destino = textBoxDestino.Text;
             result = MsgBox.Show(service.Eliminar(origen,destino), "Advertencia", MsgBox.Buttons.OK, MsgBox.Icon.Warning);
+            service.Eliminar(destino, origen);
+            actualizar();
         }
 
         private void textBoxDestino_Enter(object sender, EventArgs e)
@@ -190,6 +216,46 @@ namespace Interfaz_Primaria
 
             }
 
+        }
+
+        public void CargarRutas()
+        {
+            dataGridViewRutas.DataSource = service.Consultar();
+            dataGridViewRutas.Refresh();
+        }
+
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+            actualizar();
+        }
+        public void actualizar()
+        {
+            IList<Rutas> datos = service.Consultar();
+            DataTable data;
+            data = ToDataTables<Rutas>(datos);
+            dataGridViewRutas.DataSource = data;
+        }
+        public DataTable ToDataTables<T>(IList<T> data)
+        {
+            PropertyDescriptorCollection props = TypeDescriptor.GetProperties(typeof(T));
+            DataTable table = new DataTable();
+            for (int i = 0; i < props.Count; i++)
+            {
+                PropertyDescriptor prp = props[i];
+                table.Columns.Add(prp.Name, prp.PropertyType);
+            }
+            object[] values = new object[props.Count];
+            foreach (T item in data)
+            {
+                for (int i = 0; i < values.Length; i++)
+                {
+                    values[i] = props[i].GetValue(item);
+
+                }
+
+                table.Rows.Add(values);
+            }
+            return table;
         }
     }
 }

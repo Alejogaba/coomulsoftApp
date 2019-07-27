@@ -75,7 +75,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxBuscarVehiculo = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.labelmodelo = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.PanelPlanilla.SuspendLayout();
@@ -518,7 +518,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.labelmodelo);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.txtCantPasajeros);
             this.panel2.Controls.Add(this.txtPlaca);
@@ -624,16 +624,16 @@
             this.comboBoxBuscarVehiculo.TabIndex = 0;
             this.comboBoxBuscarVehiculo.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBuscarVehiculo_SelectedIndexChanged);
             // 
-            // label17
+            // labelmodelo
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.label17.Location = new System.Drawing.Point(106, 183);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(83, 16);
-            this.label17.TabIndex = 15;
-            this.label17.Text = "---------------";
+            this.labelmodelo.AutoSize = true;
+            this.labelmodelo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelmodelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.labelmodelo.Location = new System.Drawing.Point(106, 183);
+            this.labelmodelo.Name = "labelmodelo";
+            this.labelmodelo.Size = new System.Drawing.Size(83, 16);
+            this.labelmodelo.TabIndex = 15;
+            this.labelmodelo.Text = "---------------";
             // 
             // label18
             // 
@@ -717,7 +717,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label labelIdentificacion;
         private System.Windows.Forms.Button buttonRegistrar;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label labelmodelo;
         private System.Windows.Forms.Label label18;
     }
 }
